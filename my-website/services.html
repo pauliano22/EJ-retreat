@@ -7,193 +7,16 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Additional fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        /* Additional styles for animations and elements from reference page */
-        .animated {
-            animation-duration: 1s;
-            animation-fill-mode: both;
-        }
-        .fadeInUp {
-            animation-name: fadeInUp;
-        }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translate3d(0, 40px, 0);
-            }
-            to {
-                opacity: 1;
-                transform: none;
-            }
-        }
-        .step {
-            border-radius: 8px;
-            background-color: white;
-            padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-        .step:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-        .step-number {
-            background-color: var(--primary);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-        .testimonial {
-            text-align: center;
-            padding: 2rem;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin: 2rem auto;
-            max-width: 800px;
-        }
-        .testimonial p {
-            font-size: 1.2rem;
-            font-style: italic;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        .testimonial cite {
-            font-weight: 600;
-            color: var(--primary);
-        }
-        .card {
-            border-radius: 8px;
-            padding: 2rem;
-            background-color: white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-        .icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        .accordion-item {
-            margin-bottom: 1rem;
-        }
-        .accordion-title {
-            background-color: var(--gray-light);
-            padding: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            border-radius: 4px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .accordion-content {
-            padding: 1rem;
-            display: none;
-        }
-        .accordion-title:after {
-            content: '+';
-            font-size: 1.5rem;
-        }
-        .accordion-title.active:after {
-            content: '-';
-        }
-        .accordion-title.active + .accordion-content {
-            display: block;
-        }
-        .metric {
-            text-align: center;
-            padding: 2rem;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        .metric h2 {
-            font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        .metric p.title {
-            font-weight: 600;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-        .metrics {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        .highlight-box {
-            background-color: rgba(46, 125, 50, 0.08);
-            border-left: 4px solid var(--primary);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 0 4px 4px 0;
-        }
-        .highlight-box h3 {
-            color: var(--primary-dark);
-            margin-bottom: 0.5rem;
-        }
-        .feature-badge {
-            display: inline-block;
-            background-color: var(--primary);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-        .quote-box {
-            font-size: 1.2rem;
-            font-style: italic;
-            padding: 1.5rem;
-            border-radius: 8px;
-            background-color: rgba(255,255,255,0.15);
-            margin: 2rem 0;
-            position: relative;
-        }
-        .quote-box:before {
-            content: '"';
-            font-size: 4rem;
-            position: absolute;
-            top: -15px;
-            left: 10px;
-            opacity: 0.2;
-            font-family: Georgia, serif;
-        }
-    </style>
+    <!-- Favicon -->
+    <link rel="icon" href="images/green-small.png" type="image/png">
+    <link rel="shortcut icon" href="images/green-small.png" type="image/png">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="../images/white-long.png" alt="E&J Retreats Logo">
+                    <img src="images/white-long.png" alt="E&J Retreats Logo">
                 </a>
             </div>
             <nav>
@@ -201,7 +24,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html" class="active">Services</a></li>
                     <li><a href="https://stayintampa.holidayfuture.com/" target="_blank">Properties</a></li>
-                    <li><a href="#" class="btn-contact">Contact</a></li>
+                    <li><a href="https://calendly.com/ssjdproperties/30min" target="_blank" class="btn-contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -213,7 +36,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="animated fadeInUp">Beyond Management, We're Your Property Partners</h1>
-                <div class="quote-box animated fadeInUp" style="font-size: 1.8rem; padding: 2rem; margin: 2.5rem auto; max-width: 90%; background-color: rgba(255,255,255,0.1); border-left: 5px solid var(--secondary);">
+                <div class="quote-box animated fadeInUp">
                     "We don't just manage. We protect your income, your asset, and your peace of mind—like it's ours."
                 </div>
                 <h3 class="animated fadeInUp">Maximize Your Returns with Full-Service Management</h3>
@@ -258,7 +81,7 @@
     </section>
 
     <!-- Amenity Optimization Section -->
-    <section style="background-color: var(--gray-light); padding: 5rem 0;">
+    <section class="section-light">
         <div class="container">
             <h2 class="animated fadeInUp">Smart Amenity Optimization</h2>
             <div class="highlight-box animated fadeInUp">
@@ -267,7 +90,7 @@
                 <p>We offer expert advice regarding amenities that will increase revenue in your specific area. Our years of experience and high-end market analysis software help us understand the ins and outs of your specific market. For example, some locations may benefit from a sauna/hot tub more than others. Our mission: What can we do to bring the most revenue to you.</p>
             </div>
             
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-top: 3rem;">
+            <div class="two-column-grid">
                 <div class="animated fadeInUp">
                     <h3>Data-Driven Amenity Recommendations</h3>
                     <p>Through analysis of thousands of bookings and guest reviews, we've identified which amenities deliver the highest ROI in different markets. Our recommendations aren't generic—they're specifically tailored to your property's location, target audience, and competitive landscape.</p>
@@ -288,7 +111,7 @@
     </section>
 
     <!-- Success Metrics Section -->
-    <section style="padding: 5rem 0;">
+    <section>
         <div class="container">
             <h2>Our Results Speak for Themselves</h2>
             <div class="metrics">
@@ -312,7 +135,7 @@
     </section>
 
     <!-- Management Process Section -->
-    <section id="process" class="process" style="background-color: var(--gray-light);">
+    <section id="process" class="process">
         <div class="container">
             <h2>How E&J Retreats Works</h2>
             
@@ -348,17 +171,17 @@
     </section>
 
     <!-- Owner Dashboard Section -->
-    <section style="background-color: white; padding: 5rem 0;">
+    <section>
         <div class="container">
             <h2 class="animated fadeInUp">Advanced Market Analysis Technology</h2>
             <p class="animated fadeInUp" style="text-align: center; margin-bottom: 3rem;">Our industry-leading software gives us insights that others simply don't have</p>
             
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+            <div class="two-column-grid">
                 <div class="animated fadeInUp">
                     <h3>Owner Dashboard & Market Analytics</h3>
                     <p>Our client-driven management dashboard gives you full control and real-time visibility of your property's performance. Unlike other management companies that keep you in the dark, we provide complete transparency with detailed analytics and revenue projections.</p>
                     
-                    <div class="highlight-box" style="margin: 2rem 0;">
+                    <div class="highlight-box">
                         <h3>Market-Specific Revenue Enhancement</h3>
                         <p>Our sophisticated market analysis software identifies exactly which amenities and features will maximize revenue in your specific area—a level of insight no other management company provides.</p>
                     </div>
@@ -378,7 +201,7 @@
     </section>
     
     <!-- Your Success, Our Commitment Section -->
-    <section style="background-color: var(--gray-light); padding: 5rem 0;">
+    <section class="section-light">
         <div class="container">
             <h2>Your Success, Our Commitment</h2>
             
@@ -388,7 +211,7 @@
                 <p>We don't just manage. We protect your income, your asset, and your peace of mind—like it's ours. This philosophy shapes every aspect of our service, from our hands-on approach to our transparent communication.</p>
             </div>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 3rem;">
+            <div class="three-column-grid">
                 <div class="animated fadeInUp">
                     <img src="https://images.unsplash.com/photo-1560184897-ae75f418493e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Team working on property management" style="width: 100%; border-radius: 10px; margin-bottom: 2rem;">
                     <ul>
@@ -413,18 +236,18 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section style="background-color: var(--primary); color: white; padding: 5rem 0; text-align: center;">
+    <section class="testimonials">
         <div class="container">
-            <h2 style="color: white; margin-bottom: 3rem;">What Our Clients Say</h2>
-            <div class="testimonial" style="background-color: rgba(255,255,255,0.1); color: white;">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial">
                 <p>"E&J Retreats transformed my investment property into a profitable vacation rental. Their personal visits and amenity recommendations increased my revenue by 30% in the first three months."</p>
                 <cite>- Michael R., Property Owner</cite>
             </div>
-            <div class="testimonial" style="background-color: rgba(255,255,255,0.1); color: white;">
+            <div class="testimonial">
                 <p>"Working with E&J Retreats has been a game-changer for us. Their hands-on approach and market expertise shine through in every aspect of property management. No other company I've worked with offers this level of personal attention!"</p>
                 <cite>- Max Larson, Property Owner</cite>
             </div>
-            <div class="testimonial" style="background-color: rgba(255,255,255,0.1); color: white;">
+            <div class="testimonial">
                 <p>"After switching to E&J Retreats from a larger management company, I'm seeing higher occupancy rates and much better care of my property. Their in-person visits catch maintenance issues before they become problems."</p>
                 <cite>- Lily Olson, Property Owner</cite>
             </div>
@@ -432,7 +255,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section style="background-color: white; padding: 5rem 0;">
+    <section>
         <div class="container">
             <h2>Frequently Asked Questions</h2>
             
@@ -501,52 +324,52 @@
     </section>
 
     <!-- Call to Action Section -->
-    <section style="background-color: var(--primary-dark); color: white; text-align: center; padding: 5rem 0;">
+    <section class="cta">
         <div class="container">
-            <h2 style="color: white; margin-bottom: 1.5rem;">Ready to experience the E&J difference?</h2>
-            <p style="margin-bottom: 1.5rem; font-size: 1.2rem;">Let us show you how our hands-on approach and market expertise can maximize your property's potential.</p>
-            <div class="quote-box" style="max-width: 800px; margin: 2rem auto;">
+            <h2>Ready to experience the E&J difference?</h2>
+            <p>Let us show you how our hands-on approach and market expertise can maximize your property's potential.</p>
+            <div class="quote-box">
                 "We don't just manage. We protect your income, your asset, and your peace of mind—like it's ours."
             </div>
-            <a href="#" class="btn btn-large" style="background-color: var(--secondary); font-size: 1.2rem; padding: 1rem 3rem; margin-top: 1.5rem;">Schedule a Consultation</a>
+            <a href="https://calendly.com/ssjdproperties/30min" target="_blank" class="btn btn-large">Schedule a Consultation</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer style="background-color: var(--dark); color: white; padding: 4rem 0;">
+    <footer>
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem;">
+            <div class="footer-grid">
                 <div>
-                    <img src="images/white-long.png" alt="E&J Retreats Logo" style="max-width: 200px; margin-bottom: 1.5rem;">
+                    <img src="images/white-long.png" alt="E&J Retreats Logo">
                     <p>Professional vacation rental management services helping property owners maximize returns through personalized service and market-specific expertise.</p>
                 </div>
                 <div>
-                    <h3 style="margin-bottom: 1.5rem; font-size: 1.4rem;">Contact</h3>
+                    <h3>Contact</h3>
                     <p>Email: info@ejretreats.com<br>
                     Phone: (555) 123-4567<br>
                     Tampa, FL</p>
                 </div>
                 <div>
-                    <h3 style="margin-bottom: 1.5rem; font-size: 1.4rem;">Quick Links</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 0.8rem;"><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
-                        <li style="margin-bottom: 0.8rem;"><a href="services.html" style="color: white; text-decoration: none;">Services</a></li>
-                        <li style="margin-bottom: 0.8rem;"><a href="https://stayintampa.holidayfuture.com/" style="color: white; text-decoration: none;">Properties</a></li>
-                        <li style="margin-bottom: 0.8rem;"><a href="#" style="color: white; text-decoration: none;">About Us</a></li>
-                        <li><a href="#" style="color: white; text-decoration: none;">Contact</a></li>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        website\services.html
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="https://stayintampa.holidayfuture.com/">Properties</a></li>
+                        <li><a href="https://calendly.com/ssjdproperties/30min" target="_blank">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 style="margin-bottom: 1.5rem; font-size: 1.4rem;">Follow Us</h3>
-                    <div style="display: flex; gap: 1rem;">
-                        <a href="#" style="color: white; text-decoration: none; font-size: 1.5rem;">📱</a>
-                        <a href="#" style="color: white; text-decoration: none; font-size: 1.5rem;">📘</a>
-                        <a href="#" style="color: white; text-decoration: none; font-size: 1.5rem;">📸</a>
-                        <a href="#" style="color: white; text-decoration: none; font-size: 1.5rem;">💼</a>
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#">📱</a>
+                        <a href="#">📘</a>
+                        <a href="#">📸</a>
+                        <a href="#">💼</a>
                     </div>
                 </div>
             </div>
-            <div style="margin-top: 3rem; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+            <div class="copyright">
                 <p>© 2024 E&J Retreats. All rights reserved.</p>
             </div>
         </div>
@@ -565,9 +388,68 @@
                     accordionTitles.forEach(otherTitle => {
                         if (otherTitle !== this) {
                             otherTitle.classList.remove('active');
+                            otherTitle.nextElementSibling.style.display = 'none';
                         }
                     });
+                    
+                    // Toggle the clicked item
+                    if (this.classList.contains('active')) {
+                        this.nextElementSibling.style.display = 'block';
+                    } else {
+                        this.nextElementSibling.style.display = 'none';
+                    }
                 });
+            });
+        });
+    </script>
+    <!-- Sticky Contact Button -->
+    <div class="sticky-contact">
+        <button class="contact-btn">📞</button>
+        <div class="contact-popup">
+            <p>Call us at: <a href="tel:+13156228336">(315) 622-8336</a></p>
+            <p>Or <a href="https://calendly.com/ssjdproperties/30min" target="_blank">schedule a consultation</a></p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionTitles = document.querySelectorAll('.accordion-title');
+            
+            accordionTitles.forEach(title => {
+                title.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    
+                    // Close all other accordion items
+                    accordionTitles.forEach(otherTitle => {
+                        if (otherTitle !== this) {
+                            otherTitle.classList.remove('active');
+                            otherTitle.nextElementSibling.style.display = 'none';
+                        }
+                    });
+                    
+                    // Toggle the clicked item
+                    if (this.classList.contains('active')) {
+                        this.nextElementSibling.style.display = 'block';
+                    } else {
+                        this.nextElementSibling.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Contact button functionality
+            const contactBtn = document.querySelector('.contact-btn');
+            const contactPopup = document.querySelector('.contact-popup');
+            
+            contactBtn.addEventListener('click', function() {
+                contactPopup.classList.toggle('show');
+            });
+            
+            // Close popup when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.sticky-contact') && contactPopup.classList.contains('show')) {
+                    contactPopup.classList.remove('show');
+                }
             });
         });
     </script>
