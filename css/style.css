@@ -389,20 +389,22 @@ nav a::after {
 }
 
 .steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 1.5rem;
     margin-top: 2rem;
+    justify-content: center;
 }
 
 .step {
-    text-align: center;
     background-color: white;
     padding: 2rem;
     border-radius: var(--radius);
+    text-align: center;
     border: 1px solid var(--border);
     transition: all 0.2s ease;
-    height: 100%;
+    flex: 0 1 320px; /* don't grow, can shrink, base width 320px */
+    min-width: 280px;
 }
 
 .step:hover {
