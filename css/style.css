@@ -249,9 +249,9 @@ nav a::after {
     width: 56px;
     height: 56px;
     border-radius: 28px;
-    background-color: var(--primary);
+    background-color: white;
     color: white;
-    border: none;
+    border: black 2px solid;
     font-size: 1.5rem;
     cursor: pointer;
     box-shadow: 0 4px 20px var(--shadow-lg);
@@ -263,7 +263,7 @@ nav a::after {
 }
 
 .contact-btn:hover {
-    background-color: var(--primary-dark);
+    background-color: black;
     transform: scale(1.05);
     box-shadow: 0 6px 24px var(--shadow-lg);
 }
