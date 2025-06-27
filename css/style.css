@@ -779,6 +779,44 @@ footer .copyright {
     color: rgba(255, 255, 255, 0.6);
 }
 
+/* Contact Info Grid */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contact-item {
+    padding: 2rem;
+    background-color: var(--gray-light);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    transition: all 0.2s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px var(--shadow-lg);
+    border-color: var(--primary);
+}
+
+.contact-item h3 {
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+}
+
+.contact-item a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: var(--primary-dark);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     header .container {
