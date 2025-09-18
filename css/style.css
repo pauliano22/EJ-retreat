@@ -926,3 +926,40 @@ footer .copyright {
         margin-bottom: 0.5rem;
     }
 }
+
+/* Survey */
+/* Custom Get Quote Button */
+.get-quote-btn {
+    position: fixed;
+    bottom: 100px;
+    right: 24px;
+    z-index: 1001;
+    background-color: var(--primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    box-shadow: 0 4px 20px var(--shadow-lg);
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.get-quote-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px var(--shadow-lg);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .get-quote-btn {
+        bottom: 90px;
+        right: 20px;
+        font-size: 0.8rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
