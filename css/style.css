@@ -143,14 +143,14 @@ header .container {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 nav a {
     color: var(--gray);
     font-weight: 500;
     font-size: 0.875rem;
-    padding: 0.5rem 0;
+    padding: 0 0;
     position: relative;
 }
 
