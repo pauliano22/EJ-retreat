@@ -12,7 +12,9 @@
     <!-- Calendly link widget -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <style>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Additional styles -->
+    <style> 
         :root {
             --accent: #007d47;
             --accent-light: #00a35c;
@@ -54,54 +56,6 @@
             max-width: 1140px;
             margin: 0 auto;
             padding: 0 24px;
-        }
-
-        /* Header - Minimal */
-        .header {
-            padding: 16px 0;
-            border-bottom: 1px solid var(--gray-100);
-            position: sticky;
-            top: 0;
-            background: var(--white);
-            z-index: 100;
-        }
-
-        .header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .header-logo img {
-            height: 50px;
-        }
-
-        .header-cta {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .header-phone {
-            color: var(--gray-700);
-            font-weight: 500;
-            font-size: 0.9375rem;
-            text-decoration: none;
-        }
-
-        .header-phone:hover {
-            color: var(--accent);
-        }
-
-        .header-link {
-            color: var(--gray-600);
-            font-weight: 500;
-            font-size: 0.9375rem;
-            text-decoration: none;
-        }
-
-        .header-link:hover {
-            color: var(--accent);
         }
 
         /* Buttons */
@@ -1080,16 +1034,21 @@
 
 <body>
     <!-- Header -->
-    <header class="header">
+    <header>
         <div class="container">
-            <a href="index.html" class="header-logo">
-                <img src="images/white-long.png" alt="E&amp;J Retreats">
-            </a>
-            <div class="header-cta">
-                <a href="properties.html" class="header-link">Our Properties</a>
-                <a href="tel:+18136990509" class="header-phone">(813) 699-0509</a>
-                <a href="#book-call" class="btn btn-primary">Book Free Audit</a>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/white-long.png" alt="E&amp;J Retreats Logo">
+                </a>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="properties.html" class="active">Properties</a></li>
+                    <li><a href="https://calendly.com/ssjdproperties/30min" target="_blank" class="btn-contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -1098,7 +1057,8 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <h1>Hands-Off Short-Term Rental Management That Actually Increases Your Revenue</h1>
+                    <h1> Hands-Off Short-Term Rental Management That<span style="text-decoration: underline solid var(--accent-dark) 3px; text-underline-offset: 12px;"> Actually Increases Your Revenue</span></h1>
+            
                     <p class="subtitle">We turn your property into a high-performing, guest-ready asset — without you dealing with cleaners, guests, pricing, or headaches.</p>
                     
                     <div class="hero-buttons">

@@ -208,7 +208,7 @@ nav a.active {
                 url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
     color: var(--white);
     padding: 6rem 0;
-    text-align: center;
+    text-align: left;
 }
 
 .hero-content {
