@@ -14,7 +14,7 @@
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <link rel="stylesheet" href="css/style.css">
     <!-- Additional styles -->
-    <style> 
+    <style>
         :root {
             --accent: #007d47;
             --accent-light: #00a35c;
@@ -33,9 +33,9 @@
             --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             --radius: 8px;
             --radius-lg: 12px;
-            --shadow: 0 1px 3px rgba(0,0,0,0.1);
-            --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
-            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+            --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
         * {
@@ -108,7 +108,8 @@
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1.2fr;
+            /* This makes the image side 20% wider than the text side */
             gap: 48px;
             align-items: center;
         }
@@ -160,17 +161,17 @@
         }
 
         .hero-images {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            gap: 12px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
         }
 
         .hero-images img {
             width: 100%;
-            height: 180px;
+            max-height: 400px;
+            /* Adjust this number to your liking */
             object-fit: cover;
-            border-radius: var(--radius-lg);
+            border-radius: 40px;
         }
 
         .hero-images img:first-child {
@@ -616,8 +617,8 @@
 
         /* Testimonials */
         .testimonial-card {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: var(--radius-lg);
             padding: 32px;
             max-width: 700px;
@@ -788,7 +789,7 @@
             padding: 12px 24px;
             display: none;
             z-index: 99;
-            box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .sticky-cta .container {
@@ -819,7 +820,7 @@
             border: none;
             font-size: 1.25rem;
             cursor: pointer;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
             transition: all 0.2s ease;
             display: flex;
             align-items: center;
@@ -843,7 +844,7 @@
             background-color: var(--white);
             padding: 20px;
             border-radius: var(--radius-lg);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
             width: 260px;
             display: none;
             text-align: left;
@@ -860,6 +861,7 @@
                 opacity: 0;
                 transform: translateY(10px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -895,7 +897,7 @@
             font-weight: 600;
             font-size: 0.9375rem;
             text-decoration: none;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
             transition: all 0.2s ease;
         }
 
@@ -1034,12 +1036,13 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJJL0RNSEL"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-TJJL0RNSEL');
+    gtag('config', 'G-TJJL0RNSEL');
 </script>
+
 <body>
     <!-- Header -->
     <header>
@@ -1054,7 +1057,8 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="properties.html" class="active">Properties</a></li>
-                    <li><a href="https://calendly.com/ssjdproperties/30min" target="_blank" class="btn-contact">Contact</a></li>
+                    <li><a href="https://calendly.com/ssjdproperties/30min" target="_blank"
+                            class="btn-contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -1065,26 +1069,42 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <h1> Hands-Off Short-Term Rental Management That<span style="text-decoration: underline solid var(--accent-dark) 3px; text-underline-offset: 12px;"> Actually Increases Your Revenue</span></h1>
-            
-                    <p class="subtitle">We turn your property into a high-performing, guest-ready asset — without you dealing with cleaners, guests, pricing, or headaches.</p>
-                    
+                    <h1> Hands-Off Short-Term Rental Management That<span
+                            style="text-decoration: underline solid var(--accent-dark) 3px; text-underline-offset: 12px;">
+                            Actually Increases Your Revenue</span></h1>
+
+                    <p class="subtitle">We turn your property into a high-performing, guest-ready asset — without you
+                        dealing with cleaners, guests, pricing, or headaches.</p>
+
                     <div class="hero-buttons">
-                        <a href="#book-call" class="btn btn-primary btn-large" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Book a Free 15-Minute Call</a>
+                        <a href="#book-call" class="btn btn-primary btn-large"
+                            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Book
+                            a Free 15-Minute Call</a>
                         <a href="#pricing" class="btn btn-secondary btn-large">See Pricing</a>
                     </div>
 
                     <div class="trust-bar">
                         <div class="trust-item">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
                             <span>Trusted by 50+ owners</span>
                         </div>
                         <div class="trust-item">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
                             <span>24/7 guest support</span>
                         </div>
                         <div class="trust-item">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
                             <span>Local teams</span>
                         </div>
                     </div>
@@ -1092,21 +1112,28 @@
 
                 <div>
                     <div class="hero-images">
-                        <img src="images/properties/eagles-nest.jpg" alt="Luxury vacation rental">
-                        <img src="images/properties/19th-hole.jpg" alt="Modern rental property">
-                        <img src="images/properties/tampa-coastal-comfort.webp" alt="Poolside property">
+                        <img src="images/properties/front.png" alt="Luxury vacation rental">
                     </div>
                     <div class="hero-badges">
                         <div class="badge-item">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
                             <span>Revenue Optimization</span>
                         </div>
                         <div class="badge-item">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
                             <span>Guest Communication 24/7</span>
                         </div>
                         <div class="badge-item">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
                             <span>Cleaning + Maintenance Included</span>
                         </div>
                     </div>
@@ -1119,19 +1146,26 @@
     <section class="section">
         <div class="container">
             <h2 class="section-title">Let Us Handle the Work — You Keep the Profits</h2>
-            
+
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
                     </div>
                     <h3>Increased Nightly Rate + 90%+ Occupancy Strategy</h3>
-                    <p>We use dynamic pricing &amp; competitive analysis to maximize earnings. No more undercharging or long vacancies.</p>
+                    <p>We use dynamic pricing &amp; competitive analysis to maximize earnings. No more undercharging or
+                        long vacancies.</p>
                 </div>
 
                 <div class="benefit-card">
                     <div class="benefit-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
                     </div>
                     <h3>Guest Messaging Managed For You</h3>
                     <p>We handle every message, late check-in, problem, and review. So you never have to.</p>
@@ -1139,16 +1173,22 @@
 
                 <div class="benefit-card">
                     <div class="benefit-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
                     </div>
                     <h3>Professional Turnover + Quality Control</h3>
-                    <p>We schedule cleaners, inspect property quality, restock supplies, and keep everything Airbnb-ready.</p>
+                    <p>We schedule cleaners, inspect property quality, restock supplies, and keep everything
+                        Airbnb-ready.</p>
                 </div>
             </div>
 
             <div class="benefit-cta">
                 <p>We make your Airbnb passive. You earn more, while doing less.</p>
-                <a href="#book-call" class="btn btn-primary btn-large" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Book a Call to Compare Your Current Performance</a>
+                <a href="#book-call" class="btn btn-primary btn-large"
+                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Book
+                    a Call to Compare Your Current Performance</a>
             </div>
         </div>
     </section>
@@ -1157,24 +1197,36 @@
     <section class="section section-alt">
         <div class="container">
             <h2 class="section-title">What's Included in Management</h2>
-            
+
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-card-header">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        </svg>
                         <h3>Operations</h3>
                     </div>
                     <ul>
                         <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
                             Full guest communication
                         </li>
                         <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
                             Check-in support &amp; resolution handling
                         </li>
                         <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
                             Automated messaging workflows
                         </li>
                     </ul>
@@ -1182,20 +1234,32 @@
 
                 <div class="service-card">
                     <div class="service-card-header">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
                         <h3>Revenue Optimization</h3>
                     </div>
                     <ul>
                         <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
                             Smart dynamic pricing
                         </li>
                         <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
                             Seasonal rate adjustments
                         </li>
                         <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
                             Occupancy and pacing analysis
                         </li>
                     </ul>
@@ -1203,20 +1267,32 @@
 
                 <div class="service-card">
                     <div class="service-card-header">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
                         <h3>Maintenance &amp; Housekeeping</h3>
                     </div>
                     <ul>
                         <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
                             Vetted cleaners + turnovers
                         </li>
                         <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
                             Restocking supplies
                         </li>
                         <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
                             Repairs &amp; contractor coordination
                         </li>
                     </ul>
@@ -1224,20 +1300,32 @@
 
                 <div class="service-card">
                     <div class="service-card-header">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
                         <h3>Owner Experience</h3>
                     </div>
                     <ul>
                         <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
                             Monthly performance reports
                         </li>
                         <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
                             Calendar control as needed
                         </li>
                         <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
                             Hands-off, transparent management
                         </li>
                     </ul>
@@ -1245,11 +1333,14 @@
             </div>
 
             <div class="service-note">
-                <p>We take 100% off your plate. No more guest emergencies. No more cleaning scheduling. No more stress.</p>
+                <p>We take 100% off your plate. No more guest emergencies. No more cleaning scheduling. No more stress.
+                </p>
             </div>
 
             <div class="benefit-cta" style="margin-top: 32px;">
-                <a href="#book-call" class="btn btn-primary btn-large" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Schedule Your Strategy Call</a>
+                <a href="#book-call" class="btn btn-primary btn-large"
+                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Schedule
+                    Your Strategy Call</a>
             </div>
         </div>
     </section>
@@ -1258,7 +1349,8 @@
     <section class="section">
         <div class="container">
             <h2 class="section-title">The Difference Between Renting... and Optimizing</h2>
-            <p class="section-subtitle">Most properties we take over see revenue increase within 60-90 days due to optimized pricing, improved listing structure, and professional guest experience.</p>
+            <p class="section-subtitle">Most properties we take over see revenue increase within 60-90 days due to
+                optimized pricing, improved listing structure, and professional guest experience.</p>
 
             <div class="comparison-table">
                 <div class="comparison-row comparison-header">
@@ -1297,24 +1389,39 @@
             <div class="fit-grid">
                 <div class="fit-card good">
                     <h3>
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
                         This is for you if you're a property owner who:
                     </h3>
                     <ul>
                         <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
                             Wants passive income, not a second job
                         </li>
                         <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
                             Is overwhelmed with guest issues or turnover
                         </li>
                         <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
                             Thinks your revenue could be higher
                         </li>
                         <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
                             Wants a management partner, not a headache
                         </li>
                     </ul>
@@ -1322,16 +1429,25 @@
 
                 <div class="fit-card bad">
                     <h3>
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
                         Not the best fit if:
                     </h3>
                     <ul>
                         <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
                             You want to manage every detail personally
                         </li>
                         <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
                             You don't want to improve guest experience or pricing strategy
                         </li>
                     </ul>
@@ -1352,20 +1468,28 @@
 
                 <ul class="pricing-features">
                     <li>
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
                         Everything listed above included
                     </li>
                     <li>
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
                         No onboarding or hidden fees
                     </li>
                     <li>
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
                         We only make money when you do
                     </li>
                 </ul>
 
-                <a href="#book-call" class="btn btn-primary btn-large" style="width: 100%;" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">See If We're a Good Match</a>
+                <a href="#book-call" class="btn btn-primary btn-large" style="width: 100%;"
+                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">See
+                    If We're a Good Match</a>
 
                 <p class="pricing-limit">We onboard 2–5 new properties per month. Availability is limited.</p>
             </div>
@@ -1376,11 +1500,13 @@
     <section class="section section-alt">
         <div class="container">
             <h2 class="section-title">Properties We Manage</h2>
-            <p class="section-subtitle">From beachfront retreats to urban getaways — we actively manage properties across multiple markets.</p>
+            <p class="section-subtitle">From beachfront retreats to urban getaways — we actively manage properties
+                across multiple markets.</p>
 
             <div class="properties-preview">
                 <div class="property-preview-card">
-                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600" alt="Luxury vacation rental">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600"
+                        alt="Luxury vacation rental">
                     <div class="property-preview-content">
                         <span class="property-preview-location">Tampa, FL</span>
                         <p>Waterfront estates, mini-resorts, urban retreats</p>
@@ -1394,7 +1520,8 @@
                     </div>
                 </div>
                 <div class="property-preview-card">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600" alt="Pennsylvania retreat">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600"
+                        alt="Pennsylvania retreat">
                     <div class="property-preview-content">
                         <span class="property-preview-location">Pennsylvania</span>
                         <p>Countryside retreats near Hershey &amp; beyond</p>
@@ -1404,7 +1531,9 @@
 
             <div class="properties-cta">
                 <a href="properties.html" class="btn btn-secondary">View All Properties</a>
-                <a href="#book-call" class="btn btn-primary" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Add Your Property</a>
+                <a href="#book-call" class="btn btn-primary"
+                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Add
+                    Your Property</a>
             </div>
         </div>
     </section>
@@ -1415,7 +1544,8 @@
             <h2 class="section-title">What Property Owners Say</h2>
 
             <div class="testimonial-card">
-                <p>"E&amp;J Retreats increased our occupancy and handled everything for us — total game changer. I finally have passive income without the stress."</p>
+                <p>"E&amp;J Retreats increased our occupancy and handled everything for us — total game changer. I
+                    finally have passive income without the stress."</p>
                 <cite>— Property Owner, Tampa FL</cite>
             </div>
 
@@ -1433,10 +1563,13 @@
         <div class="container">
             <div class="calendly-wrapper">
                 <h2>Schedule Your Free Revenue Strategy Call</h2>
-                <p class="subtitle">We'll analyze your current listing performance, recommend revenue improvements, and show you how we can take over the hands-on work immediately.</p>
+                <p class="subtitle">We'll analyze your current listing performance, recommend revenue improvements, and
+                    show you how we can take over the hands-on work immediately.</p>
 
                 <!-- Calendly inline widget -->
-                <div class="calendly-inline-widget" data-url="https://calendly.com/ejretreats1/30min?hide_event_type_details=1&primary_color=007d47"></div>
+                <div class="calendly-inline-widget"
+                    data-url="https://calendly.com/ejretreats1/30min?hide_event_type_details=1&primary_color=007d47">
+                </div>
 
                 <p class="calendly-note">Takes 15 minutes. No pressure. Clear answers.</p>
             </div>
@@ -1464,7 +1597,8 @@
                 <div>
                     <h4>Connect</h4>
                     <ul>
-                        <li><a href="https://m.facebook.com/p/EJ-Retreats-61576666153450/" target="_blank">Facebook</a></li>
+                        <li><a href="https://m.facebook.com/p/EJ-Retreats-61576666153450/" target="_blank">Facebook</a>
+                        </li>
                         <li><a href="https://www.instagram.com/ejretreats" target="_blank">Instagram</a></li>
                         <li><a href="mailto:info@ejretreats.com">Email Us</a></li>
                     </ul>
@@ -1473,7 +1607,9 @@
             <div class="footer-bottom">
                 <p>© 2024 E&amp;J Retreats. All rights reserved.</p>
                 <div class="footer-cta">
-                    <a href="#book-call" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Book a Call — Let's Grow Your Revenue</a>
+                    <a href="#book-call"
+                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Book
+                        a Call — Let's Grow Your Revenue</a>
                 </div>
             </div>
         </div>
@@ -1483,7 +1619,9 @@
     <div class="sticky-cta">
         <div class="container">
             <p>Ready to earn more?</p>
-            <a href="#book-call" class="btn btn-primary" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Book Free Audit</a>
+            <a href="#book-call" class="btn btn-primary"
+                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Book
+                Free Audit</a>
         </div>
     </div>
 
@@ -1504,7 +1642,7 @@
     <script>
         // Show sticky CTA on scroll (mobile)
         if (window.innerWidth <= 640) {
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 var stickyCta = document.querySelector('.sticky-cta');
                 if (window.scrollY > 500) {
                     stickyCta.style.display = 'block';
@@ -1521,7 +1659,7 @@
         }
 
         // Close popup when clicking outside
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', function (event) {
             var popup = document.getElementById('contactPopup');
             if (!event.target.closest('.sticky-contact') && popup.classList.contains('show')) {
                 popup.classList.remove('show');
