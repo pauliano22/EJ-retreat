@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E&amp;J Retreats - Hands-Off Airbnb Management</title>
+    <title>E&J Retreats - Hands-Off Airbnb Management</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="images/black-small.png" type="image/png">
     <!-- Calendly link widget -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
@@ -93,6 +93,7 @@
         .btn-secondary:hover {
             border-color: var(--gray-400);
             background: var(--gray-50);
+            color: var(--gray-900);
         }
 
         .btn-large {
@@ -907,6 +908,90 @@
             transform: translateY(-2px);
         }
 
+        /* NEW: Proof Section Styles */
+        .proof-section {
+            background: var(--white);
+            padding: 60px 0;
+        }
+
+        .proof-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .case-study-box {
+            background: linear-gradient(135deg, rgba(0, 125, 71, 0.05) 0%, rgba(0, 125, 71, 0.02) 100%);
+            border-left: 4px solid var(--accent);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin-bottom: 40px;
+        }
+
+        .case-study-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            padding: 6px 12px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .case-study-box h3 {
+            font-size: 1.5rem;
+            color: var(--gray-900);
+            margin-bottom: 16px;
+        }
+
+        .case-study-box p {
+            font-size: 1rem;
+            color: var(--gray-700);
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .case-study-highlight {
+            font-weight: 600;
+            color: var(--accent-dark);
+        }
+
+        .partnership-box {
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 24px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .partnership-box p {
+            font-size: 1rem;
+            color: var(--gray-700);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .partnership-box strong {
+            color: var(--gray-900);
+        }
+
+        .reviews-placeholder {
+            background: var(--gray-50);
+            border: 2px dashed var(--gray-300);
+            border-radius: var(--radius-lg);
+            padding: 48px 32px;
+            text-align: center;
+        }
+
+        .reviews-placeholder p {
+            color: var(--gray-500);
+            font-size: 0.9375rem;
+            margin: 0;
+        }
+
         /* Responsive */
         @media (max-width: 968px) {
             .hero-grid {
@@ -1030,6 +1115,18 @@
                 padding: 12px 16px;
                 font-size: 0.875rem;
             }
+
+            .proof-section {
+                padding: 40px 0;
+            }
+
+            .case-study-box {
+                padding: 24px;
+            }
+
+            .case-study-box h3 {
+                font-size: 1.25rem;
+            }
         }
     </style>
 </head>
@@ -1049,7 +1146,7 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/white-long.png" alt="E&amp;J Retreats Logo">
+                    <img src="images/white-long.png" alt="E&J Retreats Logo">
                 </a>
             </div>
             <nav>
@@ -1077,9 +1174,7 @@
                         dealing with cleaners, guests, pricing, or headaches.</p>
 
                     <div class="hero-buttons">
-                        <a href="#book-call" class="btn btn-primary btn-large"
-                            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Book
-                            a Free 15-Minute Call</a>
+                        <a href="https://form.typeform.com/to/NJniTDDG" target="_blank" class="btn btn-primary btn-large">See What Your Property Could Earn</a>
                         <a href="#pricing" class="btn btn-secondary btn-large">See Pricing</a>
                     </div>
 
@@ -1142,6 +1237,32 @@
         </div>
     </section>
 
+    <!-- NEW: Proof of Expertise Section -->
+    <section class="proof-section">
+        <div class="container">
+            <div class="proof-container">
+                <!-- Case Study -->
+                <div class="case-study-box">
+                    <span class="case-study-badge">Real Results</span>
+                    <h3>Case Study: Florida Investment Property</h3>
+                    <p>Property sat with <strong>zero bookings for 3 months</strong> before working with us.</p>
+                    <p>After taking over operations, pricing, and marketing, the property now averages <span class="case-study-highlight">$12,000 per month in bookings.</span></p>
+                    <p>The owner was preparing to sell before finding us — after results, they trusted us to operate their additional investment property as well.</p>
+                </div>
+
+                <!-- Partnership -->
+                <div class="partnership-box">
+                    <p><strong>Investor Partnership:</strong> We work directly with Lana Moriece, Realtor in Sarasota, FL, who partners with us to help investors acquire and operate high-performing short-term rental properties.</p>
+                </div>
+
+                <!-- Reviews Placeholder -->
+                <div class="reviews-placeholder">
+                    <p>Owner reviews and testimonials coming soon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Benefits Section -->
     <section class="section">
         <div class="container">
@@ -1156,7 +1277,7 @@
                         </svg>
                     </div>
                     <h3>Increased Nightly Rate + 90%+ Occupancy Strategy</h3>
-                    <p>We use dynamic pricing &amp; competitive analysis to maximize earnings. No more undercharging or
+                    <p>We use dynamic pricing & competitive analysis to maximize earnings. No more undercharging or
                         long vacancies.</p>
                 </div>
 
@@ -1220,7 +1341,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7" />
                             </svg>
-                            Check-in support &amp; resolution handling
+                            Check-in support & resolution handling
                         </li>
                         <li>
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1271,7 +1392,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                         </svg>
-                        <h3>Maintenance &amp; Housekeeping</h3>
+                        <h3>Maintenance & Housekeeping</h3>
                     </div>
                     <ul>
                         <li>
@@ -1293,7 +1414,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7" />
                             </svg>
-                            Repairs &amp; contractor coordination
+                            Repairs & contractor coordination
                         </li>
                     </ul>
                 </div>
@@ -1355,7 +1476,7 @@
             <div class="comparison-table">
                 <div class="comparison-row comparison-header">
                     <div class="comparison-cell">Basic Airbnb Host</div>
-                    <div class="comparison-cell">E&amp;J Retreats</div>
+                    <div class="comparison-cell">E&J Retreats</div>
                 </div>
                 <div class="comparison-row">
                     <div class="comparison-cell">Manual pricing</div>
@@ -1456,7 +1577,7 @@
             <div class="pricing-card">
                 <h3>Full-Service Management Fee</h3>
                 <div class="pricing-amount">15-20%</div>
-                <p class="pricing-note">depending on property &amp; location</p>
+                <p class="pricing-note">depending on property & location</p>
 
                 <ul class="pricing-features">
                     <li>
@@ -1508,7 +1629,7 @@
                     <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Beach property">
                     <div class="property-preview-content">
                         <span class="property-preview-location">North Myrtle Beach, SC</span>
-                        <p>Beachfront homes with pools &amp; golf access</p>
+                        <p>Beachfront homes with pools & golf access</p>
                     </div>
                 </div>
                 <div class="property-preview-card">
@@ -1516,7 +1637,7 @@
                         alt="Pennsylvania retreat">
                     <div class="property-preview-content">
                         <span class="property-preview-location">Pennsylvania</span>
-                        <p>Countryside retreats near Hershey &amp; beyond</p>
+                        <p>Countryside retreats near Hershey & beyond</p>
                     </div>
                 </div>
             </div>
@@ -1536,7 +1657,7 @@
             <h2 class="section-title">What Property Owners Say</h2>
 
             <div class="testimonial-card">
-                <p>"E&amp;J Retreats increased our occupancy and handled everything for us — total game changer. I
+                <p>"E&J Retreats increased our occupancy and handled everything for us — total game changer. I
                     finally have passive income without the stress."</p>
                 <cite>— Property Owner, Tampa FL</cite>
             </div>
@@ -1545,7 +1666,7 @@
                 <span>Revenue optimization powered by</span>
                 <span style="font-weight: 600; color: var(--white);">PriceLabs</span>
                 <span>|</span>
-                <span>Airbnb &amp; VRBO management experience</span>
+                <span>Airbnb & VRBO management experience</span>
             </div>
         </div>
     </section>
@@ -1573,7 +1694,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <img src="images/white-long.png" alt="E&amp;J Retreats">
+                    <img src="images/white-long.png" alt="E&J Retreats">
                     <p>Professional short-term rental management that turns your property into truly passive income.</p>
                     <p>(813) 699-0509</p>
                 </div>
@@ -1592,12 +1713,12 @@
                         <li><a href="https://m.facebook.com/p/EJ-Retreats-61576666153450/" target="_blank">Facebook</a>
                         </li>
                         <li><a href="https://www.instagram.com/ejretreats" target="_blank">Instagram</a></li>
-                        <li><a href="mailto:info@ejretreats.com">Email Us</a></li>
+                        <li><a href="/cdn-cgi/l/email-protection#553c3b333a15303f27302127303421267b363a38">Email Us</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2024 E&amp;J Retreats. All rights reserved.</p>
+                <p>© 2024 E&J Retreats. All rights reserved.</p>
                 <div class="footer-cta">
                     <a href="#book-call"
                         onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Book
@@ -1611,9 +1732,7 @@
     <div class="sticky-cta">
         <div class="container">
             <p>Ready to earn more?</p>
-            <a href="#book-call" class="btn btn-primary"
-                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Book
-                Free Audit</a>
+            <a href="https://form.typeform.com/to/NJniTDDG" target="_blank" class="btn btn-primary">Get Free Rental Income Analysis</a>
         </div>
     </div>
 
@@ -1626,12 +1745,12 @@
         </div>
     </div>
 
-    <!-- Get Quote Button (Left) -->
+    <!-- Get Quote Button (Left) - UPDATED -->
     <a href="https://form.typeform.com/to/NJniTDDG?typeform-source=taplink.cc" target="_blank" class="get-quote-btn">
-        Get Quote
+        Get Free Rental Income Analysis
     </a>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Show sticky CTA on scroll (mobile)
         if (window.innerWidth <= 640) {
             window.addEventListener('scroll', function () {
