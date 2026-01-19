@@ -1101,10 +1101,7 @@ footer .copyright {
     }
 
     .get-quote-btn {
-        bottom: 80px;
-        left: 16px;
-        font-size: 0.8125rem;
-        padding: 0.625rem 1rem;
+        display: none;
     }
 
     .properties-hero {
