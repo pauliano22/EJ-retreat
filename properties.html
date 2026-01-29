@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Properties - E&J Retreats</title>
+    <meta name="description" content="Browse E&J Retreats' portfolio of premium vacation rentals in Tampa, North Myrtle Beach, Pennsylvania, and Phoenix. Book waterfront estates, beach homes, and countryside retreats.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,16 +30,30 @@
                     <img src="images/white-long.png" alt="E&J Retreats Logo">
                 </a>
             </div>
-            <nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <nav id="nav-menu">
+                <div class="mobile-nav-header">
+                    <span>Menu</span>
+                    <button class="mobile-nav-close" id="navClose" aria-label="Close menu">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="properties.html" class="active">Properties</a></li>
-                    <li><a href="https://calendly.com/ssjdproperties/30min" target="_blank" class="btn-contact">Contact</a></li>
+                    <li><a href="https://calendly.com/ejretreats1/30min" target="_blank" class="btn-contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <div class="nav-overlay" id="navOverlay"></div>
 
     <section class="properties-hero">
         <div class="container">
@@ -55,7 +70,7 @@
                 <h2 class="location-title">North Myrtle Beach, SC</h2>
                 <div class="properties-grid">
                     <div class="property-card">
-                        <img src="images/properties/myplace-holly-dr.jpg" alt="MyPlace on Holly Dr." class="property-image">
+                        <img src="images/properties/myplace-holly-dr.jpg" alt="MyPlace on Holly Dr." class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">MyPlace on Holly Dr.</h3>
                             <p class="property-location">North Myrtle Beach, SC</p>
@@ -72,7 +87,7 @@
                     </div>
 
                     <div class="property-card">
-                        <img src="images/properties/eagles-nest.jpg" alt="My Eagles Nest" class="property-image">
+                        <img src="images/properties/eagles-nest.jpg" alt="My Eagles Nest" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">My Eagles Nest</h3>
                             <p class="property-location">North Myrtle Beach, SC</p>
@@ -89,7 +104,7 @@
                     </div>
 
                     <div class="property-card">
-                        <img src="images/properties/19th-hole.jpg" alt="The 19th Hole" class="property-image">
+                        <img src="images/properties/19th-hole.jpg" alt="The 19th Hole" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">The 19th Hole</h3>
                             <p class="property-location">North Myrtle Beach, SC</p>
@@ -112,7 +127,7 @@
                 <h2 class="location-title">Pennsylvania</h2>
                 <div class="properties-grid">
                     <div class="property-card">
-                        <img src="images/properties/cocoa-ridge-retreat.webp" alt="Cocoa Ridge Retreat" class="property-image">
+                        <img src="images/properties/cocoa-ridge-retreat.webp" alt="Cocoa Ridge Retreat" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">Cocoa Ridge Retreat</h3>
                             <p class="property-location">Near Hershey, PA</p>
@@ -129,7 +144,7 @@
                     </div>
 
                     <div class="property-card">
-                        <img src="images/properties/farm-house.webp" alt="The Farm House" class="property-image">
+                        <img src="images/properties/farm-house.webp" alt="The Farm House" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">The Farm House</h3>
                             <p class="property-location">Central Pennsylvania</p>
@@ -146,7 +161,7 @@
                     </div>
 
                     <div class="property-card">
-                        <img src="images/properties/creative-home-246651.webp" alt="Creative Home Property" class="property-image">
+                        <img src="images/properties/creative-home-246651.webp" alt="Creative Home Property" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">Creative Home Property</h3>
                             <p class="property-location">Pennsylvania</p>
@@ -161,7 +176,7 @@
                     </div>
 
                     <div class="property-card">
-                        <img src="images/properties/pennsylvania-retreat-214819.webp" alt="Pennsylvania Retreat" class="property-image">
+                        <img src="images/properties/pennsylvania-retreat-214819.webp" alt="Pennsylvania Retreat" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">Pennsylvania Retreat</h3>
                             <p class="property-location">Pennsylvania</p>
@@ -182,7 +197,7 @@
                 <h2 class="location-title">Tampa, Florida</h2>
                 <div class="properties-grid">
                     <div class="property-card">
-                        <img src="images/properties/tampa-bay-getaway.webp" alt="Tampa Bay Getaway" class="property-image">
+                        <img src="images/properties/tampa-bay-getaway.webp" alt="Tampa Bay Getaway" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">Tampa Bay Getaway</h3>
                             <p class="property-location">Tampa, FL</p>
@@ -199,7 +214,7 @@
                     </div>
 
                     <div class="property-card">
-                        <img src="images/properties/tampa-urban-retreat.webp" alt="Tampa Urban Retreat" class="property-image">
+                        <img src="images/properties/tampa-urban-retreat.webp" alt="Tampa Urban Retreat" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">Tampa Urban Retreat</h3>
                             <p class="property-location">Tampa, FL</p>
@@ -216,7 +231,7 @@
                     </div>
 
                     <div class="property-card">
-                        <img src="images/properties/sunshine-state-sanctuary.webp" alt="Sunshine State Sanctuary" class="property-image">
+                        <img src="images/properties/sunshine-state-sanctuary.webp" alt="Sunshine State Sanctuary" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">Sunshine State Sanctuary</h3>
                             <p class="property-location">Tampa, FL</p>
@@ -233,7 +248,7 @@
                     </div>
 
                     <div class="property-card">
-                        <img src="images/properties/tampa-coastal-comfort.webp" alt="Tampa Coastal Comfort" class="property-image">
+                        <img src="images/properties/tampa-coastal-comfort.webp" alt="Tampa Coastal Comfort" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">Tampa Coastal Comfort</h3>
                             <p class="property-location">Tampa, FL</p>
@@ -250,7 +265,7 @@
                     </div>
 
                     <div class="property-card">
-                        <img src="images/properties/florida-paradise.webp" alt="Florida Paradise" class="property-image">
+                        <img src="images/properties/florida-paradise.webp" alt="Florida Paradise" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">Florida Paradise</h3>
                             <p class="property-location">Tampa, FL</p>
@@ -267,7 +282,7 @@
                     </div>
 
                     <div class="property-card">
-                        <img src="images/properties/tampa-premier-stay.webp" alt="Tampa Premier Stay" class="property-image">
+                        <img src="images/properties/tampa-premier-stay.webp" alt="Tampa Premier Stay" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">Tampa Premier Stay</h3>
                             <p class="property-location">Tampa, FL</p>
@@ -284,7 +299,7 @@
                     </div>
 
                     <div class="property-card">
-                        <img src="images/properties/tampa-executive-suite.webp" alt="Tampa Executive Suite" class="property-image">
+                        <img src="images/properties/tampa-executive-suite.webp" alt="Tampa Executive Suite" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">Tampa Executive Suite</h3>
                             <p class="property-location">Tampa, FL</p>
@@ -301,7 +316,7 @@
                     </div>
 
                     <div class="property-card">
-                        <img src="images/properties/tampa-central-hub.webp" alt="Tampa Central Hub" class="property-image">
+                        <img src="images/properties/tampa-central-hub.webp" alt="Tampa Central Hub" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">Tampa Central Hub</h3>
                             <p class="property-location">Tampa, FL</p>
@@ -318,7 +333,7 @@
                     </div>
 
                     <div class="property-card">
-                        <img src="images/properties/waterfront-boaters-paradise.webp" alt="Classic Waterfront Boaters Paradise" class="property-image">
+                        <img src="images/properties/waterfront-boaters-paradise.webp" alt="Classic Waterfront Boaters Paradise" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">Classic Waterfront Boaters Paradise</h3>
                             <p class="property-location">Tampa, FL</p>
@@ -335,7 +350,7 @@
                     </div>
 
                     <div class="property-card">
-                        <img src="images/properties/tampa-bay-getaway-pool.webp" alt="Tampa Bay Getaway w/Pool" class="property-image">
+                        <img src="images/properties/tampa-bay-getaway-pool.webp" alt="Tampa Bay Getaway w/Pool" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">Tampa Bay Getaway w/Pool</h3>
                             <p class="property-location">Tampa, FL</p>
@@ -352,7 +367,7 @@
                     </div>
 
                     <div class="property-card">
-                        <img src="images/properties/stunning-tampa-bay-waterfront.webp" alt="Stunning Tampa Bay Waterfront House w/Pool" class="property-image">
+                        <img src="images/properties/stunning-tampa-bay-waterfront.webp" alt="Stunning Tampa Bay Waterfront House w/Pool" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">Stunning Tampa Bay Waterfront House w/Pool</h3>
                             <p class="property-location">Tampa, FL</p>
@@ -369,7 +384,7 @@
                     </div>
 
                     <div class="property-card">
-                        <img src="images/properties/waterfront-pool-oasis.webp" alt="Waterfront 3BR Pool Oasis" class="property-image">
+                        <img src="images/properties/waterfront-pool-oasis.webp" alt="Waterfront 3BR Pool Oasis" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">Waterfront 3BR Pool Oasis w/ Dock</h3>
                             <p class="property-location">Tampa, FL</p>
@@ -386,7 +401,7 @@
                     </div>
 
                     <div class="property-card">
-                        <img src="images/properties/mini-resort-pool.webp" alt="8 Bedroom Mini Resort with Pool" class="property-image">
+                        <img src="images/properties/mini-resort-pool.webp" alt="8 Bedroom Mini Resort with Pool" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">8 Bedroom Mini Resort with Pool</h3>
                             <p class="property-location">Tampa, FL</p>
@@ -403,7 +418,7 @@
                     </div>
 
                     <div class="property-card">
-                        <img src="images/properties/mini-resort-pool2.webp" alt="Tropical 7BR Mini-Resort" class="property-image">
+                        <img src="images/properties/mini-resort-pool2.webp" alt="Tropical 7BR Mini-Resort" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">Tropical 7BR Mini-Resort w/ Pool</h3>
                             <p class="property-location">Tampa, FL</p>
@@ -420,7 +435,7 @@
                     </div>
 
                     <div class="property-card">
-                        <img src="images/properties/busch-gardens-fire-pit.webp" alt="Close to Busch Gardens" class="property-image">
+                        <img src="images/properties/busch-gardens-fire-pit.webp" alt="Close to Busch Gardens" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">Close to Busch Gardens - Fire Pit, Patio</h3>
                             <p class="property-location">Tampa, FL</p>
@@ -443,7 +458,7 @@
                 <h2 class="location-title">Phoenix, AZ</h2>
                 <div class="properties-grid">
                     <div class="property-card">
-                        <img src="images/properties/desert-oasis-retreat.webp" alt="Desert Oasis Retreat" class="property-image">
+                        <img src="images/properties/desert-oasis-retreat.webp" alt="Desert Oasis Retreat" class="property-image" loading="lazy">
                         <div class="property-content">
                             <h3 class="property-title">Desert Oasis Retreat</h3>
                             <p class="property-location">Phoenix, AZ</p>
@@ -470,7 +485,7 @@
             <div class="quote-box">
                 "We don't just manage. We protect your income, your asset, and your peace of mind—like it's ours."
             </div>
-            <a href="https://calendly.com/ssjdproperties/30min" target="_blank" class="btn btn-large">Schedule a Consultation</a>
+            <a href="https://calendly.com/ejretreats1/30min" target="_blank" class="btn btn-large">Schedule a Consultation</a>
         </div>
     </section>
 
@@ -496,12 +511,12 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="properties.html">Properties</a></li>
-                        <li><a href="https://calendly.com/ssjdproperties/30min" target="_blank">Contact</a></li>
+                        <li><a href="https://calendly.com/ejretreats1/30min" target="_blank">Contact</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>© 2024 E&J Retreats. All rights reserved.</p>
+                <p>© 2025 E&J Retreats. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -510,16 +525,21 @@
         <button class="contact-btn"></button>
         <div class="contact-popup">
             <p>Call us: <a href="tel:+18136990509">(813) 699-0509</a></p>
-            <p>Or <a href="https://calendly.com/ssjdproperties/30min" target="_blank">schedule a consultation</a></p>
+            <p>Or <a href="https://calendly.com/ejretreats1/30min" target="_blank">schedule a consultation</a></p>
         </div>
     </div>
 
-    <!-- UPDATED Get Quote Button -->
-    <a href="https://form.typeform.com/to/NJniTDDG?typeform-source=taplink.cc" target="_blank" class="get-quote-btn">
-        Get Free Rental Income Analysis
-    </a>
-
     <script>
+        // Header scroll shadow
+        var header = document.querySelector('header');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 20) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
         document.addEventListener('DOMContentLoaded', function() {
             var contactBtn = document.querySelector('.contact-btn');
             var contactPopup = document.querySelector('.contact-popup');
@@ -532,6 +552,64 @@
                 if (!event.target.closest('.sticky-contact') && contactPopup.classList.contains('show')) {
                     contactPopup.classList.remove('show');
                 }
+            });
+
+            // Hamburger menu toggle
+            var hamburger = document.getElementById('hamburger');
+            var navMenu = document.getElementById('nav-menu');
+            var navOverlay = document.getElementById('navOverlay');
+            var navClose = document.getElementById('navClose');
+
+            function toggleMenu() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('open');
+                navOverlay.classList.toggle('active');
+                document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+            }
+
+            hamburger.addEventListener('click', toggleMenu);
+            navOverlay.addEventListener('click', toggleMenu);
+            navClose.addEventListener('click', toggleMenu);
+
+            // Close menu when clicking a nav link
+            navMenu.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    if (navMenu.classList.contains('open')) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            // Scroll animations with Intersection Observer
+            var animateSelectors = [
+                '.location-title',
+                '.property-card',
+                '.quote-box'
+            ];
+
+            animateSelectors.forEach(function(selector) {
+                document.querySelectorAll(selector).forEach(function(el) {
+                    el.classList.add('fade-in');
+                });
+            });
+
+            var fadeElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
+
+            var observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            fadeElements.forEach(function(el) {
+                observer.observe(el);
             });
         });
     </script>

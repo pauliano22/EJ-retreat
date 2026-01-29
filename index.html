@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E&J Retreats - Hands-Off Airbnb Management</title>
+    <meta name="description" content="E&J Retreats offers full-service short-term rental management in Tampa, North Myrtle Beach, Pennsylvania, and Phoenix. We handle pricing, guests, cleaning, and maintenance so you earn more while doing less.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,1134 +14,18 @@
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <link rel="stylesheet" href="css/style.css">
-    <!-- Additional styles -->
-    <style>
-        :root {
-            --accent: #007d47;
-            --accent-light: #00a35c;
-            --accent-dark: #005c34;
-            --white: #ffffff;
-            --gray-50: #f9fafb;
-            --gray-100: #f3f4f6;
-            --gray-200: #e5e7eb;
-            --gray-300: #d1d5db;
-            --gray-400: #9ca3af;
-            --gray-500: #6b7280;
-            --gray-600: #4b5563;
-            --gray-700: #374151;
-            --gray-800: #1f2937;
-            --gray-900: #111827;
-            --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            --radius: 8px;
-            --radius-lg: 12px;
-            --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
-            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font);
-            line-height: 1.6;
-            color: var(--gray-800);
-            background: var(--white);
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .container {
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 24px;
-            border-radius: var(--radius);
-            font-weight: 600;
-            font-size: 0.9375rem;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: var(--white);
-        }
-
-        .btn-primary:hover {
-            background: var(--accent-dark);
-            transform: translateY(-1px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn-secondary {
-            background: var(--white);
-            color: var(--gray-700);
-            border: 1px solid var(--gray-300);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--gray-400);
-            background: var(--gray-50);
-            color: var(--gray-900);
-        }
-
-        .btn-large {
-            padding: 16px 32px;
-            font-size: 1rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 64px 0 80px;
-            background: linear-gradient(180deg, var(--white) 0%, var(--gray-50) 100%);
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            /* This makes the image side 20% wider than the text side */
-            gap: 48px;
-            align-items: center;
-        }
-
-        .hero-content h1 {
-            font-size: 2.75rem;
-            font-weight: 700;
-            line-height: 1.15;
-            color: var(--gray-900);
-            margin-bottom: 16px;
-            letter-spacing: -0.02em;
-        }
-
-        .hero-content .subtitle {
-            font-size: 1.1875rem;
-            color: var(--gray-600);
-            margin-bottom: 32px;
-            line-height: 1.6;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 32px;
-            flex-wrap: wrap;
-        }
-
-        .trust-bar {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            padding-top: 24px;
-            border-top: 1px solid var(--gray-200);
-            flex-wrap: wrap;
-        }
-
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.875rem;
-            color: var(--gray-600);
-        }
-
-        .trust-item svg {
-            width: 18px;
-            height: 18px;
-            color: var(--accent);
-        }
-
-        .hero-images {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-
-        .hero-images img {
-            width: 100%;
-            max-height: 400px;
-            /* Adjust this number to your liking */
-            object-fit: cover;
-            border-radius: 40px;
-        }
-
-        .hero-images img:first-child {
-            grid-row: span 2;
-            height: 100%;
-        }
-
-        .hero-badges {
-            margin-top: 16px;
-        }
-
-        .badge-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.9375rem;
-            color: var(--gray-700);
-            margin-bottom: 8px;
-        }
-
-        .badge-item svg {
-            width: 20px;
-            height: 20px;
-            color: var(--accent);
-            flex-shrink: 0;
-        }
-
-        /* Section Styling */
-        .section {
-            padding: 80px 0;
-        }
-
-        .section-alt {
-            background: var(--gray-50);
-        }
-
-        .section-dark {
-            background: var(--gray-900);
-            color: var(--white);
-        }
-
-        .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 16px;
-            color: var(--gray-900);
-            letter-spacing: -0.02em;
-        }
-
-        .section-dark .section-title {
-            color: var(--white);
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--gray-600);
-            font-size: 1.0625rem;
-            max-width: 640px;
-            margin: 0 auto 48px;
-        }
-
-        .section-dark .section-subtitle {
-            color: var(--gray-400);
-        }
-
-        /* Benefits Grid */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .benefit-card {
-            background: var(--white);
-            border: 1px solid var(--gray-200);
-            border-radius: var(--radius-lg);
-            padding: 32px 24px;
-            text-align: center;
-            transition: all 0.2s ease;
-        }
-
-        .benefit-card:hover {
-            box-shadow: var(--shadow-lg);
-            border-color: var(--gray-300);
-        }
-
-        .benefit-icon {
-            width: 56px;
-            height: 56px;
-            background: var(--gray-50);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-        }
-
-        .benefit-icon svg {
-            width: 28px;
-            height: 28px;
-            color: var(--accent);
-        }
-
-        .benefit-card h3 {
-            font-size: 1.125rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: var(--gray-900);
-        }
-
-        .benefit-card p {
-            font-size: 0.9375rem;
-            color: var(--gray-600);
-            line-height: 1.6;
-        }
-
-        .benefit-cta {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .benefit-cta p {
-            font-size: 1.0625rem;
-            color: var(--gray-700);
-            margin-bottom: 20px;
-        }
-
-        /* Services Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-        }
-
-        .service-card {
-            background: var(--white);
-            border: 1px solid var(--gray-200);
-            border-radius: var(--radius-lg);
-            padding: 28px;
-        }
-
-        .service-card-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-
-        .service-card-header svg {
-            width: 24px;
-            height: 24px;
-            color: var(--accent);
-        }
-
-        .service-card-header h3 {
-            font-size: 1.0625rem;
-            font-weight: 600;
-            color: var(--gray-900);
-        }
-
-        .service-card ul {
-            list-style: none;
-        }
-
-        .service-card li {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            font-size: 0.9375rem;
-            color: var(--gray-600);
-            margin-bottom: 10px;
-        }
-
-        .service-card li svg {
-            width: 18px;
-            height: 18px;
-            color: var(--accent);
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        .service-note {
-            text-align: center;
-            margin-top: 40px;
-            padding: 24px;
-            background: var(--gray-100);
-            border-radius: var(--radius-lg);
-        }
-
-        .service-note p {
-            font-size: 1.0625rem;
-            color: var(--gray-700);
-            font-weight: 500;
-        }
-
-        /* Comparison Table */
-        .comparison-table {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            border: 1px solid var(--gray-200);
-        }
-
-        .comparison-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .comparison-header {
-            background: var(--gray-100);
-            font-weight: 600;
-        }
-
-        .comparison-cell {
-            padding: 16px 24px;
-            border-bottom: 1px solid var(--gray-200);
-            font-size: 0.9375rem;
-        }
-
-        .comparison-cell:first-child {
-            border-right: 1px solid var(--gray-200);
-        }
-
-        .comparison-header .comparison-cell {
-            color: var(--gray-700);
-        }
-
-        .comparison-row:last-child .comparison-cell {
-            border-bottom: none;
-        }
-
-        .comparison-cell.highlight {
-            background: rgba(0, 125, 71, 0.05);
-            color: var(--accent-dark);
-            font-weight: 500;
-        }
-
-        .comparison-note {
-            text-align: center;
-            margin-top: 32px;
-            padding: 20px;
-            background: var(--gray-50);
-            border-radius: var(--radius);
-        }
-
-        .comparison-note p {
-            color: var(--gray-600);
-            font-size: 0.9375rem;
-        }
-
-        /* Fit Section */
-        .fit-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .fit-card {
-            padding: 32px;
-            border-radius: var(--radius-lg);
-        }
-
-        .fit-card.good {
-            background: rgba(0, 125, 71, 0.08);
-            border: 1px solid rgba(0, 125, 71, 0.2);
-        }
-
-        .fit-card.bad {
-            background: var(--gray-50);
-            border: 1px solid var(--gray-200);
-        }
-
-        .fit-card h3 {
-            font-size: 1.125rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .fit-card.good h3 {
-            color: var(--accent-dark);
-        }
-
-        .fit-card.bad h3 {
-            color: var(--gray-700);
-        }
-
-        .fit-card ul {
-            list-style: none;
-        }
-
-        .fit-card li {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            font-size: 0.9375rem;
-            margin-bottom: 12px;
-        }
-
-        .fit-card.good li {
-            color: var(--gray-700);
-        }
-
-        .fit-card.bad li {
-            color: var(--gray-500);
-        }
-
-        .fit-card li svg {
-            width: 20px;
-            height: 20px;
-            flex-shrink: 0;
-            margin-top: 1px;
-        }
-
-        .fit-card.good li svg {
-            color: var(--accent);
-        }
-
-        .fit-card.bad li svg {
-            color: var(--gray-400);
-        }
-
-        /* Pricing Section */
-        .pricing-card {
-            max-width: 600px;
-            margin: 0 auto;
-            background: var(--white);
-            border: 2px solid var(--accent);
-            border-radius: var(--radius-lg);
-            padding: 40px;
-            text-align: center;
-        }
-
-        .pricing-card h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--gray-900);
-            margin-bottom: 8px;
-        }
-
-        .pricing-amount {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--accent);
-            margin-bottom: 8px;
-        }
-
-        .pricing-note {
-            color: var(--gray-500);
-            font-size: 0.9375rem;
-            margin-bottom: 24px;
-        }
-
-        .pricing-features {
-            text-align: left;
-            margin-bottom: 32px;
-        }
-
-        .pricing-features li {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.9375rem;
-            color: var(--gray-700);
-            margin-bottom: 12px;
-            list-style: none;
-        }
-
-        .pricing-features li svg {
-            width: 20px;
-            height: 20px;
-            color: var(--accent);
-        }
-
-        .pricing-limit {
-            margin-top: 24px;
-            padding-top: 20px;
-            border-top: 1px solid var(--gray-200);
-            font-size: 0.875rem;
-            color: var(--gray-500);
-        }
-
-        /* Properties Preview */
-        .properties-preview {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .property-preview-card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            border: 1px solid var(--gray-200);
-            transition: all 0.2s ease;
-        }
-
-        .property-preview-card:hover {
-            box-shadow: var(--shadow-lg);
-            border-color: var(--gray-300);
-        }
-
-        .property-preview-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-
-        .property-preview-content {
-            padding: 20px;
-        }
-
-        .property-preview-location {
-            display: inline-block;
-            background: var(--accent);
-            color: var(--white);
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 4px 10px;
-            border-radius: 4px;
-            margin-bottom: 8px;
-        }
-
-        .property-preview-content p {
-            color: var(--gray-600);
-            font-size: 0.9375rem;
-            margin: 0;
-        }
-
-        .properties-cta {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 32px;
-        }
-
-        /* Testimonials */
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: var(--radius-lg);
-            padding: 32px;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .testimonial-card p {
-            font-size: 1.125rem;
-            font-style: italic;
-            color: var(--gray-300);
-            margin-bottom: 20px;
-            line-height: 1.7;
-        }
-
-        .testimonial-card cite {
-            font-style: normal;
-            color: var(--gray-400);
-            font-size: 0.9375rem;
-        }
-
-        .trust-logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            margin-top: 48px;
-            flex-wrap: wrap;
-        }
-
-        .trust-logos img {
-            height: 32px;
-            opacity: 0.5;
-        }
-
-        .trust-logos span {
-            color: var(--gray-400);
-            font-size: 0.875rem;
-        }
-
-        /* Calendly Section */
-        .calendly-section {
-            padding: 80px 0;
-            background: var(--gray-50);
-        }
-
-        .calendly-wrapper {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .calendly-wrapper h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: var(--gray-900);
-        }
-
-        .calendly-wrapper .subtitle {
-            color: var(--gray-600);
-            font-size: 1.0625rem;
-            margin-bottom: 32px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .calendly-inline-widget {
-            min-width: 320px;
-            height: 700px;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            background: var(--white);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .calendly-note {
-            margin-top: 20px;
-            font-size: 0.9375rem;
-            color: var(--gray-500);
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--gray-900);
-            color: var(--gray-400);
-            padding: 48px 0 32px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 48px;
-            margin-bottom: 32px;
-        }
-
-        .footer-brand img {
-            height: 40px;
-            margin-bottom: 16px;
-            opacity: 0.9;
-        }
-
-        .footer-brand p {
-            font-size: 0.875rem;
-            line-height: 1.6;
-            margin-bottom: 16px;
-        }
-
-        .footer h4 {
-            color: var(--white);
-            font-size: 0.9375rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .footer ul {
-            list-style: none;
-        }
-
-        .footer li {
-            margin-bottom: 10px;
-        }
-
-        .footer a {
-            color: var(--gray-400);
-            text-decoration: none;
-            font-size: 0.875rem;
-            transition: color 0.2s;
-        }
-
-        .footer a:hover {
-            color: var(--white);
-        }
-
-        .footer-bottom {
-            padding-top: 24px;
-            border-top: 1px solid var(--gray-800);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-
-        .footer-bottom p {
-            font-size: 0.8125rem;
-        }
-
-        .footer-cta {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .footer-cta a {
-            color: var(--accent-light);
-            font-weight: 500;
-        }
-
-        /* Sticky CTA */
-        .sticky-cta {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--white);
-            border-top: 1px solid var(--gray-200);
-            padding: 12px 24px;
-            display: none;
-            z-index: 99;
-            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .sticky-cta .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .sticky-cta p {
-            font-weight: 500;
-            color: var(--gray-700);
-        }
-
-        /* Sticky Contact Button (Right) */
-        .sticky-contact {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 1000;
-        }
-
-        .contact-btn {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            background-color: var(--gray-900);
-            color: var(--white);
-            border: none;
-            font-size: 1.25rem;
-            cursor: pointer;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .contact-btn:hover {
-            background-color: var(--gray-700);
-            transform: translateY(-2px);
-        }
-
-        .contact-btn::before {
-            content: "\260E";
-            font-size: 1.5rem;
-        }
-
-        .contact-popup {
-            position: absolute;
-            bottom: 70px;
-            right: 0;
-            background-color: var(--white);
-            padding: 20px;
-            border-radius: var(--radius-lg);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-            width: 260px;
-            display: none;
-            text-align: left;
-            border: 1px solid var(--gray-200);
-        }
-
-        .contact-popup.show {
-            display: block;
-            animation: slideUp 0.2s ease-out;
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .contact-popup p {
-            margin: 8px 0;
-            font-size: 0.9375rem;
-            color: var(--gray-600);
-        }
-
-        .contact-popup a {
-            color: var(--accent);
-            font-weight: 500;
-            text-decoration: none;
-        }
-
-        .contact-popup a:hover {
-            color: var(--accent-dark);
-        }
-
-        /* Get Quote Button (Left) */
-        .get-quote-btn {
-            position: fixed;
-            bottom: 24px;
-            left: 24px;
-            z-index: 1001;
-            background-color: var(--accent);
-            color: var(--white);
-            padding: 14px 20px;
-            border-radius: var(--radius);
-            font-weight: 600;
-            font-size: 0.9375rem;
-            text-decoration: none;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            transition: all 0.2s ease;
-        }
-
-        .get-quote-btn:hover {
-            background-color: var(--accent-dark);
-            color: var(--white);
-            transform: translateY(-2px);
-        }
-
-        /* NEW: Proof Section Styles */
-        .proof-section {
-            background: var(--white);
-            padding: 60px 0;
-        }
-
-        .proof-container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .case-study-box {
-            background: linear-gradient(135deg, rgba(0, 125, 71, 0.05) 0%, rgba(0, 125, 71, 0.02) 100%);
-            border-left: 4px solid var(--accent);
-            border-radius: var(--radius-lg);
-            padding: 32px;
-            margin-bottom: 40px;
-        }
-
-        .case-study-badge {
-            display: inline-block;
-            background: var(--accent);
-            color: var(--white);
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            padding: 6px 12px;
-            border-radius: 4px;
-            margin-bottom: 16px;
-            text-transform: uppercase;
-        }
-
-        .case-study-box h3 {
-            font-size: 1.5rem;
-            color: var(--gray-900);
-            margin-bottom: 16px;
-        }
-
-        .case-study-box p {
-            font-size: 1rem;
-            color: var(--gray-700);
-            line-height: 1.8;
-            margin-bottom: 12px;
-        }
-
-        .case-study-highlight {
-            font-weight: 600;
-            color: var(--accent-dark);
-        }
-
-        .partnership-box {
-            background: var(--gray-50);
-            border: 1px solid var(--gray-200);
-            border-radius: var(--radius);
-            padding: 24px;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .partnership-box p {
-            font-size: 1rem;
-            color: var(--gray-700);
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        .partnership-box strong {
-            color: var(--gray-900);
-        }
-
-        .reviews-placeholder {
-            background: var(--gray-50);
-            border: 2px dashed var(--gray-300);
-            border-radius: var(--radius-lg);
-            padding: 48px 32px;
-            text-align: center;
-        }
-
-        .reviews-placeholder p {
-            color: var(--gray-500);
-            font-size: 0.9375rem;
-            margin: 0;
-        }
-
-        /* Responsive */
-        @media (max-width: 968px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .hero-content h1 {
-                font-size: 2.25rem;
-            }
-
-            .hero-images {
-                max-width: 500px;
-                margin: 0 auto;
-            }
-
-            .benefits-grid {
-                grid-template-columns: 1fr;
-                max-width: 400px;
-                margin: 0 auto;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .fit-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .properties-preview {
-                grid-template-columns: 1fr;
-                max-width: 400px;
-                margin: 0 auto;
-            }
-
-            .properties-cta {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .properties-cta .btn {
-                width: 100%;
-                max-width: 280px;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .section {
-                padding: 60px 0;
-            }
-
-            .hero {
-                padding: 40px 0 60px;
-            }
-
-            .hero-content h1 {
-                font-size: 1.875rem;
-            }
-
-            .section-title {
-                font-size: 1.625rem;
-            }
-
-            .header-phone {
-                display: none;
-            }
-
-            .header-link {
-                display: none;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .hero-buttons .btn {
-                width: 100%;
-            }
-
-            .trust-bar {
-                justify-content: center;
-            }
-
-            .comparison-cell {
-                padding: 12px 16px;
-                font-size: 0.875rem;
-            }
-
-            .sticky-cta {
-                display: block;
-                bottom: 0;
-            }
-
-            .sticky-cta p {
-                display: none;
-            }
-
-            .sticky-cta .btn {
-                width: 100%;
-            }
-
-            .sticky-contact {
-                bottom: 80px;
-                right: 16px;
-            }
-
-            .contact-btn {
-                width: 50px;
-                height: 50px;
-            }
-
-            .get-quote-btn {
-                bottom: 80px;
-                left: 16px;
-                padding: 12px 16px;
-                font-size: 0.875rem;
-            }
-
-            .proof-section {
-                padding: 40px 0;
-            }
-
-            .case-study-box {
-                padding: 24px;
-            }
-
-            .case-study-box h3 {
-                font-size: 1.25rem;
-            }
-        }
-    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJJL0RNSEL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-TJJL0RNSEL');
+    </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TJJL0RNSEL"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
 
-    gtag('config', 'G-TJJL0RNSEL');
-</script>
-
-<body>
+<body class="page-home">
     <!-- Header -->
     <header>
         <div class="container">
@@ -1149,17 +34,31 @@
                     <img src="images/white-long.png" alt="E&J Retreats Logo">
                 </a>
             </div>
-            <nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <nav id="nav-menu">
+                <div class="mobile-nav-header">
+                    <span>Menu</span>
+                    <button class="mobile-nav-close" id="navClose" aria-label="Close menu">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="properties.html" class="active">Properties</a></li>
-                    <li><a href="https://calendly.com/ssjdproperties/30min" target="_blank"
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="https://calendly.com/ejretreats1/30min" target="_blank"
                             class="btn-contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <div class="nav-overlay" id="navOverlay"></div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -1182,13 +81,6 @@
                         <div class="trust-item">
                             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span>Trusted by 50+ owners</span>
-                        </div>
-                        <div class="trust-item">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                             <span>24/7 guest support</span>
@@ -1207,7 +99,7 @@
 
                 <div>
                     <div class="hero-images">
-                        <img src="images/properties/front.png" alt="Luxury vacation rental">
+                        <img src="images/properties/front.png" alt="Luxury vacation rental" loading="lazy">
                     </div>
                     <div class="hero-badges">
                         <div class="badge-item">
@@ -1252,13 +144,9 @@
 
                 <!-- Partnership -->
                 <div class="partnership-box">
-                    <p><strong>Investor Partnership:</strong> We work directly with Lana Moriece, Realtor in Sarasota, FL, who partners with us to help investors acquire and operate high-performing short-term rental properties.</p>
+                    <p><strong>Trusted by Real Estate Professionals:</strong> Licensed realtors and investment advisors refer their clients to E&J Retreats because they trust us to protect and grow their clients' rental income. We work alongside real estate professionals across Florida to help investors acquire and operate high-performing short-term rental properties.</p>
                 </div>
 
-                <!-- Reviews Placeholder -->
-                <div class="reviews-placeholder">
-                    <p>Owner reviews and testimonials coming soon</p>
-                </div>
             </div>
         </div>
     </section>
@@ -1310,6 +198,32 @@
                 <a href="#book-call" class="btn btn-primary btn-large"
                     onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Book
                     a Call to Compare Your Current Performance</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Our Track Record</h2>
+            <p class="section-subtitle">Results across properties we manage</p>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">20%</div>
+                    <div class="metric-label">Higher Revenue</div>
+                    <p>Our properties earn an average of 20% more through strategic pricing and optimized listings.</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">95%</div>
+                    <div class="metric-label">Occupancy Rate</div>
+                    <p>Market-specific optimization delivers consistently high occupancy across our portfolio.</p>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">4.9/5</div>
+                    <div class="metric-label">Guest Rating</div>
+                    <p>Hands-on management ensures exceptional guest experiences and stellar reviews.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1563,6 +477,20 @@
                             </svg>
                             You don't want to improve guest experience or pricing strategy
                         </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                            Your property isn't ready for guests and you're not open to upgrades
+                        </li>
+                        <li>
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                            You're looking for the cheapest option rather than the best results
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -1619,14 +547,14 @@
             <div class="properties-preview">
                 <div class="property-preview-card">
                     <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600"
-                        alt="Luxury vacation rental">
+                        alt="Luxury vacation rental" loading="lazy">
                     <div class="property-preview-content">
                         <span class="property-preview-location">Tampa, FL</span>
                         <p>Waterfront estates, mini-resorts, urban retreats</p>
                     </div>
                 </div>
                 <div class="property-preview-card">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Beach property">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Beach property" loading="lazy">
                     <div class="property-preview-content">
                         <span class="property-preview-location">North Myrtle Beach, SC</span>
                         <p>Beachfront homes with pools & golf access</p>
@@ -1634,7 +562,7 @@
                 </div>
                 <div class="property-preview-card">
                     <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600"
-                        alt="Pennsylvania retreat">
+                        alt="Pennsylvania retreat" loading="lazy">
                     <div class="property-preview-content">
                         <span class="property-preview-location">Pennsylvania</span>
                         <p>Countryside retreats near Hershey & beyond</p>
@@ -1718,7 +646,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2024 E&J Retreats. All rights reserved.</p>
+                <p>© 2025 E&J Retreats. All rights reserved.</p>
                 <div class="footer-cta">
                     <a href="#book-call"
                         onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Book
@@ -1745,12 +673,17 @@
         </div>
     </div>
 
-    <!-- Get Quote Button (Left) - UPDATED -->
-    <a href="https://form.typeform.com/to/NJniTDDG?typeform-source=taplink.cc" target="_blank" class="get-quote-btn">
-        Get Free Rental Income Analysis
-    </a>
-
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Header scroll shadow
+        var header = document.querySelector('header');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 20) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
         // Show sticky CTA on scroll (mobile)
         if (window.innerWidth <= 640) {
             window.addEventListener('scroll', function () {
@@ -1775,6 +708,73 @@
             if (!event.target.closest('.sticky-contact') && popup.classList.contains('show')) {
                 popup.classList.remove('show');
             }
+        });
+
+        // Hamburger menu toggle
+        var hamburger = document.getElementById('hamburger');
+        var navMenu = document.getElementById('nav-menu');
+        var navOverlay = document.getElementById('navOverlay');
+        var navClose = document.getElementById('navClose');
+
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('open');
+            navOverlay.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+        navOverlay.addEventListener('click', toggleMenu);
+        navClose.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking a nav link
+        navMenu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                if (navMenu.classList.contains('open')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Scroll animations with Intersection Observer
+        // Auto-add fade-in to common elements
+        var animateSelectors = [
+            '.section-title',
+            '.section-subtitle',
+            '.benefit-card',
+            '.metric-card',
+            '.service-card',
+            '.fit-card',
+            '.pricing-card',
+            '.property-preview-card',
+            '.testimonial-card',
+            '.case-study-box',
+            '.comparison-table'
+        ];
+
+        animateSelectors.forEach(function(selector) {
+            document.querySelectorAll(selector).forEach(function(el) {
+                el.classList.add('fade-in');
+            });
+        });
+
+        var fadeElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
+
+        var observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        fadeElements.forEach(function(el) {
+            observer.observe(el);
         });
     </script>
 </body>

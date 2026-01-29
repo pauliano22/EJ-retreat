@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Property Management Services - E&J Retreats</title>
+    <meta name="description" content="Explore E&J Retreats' full-service property management: dynamic pricing, 24/7 guest support, professional cleaning, maintenance coordination, and market-specific amenity optimization.">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="icon" href="images/black-small.png" type="image/png">
@@ -27,18 +28,32 @@
                     <img src="images/white-long.png" alt="E&J Retreats Logo">
                 </a>
             </div>
-            <nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <nav id="nav-menu">
+                <div class="mobile-nav-header">
+                    <span>Menu</span>
+                    <button class="mobile-nav-close" id="navClose" aria-label="Close menu">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html" class="active">Services</a></li>
                     <li><a href="properties.html">Properties</a></li>
-                    <li><a href="https://calendly.com/ssjdproperties/30min" target="_blank" class="btn-contact">Contact</a></li>
+                    <li><a href="https://calendly.com/ejretreats1/30min" target="_blank" class="btn-contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <div class="nav-overlay" id="navOverlay"></div>
 
-    <section class="hero" style="background: linear-gradient(rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.75)), 
+    <section class="hero" style="background: linear-gradient(rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.75)),
                 url('https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;">
         <div class="container">
             <div class="hero-content">
@@ -332,7 +347,7 @@
                 </div>
                 <div class="contact-item">
                     <h3>Schedule Online</h3>
-                    <p><a href="https://calendly.com/ssjdproperties/30min" target="_blank">Book a Consultation</a></p>
+                    <p><a href="https://calendly.com/ejretreats1/30min" target="_blank">Book a Consultation</a></p>
                 </div>
                 <div class="contact-item">
                     <h3>Follow Us</h3>
@@ -353,7 +368,7 @@
             <div class="quote-box">
                 "We don't just manage. We protect your income, your asset, and your peace of mind—like it's ours."
             </div>
-            <a href="https://calendly.com/ssjdproperties/30min" target="_blank" class="btn btn-large">Schedule a Consultation</a>
+            <a href="https://calendly.com/ejretreats1/30min" target="_blank" class="btn btn-large">Schedule a Consultation</a>
         </div>
     </section>
 
@@ -378,12 +393,12 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="properties.html">Properties</a></li>
-                        <li><a href="https://calendly.com/ssjdproperties/30min" target="_blank">Contact</a></li>
+                        <li><a href="https://calendly.com/ejretreats1/30min" target="_blank">Contact</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>© 2024 E&J Retreats. All rights reserved.</p>
+                <p>© 2025 E&J Retreats. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -392,16 +407,21 @@
         <button class="contact-btn"></button>
         <div class="contact-popup">
             <p>Call us: <a href="tel:+18136990509">(813) 699-0509</a></p>
-            <p>Or <a href="https://calendly.com/ssjdproperties/30min" target="_blank">schedule a consultation</a></p>
+            <p>Or <a href="https://calendly.com/ejretreats1/30min" target="_blank">schedule a consultation</a></p>
         </div>
     </div>
 
-    <!-- UPDATED Get Quote Button -->
-    <a href="https://form.typeform.com/to/NJniTDDG?typeform-source=taplink.cc" target="_blank" class="get-quote-btn">
-        Get Free Rental Income Analysis
-    </a>
-
     <script>
+        // Header scroll shadow
+        var header = document.querySelector('header');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 20) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
         document.addEventListener('DOMContentLoaded', function() {
             var accordionTitles = document.querySelectorAll('.accordion-title');
             
@@ -435,6 +455,68 @@
                 if (!event.target.closest('.sticky-contact') && contactPopup.classList.contains('show')) {
                     contactPopup.classList.remove('show');
                 }
+            });
+
+            // Hamburger menu toggle
+            var hamburger = document.getElementById('hamburger');
+            var navMenu = document.getElementById('nav-menu');
+            var navOverlay = document.getElementById('navOverlay');
+            var navClose = document.getElementById('navClose');
+
+            function toggleMenu() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('open');
+                navOverlay.classList.toggle('active');
+                document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+            }
+
+            hamburger.addEventListener('click', toggleMenu);
+            navOverlay.addEventListener('click', toggleMenu);
+            navClose.addEventListener('click', toggleMenu);
+
+            // Close menu when clicking a nav link
+            navMenu.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    if (navMenu.classList.contains('open')) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            // Scroll animations with Intersection Observer
+            var animateSelectors = [
+                'h2',
+                '.card',
+                '.step',
+                '.highlight-box',
+                '.accordion-item',
+                '.contact-item',
+                '.quote-box'
+            ];
+
+            animateSelectors.forEach(function(selector) {
+                document.querySelectorAll(selector).forEach(function(el) {
+                    el.classList.add('fade-in');
+                });
+            });
+
+            var fadeElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
+
+            var observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            fadeElements.forEach(function(el) {
+                observer.observe(el);
             });
         });
     </script>
