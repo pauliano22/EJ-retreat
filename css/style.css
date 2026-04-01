@@ -279,18 +279,26 @@ h3 { font-size: 1.25rem; font-weight: 700; }
 .problem-item span { font-size: .95rem; color: var(--gray-700); }
 
 /* ── Section 2+3: Authority + Dashboard ────────── */
-.authority-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start;
+.authority-checklist { max-width: 860px; margin: 0 auto; }
+.authority-checklist-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px 48px;
 }
-.authority-list { margin: 28px 0 24px; }
-.authority-list li {
+.authority-checklist-grid li {
   display: flex; align-items: flex-start; gap: 10px;
-  padding: 8px 0; font-size: .97rem; color: var(--gray-700);
+  padding: 8px 0; font-size: .97rem; color: var(--gray-700); list-style: none;
 }
-.authority-list li i { color: var(--orange); margin-top: 4px; flex-shrink: 0; }
+.authority-checklist-grid li i { color: var(--orange); margin-top: 4px; flex-shrink: 0; }
 .authority-note {
   font-size: .88rem; color: var(--gray-500); font-style: italic;
   margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--gray-200);
+  text-align: center;
+}
+.dash-preview-img {
+  width: 100%; border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+}
+@media(max-width:600px) {
+  .authority-checklist-grid { grid-template-columns: 1fr; }
 }
 
 /* Dashboard card (reusable) */
