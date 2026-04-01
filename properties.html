@@ -1,621 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Properties - E&J Retreats</title>
-    <meta name="description" content="Browse E&J Retreats' portfolio of premium vacation rentals in Tampa, North Myrtle Beach, Pennsylvania, and Phoenix. Book waterfront estates, beach homes, and countryside retreats.">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/black-small.png" type="image/png">
-    <link rel="shortcut icon" href="images/black-small.png" type="image/png">
-    <!-- Leadsy AI Pixel -->
-    <script id="vtag-ai-js" async src="https://r2.leadsy.ai/tag.js" data-pid="ypf3xwz1YhqR3hsP" data-version="062024"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Properties — E&amp;J Retreats</title>
+  <meta name="description" content="Browse E&J Retreats' portfolio of premium vacation rentals in Tampa, North Myrtle Beach, Pennsylvania, and Phoenix. Book waterfront estates, beach homes, and countryside retreats." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Calendly widget -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+  <!-- Leadsy AI Pixel -->
+  <script id="vtag-ai-js" async src="https://r2.leadsy.ai/tag.js" data-pid="ypf3xwz1YhqR3hsP" data-version="062024"></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJJL0RNSEL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJJL0RNSEL');
+  </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TJJL0RNSEL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TJJL0RNSEL');
-</script>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/white-long.png" alt="E&J Retreats Logo">
-                </a>
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-            <nav id="nav-menu">
-                <div class="mobile-nav-header">
-                    <span>Menu</span>
-                    <button class="mobile-nav-close" id="navClose" aria-label="Close menu">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                        </svg>
-                    </button>
-                </div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="properties.html" class="active">Properties</a></li>
-                    <li><a href="https://calendly.com/ejretreats1/30min" target="_blank" class="btn-contact">Contact</a></li>
-                </ul>
-            </nav>
+
+<!-- ── Navigation ───────────────────────────────── -->
+<header id="site-header">
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="E&amp;J Retreats" />
+        <span class="nav-tagline">Helping your property perform at its full revenue potential</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="properties.html" class="active">Properties</a>
+        <a href="index.html#revenue-report">Revenue Report</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="index.html#revenue-report" class="btn btn-primary">Get Free Revenue Report</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="index.html#how-it-works">How It Works</a>
+  <a href="index.html#pricing">Pricing</a>
+  <a href="properties.html">Properties</a>
+  <a href="index.html#revenue-report">Revenue Report</a>
+  <a href="contact.html">Contact</a>
+  <a href="index.html#revenue-report" class="btn btn-primary btn-full mobile-cta">Get Free Revenue Report</a>
+</nav>
+<div class="mobile-overlay" id="mobile-overlay"></div>
+
+<!-- ── Properties Hero ─────────────────────────── -->
+<section class="properties-hero">
+  <div class="container">
+    <span class="section-label">Our Portfolio</span>
+    <h1>Our Managed Properties</h1>
+    <p style="font-size:1.05rem;margin-top:12px;max-width:600px;margin-left:auto;margin-right:auto;color:rgba(255,255,255,.65);">
+      Discover our carefully curated collection of premium vacation rentals, each personally managed with our signature hands-on approach.
+    </p>
+  </div>
+</section>
+
+<!-- ── Properties List ─────────────────────────── -->
+<section class="section">
+  <div class="container">
+
+    <!-- North Myrtle Beach -->
+    <div class="location-section">
+      <h2 class="location-title">North Myrtle Beach, SC</h2>
+      <div class="properties-grid">
+        <div class="property-card fade-in">
+          <img src="images/properties/myplace-holly-dr.jpg" alt="MyPlace on Holly Dr." class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">MyPlace on Holly Dr.</h3>
+            <p class="property-location">North Myrtle Beach, SC</p>
+            <div class="property-features"><span>10 Bedrooms</span><span>&bull;</span><span>Sleeps 20</span><span>&bull;</span><span>Pool &amp; Hot Tub</span></div>
+            <p>Luxury beachfront retreat with pool, hot tub, and stunning golf course views. Perfect for large groups seeking the ultimate beach vacation experience.</p>
+            <a href="https://myplace4u.hospitable.rentals/" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
         </div>
-    </header>
-    <div class="nav-overlay" id="navOverlay"></div>
 
-    <section class="properties-hero">
-        <div class="container">
-            <h1>Our Managed Properties</h1>
-            <p style="font-size: 1.125rem; margin-top: 1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                Discover our carefully curated collection of premium vacation rentals, each personally managed with our signature hands-on approach.</p>
-            <a href="https://ejretreats.bookeddirectly.com/g" target="_blank" class="btn btn-primary btn-large" style="margin-top: 1.5rem; display: inline-block;">Book Direct &rarr; Save More</a>
+        <div class="property-card fade-in delay-1">
+          <img src="images/properties/eagles-nest.jpg" alt="My Eagles Nest" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">My Eagles Nest</h3>
+            <p class="property-location">North Myrtle Beach, SC</p>
+            <div class="property-features"><span>5 Bedrooms</span><span>&bull;</span><span>Sleeps 10</span><span>&bull;</span><span>Heated Pool</span></div>
+            <p>Beautiful beach home with heated pool and hot tub. Walk to the beach and enjoy all the amenities this coastal paradise has to offer.</p>
+            <a href="https://myplace4u.hospitable.rentals/" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
         </div>
-    </section>
 
-    <section>
-        <div class="container">
-            <!-- North Myrtle Beach Properties -->
-            <div class="location-section">
-                <h2 class="location-title">North Myrtle Beach, SC</h2>
-                <div class="properties-grid">
-                    <div class="property-card">
-                        <img src="images/properties/myplace-holly-dr.jpg" alt="MyPlace on Holly Dr." class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">MyPlace on Holly Dr.</h3>
-                            <p class="property-location">North Myrtle Beach, SC</p>
-                            <div class="property-features">
-                                <span>10 Bedrooms</span>
-                                <span>•</span>
-                                <span>Sleeps 20</span>
-                                <span>•</span>
-                                <span>Pool & Hot Tub</span>
-                            </div>
-                            <p>Luxury beachfront retreat with pool, hot tub, and stunning golf course views. Perfect for large groups seeking the ultimate beach vacation experience.</p>
-                            <a href="https://myplace4u.hospitable.rentals/" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-
-                    <div class="property-card">
-                        <img src="images/properties/eagles-nest.jpg" alt="My Eagles Nest" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">My Eagles Nest</h3>
-                            <p class="property-location">North Myrtle Beach, SC</p>
-                            <div class="property-features">
-                                <span>5 Bedrooms</span>
-                                <span>•</span>
-                                <span>Sleeps 10</span>
-                                <span>•</span>
-                                <span>Heated Pool</span>
-                            </div>
-                            <p>Beautiful beach home with heated pool and hot tub. Walk to the beach and enjoy all the amenities this coastal paradise has to offer.</p>
-                            <a href="https://myplace4u.hospitable.rentals/" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-
-                    <div class="property-card">
-                        <img src="images/properties/19th-hole.jpg" alt="The 19th Hole" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">The 19th Hole</h3>
-                            <p class="property-location">North Myrtle Beach, SC</p>
-                            <div class="property-features">
-                                <span>5 Bedrooms</span>
-                                <span>•</span>
-                                <span>Sleeps 10</span>
-                                <span>•</span>
-                                <span>Golf & Beach</span>
-                            </div>
-                            <p>Golf enthusiast's dream with easy beach access, heated pool, and hot tub. The perfect combination of golf and beach vacation.</p>
-                            <a href="https://myplace4u.hospitable.rentals/" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pennsylvania Properties -->
-            <div class="location-section">
-                <h2 class="location-title">Pennsylvania</h2>
-                <div class="properties-grid">
-                    <div class="property-card">
-                        <img src="images/properties/cocoa-ridge-retreat.webp" alt="Cocoa Ridge Retreat" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">Cocoa Ridge Retreat</h3>
-                            <p class="property-location">Near Hershey, PA</p>
-                            <div class="property-features">
-                                <span>4 Bedrooms</span>
-                                <span>•</span>
-                                <span>Sleeps 10</span>
-                                <span>•</span>
-                                <span>Pool & Fire Pit</span>
-                            </div>
-                            <p>Just 10 minutes from Hersheypark! Newly renovated home featuring a private pool, cozy fire pit, and all the sweet comfort you need.</p>
-                            <a href="https://creativehomepros.holidayfuture.com/listings/387105" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-
-                    <div class="property-card">
-                        <img src="images/properties/farm-house.webp" alt="The Farm House" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">The Farm House</h3>
-                            <p class="property-location">Central Pennsylvania</p>
-                            <div class="property-features">
-                                <span>3 Bedrooms</span>
-                                <span>•</span>
-                                <span>Sleeps 6</span>
-                                <span>•</span>
-                                <span>Pet Friendly</span>
-                            </div>
-                            <p>Peaceful countryside retreat with rocking chair porch and walking trails through surrounding farmland. Perfect for a tranquil getaway.</p>
-                            <a href="https://creativehomepros.holidayfuture.com/listings/281448" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-
-                    <div class="property-card">
-                        <img src="images/properties/creative-home-246651.webp" alt="Creative Home Property" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">Creative Home Property</h3>
-                            <p class="property-location">Pennsylvania</p>
-                            <div class="property-features">
-                                <span>Modern Amenities</span>
-                                <span>•</span>
-                                <span>Family Friendly</span>
-                            </div>
-                            <p>Thoughtfully designed vacation rental with modern amenities and comfortable accommodations for your perfect getaway.</p>
-                            <a href="https://creativehomepros.holidayfuture.com/listings/246651" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-
-                    <div class="property-card">
-                        <img src="images/properties/pennsylvania-retreat-214819.webp" alt="Pennsylvania Retreat" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">Pennsylvania Retreat</h3>
-                            <p class="property-location">Pennsylvania</p>
-                            <div class="property-features">
-                                <span>Comfortable</span>
-                                <span>•</span>
-                                <span>Well-Appointed</span>
-                            </div>
-                            <p>Charming vacation rental offering comfort and convenience in beautiful Pennsylvania. Perfect for exploring the local attractions.</p>
-                            <a href="https://creativehomepros.holidayfuture.com/listings/214819" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tampa Properties -->
-            <div class="location-section">
-                <h2 class="location-title">Tampa, Florida</h2>
-                <div class="properties-grid">
-                    <div class="property-card">
-                        <img src="images/properties/tampa-bay-getaway.webp" alt="Tampa Bay Getaway" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">Tampa Bay Getaway</h3>
-                            <p class="property-location">Tampa, FL</p>
-                            <div class="property-features">
-                                <span>Modern</span>
-                                <span>•</span>
-                                <span>City Access</span>
-                                <span>•</span>
-                                <span>Comfort</span>
-                            </div>
-                            <p>Contemporary Tampa vacation rental with easy access to beaches, dining, and entertainment. Your perfect Florida base.</p>
-                            <a href="https://ejretreats.holidayfuture.com/listings/333670" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-
-                    <div class="property-card">
-                        <img src="images/properties/tampa-urban-retreat.webp" alt="Tampa Urban Retreat" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">Tampa Urban Retreat</h3>
-                            <p class="property-location">Tampa, FL</p>
-                            <div class="property-features">
-                                <span>Urban</span>
-                                <span>•</span>
-                                <span>Stylish</span>
-                                <span>•</span>
-                                <span>Convenient</span>
-                            </div>
-                            <p>Stylish urban retreat in the heart of Tampa with modern amenities and convenient access to all the city has to offer.</p>
-                            <a href="https://ejretreats.holidayfuture.com/listings/333671" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-
-                    <div class="property-card">
-                        <img src="images/properties/sunshine-state-sanctuary.webp" alt="Sunshine State Sanctuary" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">Sunshine State Sanctuary</h3>
-                            <p class="property-location">Tampa, FL</p>
-                            <div class="property-features">
-                                <span>Bright</span>
-                                <span>•</span>
-                                <span>Welcoming</span>
-                                <span>•</span>
-                                <span>Prime Location</span>
-                            </div>
-                            <p>Bright and welcoming Tampa vacation rental perfect for business travelers and vacation guests alike.</p>
-                            <a href="https://ejretreats.holidayfuture.com/listings/333672" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-
-                    <div class="property-card">
-                        <img src="images/properties/tampa-coastal-comfort.webp" alt="Tampa Coastal Comfort" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">Tampa Coastal Comfort</h3>
-                            <p class="property-location">Tampa, FL</p>
-                            <div class="property-features">
-                                <span>Coastal</span>
-                                <span>•</span>
-                                <span>Relaxing</span>
-                                <span>•</span>
-                                <span>Premium</span>
-                            </div>
-                            <p>Premium coastal-inspired accommodation offering the perfect blend of Tampa city life and Florida beach vibes.</p>
-                            <a href="https://ejretreats.holidayfuture.com/listings/337078" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-
-                    <div class="property-card">
-                        <img src="images/properties/florida-paradise.webp" alt="Florida Paradise" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">Florida Paradise</h3>
-                            <p class="property-location">Tampa, FL</p>
-                            <div class="property-features">
-                                <span>Paradise</span>
-                                <span>•</span>
-                                <span>Luxury</span>
-                                <span>•</span>
-                                <span>Experience</span>
-                            </div>
-                            <p>Experience Florida paradise with this beautifully appointed Tampa vacation rental offering luxury and comfort.</p>
-                            <a href="https://ejretreats.holidayfuture.com/listings/338179" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-
-                    <div class="property-card">
-                        <img src="images/properties/tampa-premier-stay.webp" alt="Tampa Premier Stay" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">Tampa Premier Stay</h3>
-                            <p class="property-location">Tampa, FL</p>
-                            <div class="property-features">
-                                <span>Premier</span>
-                                <span>•</span>
-                                <span>Executive</span>
-                                <span>•</span>
-                                <span>Quality</span>
-                            </div>
-                            <p>Premier Tampa accommodation delivering executive-level comfort and quality for discerning guests.</p>
-                            <a href="https://ejretreats.holidayfuture.com/listings/370223" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-
-                    <div class="property-card">
-                        <img src="images/properties/tampa-executive-suite.webp" alt="Tampa Executive Suite" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">Tampa Executive Suite</h3>
-                            <p class="property-location">Tampa, FL</p>
-                            <div class="property-features">
-                                <span>Executive</span>
-                                <span>•</span>
-                                <span>Business Ready</span>
-                                <span>•</span>
-                                <span>Upscale</span>
-                            </div>
-                            <p>Upscale executive suite perfect for business travelers and those seeking sophisticated Tampa accommodations.</p>
-                            <a href="https://ejretreats.holidayfuture.com/listings/370228" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-
-                    <div class="property-card">
-                        <img src="images/properties/tampa-central-hub.webp" alt="Tampa Central Hub" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">Tampa Central Hub</h3>
-                            <p class="property-location">Tampa, FL</p>
-                            <div class="property-features">
-                                <span>Central</span>
-                                <span>•</span>
-                                <span>Connected</span>
-                                <span>•</span>
-                                <span>Smart Choice</span>
-                            </div>
-                            <p>Centrally located Tampa rental providing easy access to all major attractions, business districts, and entertainment venues.</p>
-                            <a href="https://ejretreats.holidayfuture.com/listings/397722" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-
-                    <div class="property-card">
-                        <img src="images/properties/waterfront-boaters-paradise.webp" alt="Classic Waterfront Boaters Paradise" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">Classic Waterfront Boaters Paradise</h3>
-                            <p class="property-location">Tampa, FL</p>
-                            <div class="property-features">
-                                <span>9 Bedrooms</span>
-                                <span>•</span>
-                                <span>Sleeps 21</span>
-                                <span>•</span>
-                                <span>Pool/Pontoon</span>
-                            </div>
-                            <p>Two stunning waterfront houses on 1+ acres with 175' dock, pontoon boat with direct bay access included, pool, and fitness room.</p>
-                            <a href="https://39113.holidayfuture.com/listings/160887" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-
-                    <div class="property-card">
-                        <img src="images/properties/tampa-bay-getaway-pool.webp" alt="Tampa Bay Getaway w/Pool" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">Tampa Bay Getaway w/Pool</h3>
-                            <p class="property-location">Tampa, FL</p>
-                            <div class="property-features">
-                                <span>3 Bedrooms</span>
-                                <span>•</span>
-                                <span>Sleeps 7</span>
-                                <span>•</span>
-                                <span>Pool & Yard</span>
-                            </div>
-                            <p>Beautiful Cypress wood exterior house on 1+ acre lot with private pool, 85" HD smart TV, and outdoor dining. Perfect waterfront retreat with modern amenities.</p>
-                            <a href="https://39113.holidayfuture.com/listings/160193" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-
-                    <div class="property-card">
-                        <img src="images/properties/stunning-tampa-bay-waterfront.webp" alt="Stunning Tampa Bay Waterfront House w/Pool" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">Stunning Tampa Bay Waterfront House w/Pool</h3>
-                            <p class="property-location">Tampa, FL</p>
-                            <div class="property-features">
-                                <span>6 Bedrooms</span>
-                                <span>•</span>
-                                <span>Sleeps 14</span>
-                                <span>•</span>
-                                <span>Pool/Fitness</span>
-                            </div>
-                            <p>Beautiful Cypress wood waterfront estate on 1+ acres with 3 master suites, private pool, fitness room, and pool table. Perfect for large families seeking luxury bay living.</p>
-                            <a href="https://39113.holidayfuture.com/listings/159976" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-
-                    <div class="property-card">
-                        <img src="images/properties/waterfront-pool-oasis.webp" alt="Waterfront 3BR Pool Oasis" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">Waterfront 3BR Pool Oasis w/ Dock</h3>
-                            <p class="property-location">Tampa, FL</p>
-                            <div class="property-features">
-                                <span>3 Bedrooms</span>
-                                <span>•</span>
-                                <span>Sleeps 7</span>
-                                <span>•</span>
-                                <span>Pool & Dock</span>
-                            </div>
-                            <p>Waterfront retreat with private dock, direct Gulf access (no bridges!), in-ground pool, and tropical outdoor spaces. Perfect for boaters and families seeking sunshine.</p>
-                            <a href="https://ejretreats.holidayfuture.com/listings/448677" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-
-                    <div class="property-card">
-                        <img src="images/properties/mini-resort-pool.webp" alt="8 Bedroom Mini Resort with Pool" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">8 Bedroom Mini Resort with Pool</h3>
-                            <p class="property-location">Tampa, FL</p>
-                            <div class="property-features">
-                                <span>8 Bedrooms</span>
-                                <span>•</span>
-                                <span>Sleeps 22</span>
-                                <span>•</span>
-                                <span>Heated Pool</span>
-                            </div>
-                            <p>One-of-a-kind 1920's Spanish-style mini resort with 3 professionally decorated homes. Features resort-sized heated pool surrounded by tropical landscaping. Perfect for large gatherings.</p>
-                            <a href="https://ejretreats.holidayfuture.com/listings/447803" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-
-                    <div class="property-card">
-                        <img src="images/properties/mini-resort-pool2.webp" alt="Tropical 7BR Mini-Resort" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">Tropical 7BR Mini-Resort w/ Pool</h3>
-                            <p class="property-location">Tampa, FL</p>
-                            <div class="property-features">
-                                <span>7 Bedrooms</span>
-                                <span>•</span>
-                                <span>Sleeps 18</span>
-                                <span>•</span>
-                                <span>Heated Pool</span>
-                            </div>
-                            <p>Unique 1920's Spanish-style mini resort with 2 professionally decorated homes. Features resort-sized heated pool surrounded by tropical landscaping near the beach.</p>
-                            <a href="https://ejretreats.holidayfuture.com/listings/447802" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-
-                    <div class="property-card">
-                        <img src="images/properties/busch-gardens-fire-pit.webp" alt="Close to Busch Gardens" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">Close to Busch Gardens - Fire Pit, Patio</h3>
-                            <p class="property-location">Tampa, FL</p>
-                            <div class="property-features">
-                                <span>3 Bedrooms</span>
-                                <span>•</span>
-                                <span>Sleeps 7</span>
-                                <span>•</span>
-                                <span>Fire Pit & Patio</span>
-                            </div>
-                            <p>Charming home minutes from Busch Gardens with cozy fire pit, private patio, and modern kitchen. Pet-friendly and family-friendly with spacious living areas.</p>
-                            <a href="https://ejretreats.holidayfuture.com/listings/437205" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Arizona Properties -->
-            <div class="location-section">
-                <h2 class="location-title">Phoenix, AZ</h2>
-                <div class="properties-grid">
-                    <div class="property-card">
-                        <img src="images/properties/desert-oasis-retreat.webp" alt="Desert Oasis Retreat" class="property-image" loading="lazy">
-                        <div class="property-content">
-                            <h3 class="property-title">Desert Oasis Retreat</h3>
-                            <p class="property-location">Phoenix, AZ</p>
-                            <div class="property-features">
-                                <span>Modern</span>
-                                <span>•</span>
-                                <span>Desert Views</span>
-                                <span>•</span>
-                                <span>Pool</span>
-                            </div>
-                            <p>Experience the beauty of the Arizona desert with this modern Phoenix vacation rental featuring stunning mountain views, private pool, and contemporary amenities in the heart of the Southwest.</p>
-                            <a href="https://ejretreats.holidayfuture.com/listings/398502" target="_blank" class="property-cta">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="property-card fade-in delay-2">
+          <img src="images/properties/19th-hole.jpg" alt="The 19th Hole" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">The 19th Hole</h3>
+            <p class="property-location">North Myrtle Beach, SC</p>
+            <div class="property-features"><span>5 Bedrooms</span><span>&bull;</span><span>Sleeps 10</span><span>&bull;</span><span>Golf &amp; Beach</span></div>
+            <p>Golf enthusiast's dream with easy beach access, heated pool, and hot tub. The perfect combination of golf and beach vacation.</p>
+            <a href="https://myplace4u.hospitable.rentals/" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
         </div>
-    </section>
-
-    <section class="cta">
-        <div class="container">
-            <h2>Ready to List Your Property with Us?</h2>
-            <p>Join our portfolio of premium vacation rentals and start maximizing your property's potential today.</p>
-            <div class="quote-box">
-                "We don't just manage. We protect your income, your asset, and your peace of mind—like it's ours."
-            </div>
-            <a href="https://calendly.com/ejretreats1/30min" target="_blank" class="btn btn-large">Schedule a Consultation</a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <img src="images/white-long.png" alt="E&J Retreats Logo">
-                    <p>Professional vacation rental management services helping property owners maximize returns through personalized service and market-specific expertise.</p>
-                    <p style="margin-top: 1rem;">(813) 699-0509</p>
-                </div>
-                <div>
-                    <h3>Contact</h3>
-                    <p>(813) 699-0509</p>
-                    <div class="social-links">
-                        <a href="https://m.facebook.com/p/EJ-Retreats-61576666153450/" target="_blank">Facebook</a>
-                        <a href="https://www.instagram.com/ejretreats" target="_blank">Instagram</a>
-                    </div>
-                </div>
-                <div>
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="properties.html">Properties</a></li>
-                        <li><a href="https://calendly.com/ejretreats1/30min" target="_blank">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>© 2025 E&J Retreats. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <div class="sticky-contact">
-        <button class="contact-btn"></button>
-        <div class="contact-popup">
-            <p>Call us: <a href="tel:+18136990509">(813) 699-0509</a></p>
-            <p>Or <a href="https://calendly.com/ejretreats1/30min" target="_blank">schedule a consultation</a></p>
-        </div>
+      </div>
     </div>
 
-    <script>
-        // Header scroll shadow
-        var header = document.querySelector('header');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 20) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+    <!-- Pennsylvania -->
+    <div class="location-section">
+      <h2 class="location-title">Pennsylvania</h2>
+      <div class="properties-grid">
+        <div class="property-card fade-in">
+          <img src="images/properties/cocoa-ridge-retreat.webp" alt="Cocoa Ridge Retreat" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">Cocoa Ridge Retreat</h3>
+            <p class="property-location">Near Hershey, PA</p>
+            <div class="property-features"><span>4 Bedrooms</span><span>&bull;</span><span>Sleeps 10</span><span>&bull;</span><span>Pool &amp; Fire Pit</span></div>
+            <p>Just 10 minutes from Hersheypark! Newly renovated home featuring a private pool, cozy fire pit, and all the sweet comfort you need.</p>
+            <a href="https://creativehomepros.holidayfuture.com/listings/387105" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
+        </div>
 
-        document.addEventListener('DOMContentLoaded', function() {
-            var contactBtn = document.querySelector('.contact-btn');
-            var contactPopup = document.querySelector('.contact-popup');
+        <div class="property-card fade-in delay-1">
+          <img src="images/properties/farm-house.webp" alt="The Farm House" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">The Farm House</h3>
+            <p class="property-location">Central Pennsylvania</p>
+            <div class="property-features"><span>3 Bedrooms</span><span>&bull;</span><span>Sleeps 6</span><span>&bull;</span><span>Pet Friendly</span></div>
+            <p>Peaceful countryside retreat with rocking chair porch and walking trails through surrounding farmland. Perfect for a tranquil getaway.</p>
+            <a href="https://creativehomepros.holidayfuture.com/listings/281448" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
+        </div>
 
-            contactBtn.addEventListener('click', function() {
-                contactPopup.classList.toggle('show');
-            });
+        <div class="property-card fade-in delay-2">
+          <img src="images/properties/creative-home-246651.webp" alt="Creative Home Property" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">Creative Home Property</h3>
+            <p class="property-location">Pennsylvania</p>
+            <div class="property-features"><span>Modern Amenities</span><span>&bull;</span><span>Family Friendly</span></div>
+            <p>Thoughtfully designed vacation rental with modern amenities and comfortable accommodations for your perfect getaway.</p>
+            <a href="https://creativehomepros.holidayfuture.com/listings/246651" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
+        </div>
 
-            document.addEventListener('click', function(event) {
-                if (!event.target.closest('.sticky-contact') && contactPopup.classList.contains('show')) {
-                    contactPopup.classList.remove('show');
-                }
-            });
+        <div class="property-card fade-in delay-3">
+          <img src="images/properties/pennsylvania-retreat-214819.webp" alt="Pennsylvania Retreat" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">Pennsylvania Retreat</h3>
+            <p class="property-location">Pennsylvania</p>
+            <div class="property-features"><span>Comfortable</span><span>&bull;</span><span>Well-Appointed</span></div>
+            <p>Charming vacation rental offering comfort and convenience in beautiful Pennsylvania. Perfect for exploring the local attractions.</p>
+            <a href="https://creativehomepros.holidayfuture.com/listings/214819" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            // Hamburger menu toggle
-            var hamburger = document.getElementById('hamburger');
-            var navMenu = document.getElementById('nav-menu');
-            var navOverlay = document.getElementById('navOverlay');
-            var navClose = document.getElementById('navClose');
+    <!-- Tampa -->
+    <div class="location-section">
+      <h2 class="location-title">Tampa, Florida</h2>
+      <div class="properties-grid">
+        <div class="property-card fade-in">
+          <img src="images/properties/tampa-bay-getaway.webp" alt="Tampa Bay Getaway" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">Tampa Bay Getaway</h3>
+            <p class="property-location">Tampa, FL</p>
+            <div class="property-features"><span>Modern</span><span>&bull;</span><span>City Access</span><span>&bull;</span><span>Comfort</span></div>
+            <p>Contemporary Tampa vacation rental with easy access to beaches, dining, and entertainment. Your perfect Florida base.</p>
+            <a href="https://ejretreats.holidayfuture.com/listings/333670" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
+        </div>
 
-            function toggleMenu() {
-                hamburger.classList.toggle('active');
-                navMenu.classList.toggle('open');
-                navOverlay.classList.toggle('active');
-                document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
-            }
+        <div class="property-card fade-in delay-1">
+          <img src="images/properties/tampa-urban-retreat.webp" alt="Tampa Urban Retreat" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">Tampa Urban Retreat</h3>
+            <p class="property-location">Tampa, FL</p>
+            <div class="property-features"><span>Urban</span><span>&bull;</span><span>Stylish</span><span>&bull;</span><span>Convenient</span></div>
+            <p>Stylish urban retreat in the heart of Tampa with modern amenities and convenient access to all the city has to offer.</p>
+            <a href="https://ejretreats.holidayfuture.com/listings/333671" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
+        </div>
 
-            hamburger.addEventListener('click', toggleMenu);
-            navOverlay.addEventListener('click', toggleMenu);
-            navClose.addEventListener('click', toggleMenu);
+        <div class="property-card fade-in delay-2">
+          <img src="images/properties/sunshine-state-sanctuary.webp" alt="Sunshine State Sanctuary" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">Sunshine State Sanctuary</h3>
+            <p class="property-location">Tampa, FL</p>
+            <div class="property-features"><span>Bright</span><span>&bull;</span><span>Welcoming</span><span>&bull;</span><span>Prime Location</span></div>
+            <p>Bright and welcoming Tampa vacation rental perfect for business travelers and vacation guests alike.</p>
+            <a href="https://ejretreats.holidayfuture.com/listings/333672" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
+        </div>
 
-            // Close menu when clicking a nav link
-            navMenu.querySelectorAll('a').forEach(function(link) {
-                link.addEventListener('click', function() {
-                    if (navMenu.classList.contains('open')) {
-                        toggleMenu();
-                    }
-                });
-            });
+        <div class="property-card fade-in">
+          <img src="images/properties/tampa-coastal-comfort.webp" alt="Tampa Coastal Comfort" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">Tampa Coastal Comfort</h3>
+            <p class="property-location">Tampa, FL</p>
+            <div class="property-features"><span>Coastal</span><span>&bull;</span><span>Relaxing</span><span>&bull;</span><span>Premium</span></div>
+            <p>Premium coastal-inspired accommodation offering the perfect blend of Tampa city life and Florida beach vibes.</p>
+            <a href="https://ejretreats.holidayfuture.com/listings/337078" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
+        </div>
 
-            // Scroll animations with Intersection Observer
-            var animateSelectors = [
-                '.location-title',
-                '.property-card',
-                '.quote-box'
-            ];
+        <div class="property-card fade-in delay-1">
+          <img src="images/properties/florida-paradise.webp" alt="Florida Paradise" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">Florida Paradise</h3>
+            <p class="property-location">Tampa, FL</p>
+            <div class="property-features"><span>Paradise</span><span>&bull;</span><span>Luxury</span><span>&bull;</span><span>Experience</span></div>
+            <p>Experience Florida paradise with this beautifully appointed Tampa vacation rental offering luxury and comfort.</p>
+            <a href="https://ejretreats.holidayfuture.com/listings/338179" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
+        </div>
 
-            animateSelectors.forEach(function(selector) {
-                document.querySelectorAll(selector).forEach(function(el) {
-                    el.classList.add('fade-in');
-                });
-            });
+        <div class="property-card fade-in delay-2">
+          <img src="images/properties/tampa-premier-stay.webp" alt="Tampa Premier Stay" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">Tampa Premier Stay</h3>
+            <p class="property-location">Tampa, FL</p>
+            <div class="property-features"><span>Premier</span><span>&bull;</span><span>Executive</span><span>&bull;</span><span>Quality</span></div>
+            <p>Premier Tampa accommodation delivering executive-level comfort and quality for discerning guests.</p>
+            <a href="https://ejretreats.holidayfuture.com/listings/370223" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
+        </div>
 
-            var fadeElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
+        <div class="property-card fade-in">
+          <img src="images/properties/tampa-executive-suite.webp" alt="Tampa Executive Suite" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">Tampa Executive Suite</h3>
+            <p class="property-location">Tampa, FL</p>
+            <div class="property-features"><span>Executive</span><span>&bull;</span><span>Business Ready</span><span>&bull;</span><span>Upscale</span></div>
+            <p>Upscale executive suite perfect for business travelers and those seeking sophisticated Tampa accommodations.</p>
+            <a href="https://ejretreats.holidayfuture.com/listings/370228" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
+        </div>
 
-            var observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
+        <div class="property-card fade-in delay-1">
+          <img src="images/properties/tampa-central-hub.webp" alt="Tampa Central Hub" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">Tampa Central Hub</h3>
+            <p class="property-location">Tampa, FL</p>
+            <div class="property-features"><span>Central</span><span>&bull;</span><span>Connected</span><span>&bull;</span><span>Smart Choice</span></div>
+            <p>Centrally located Tampa rental providing easy access to all major attractions, business districts, and entertainment venues.</p>
+            <a href="https://ejretreats.holidayfuture.com/listings/397722" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
+        </div>
 
-            var observer = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, observerOptions);
+        <div class="property-card fade-in delay-2">
+          <img src="images/properties/waterfront-boaters-paradise.webp" alt="Classic Waterfront Boaters Paradise" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">Classic Waterfront Boaters Paradise</h3>
+            <p class="property-location">Tampa, FL</p>
+            <div class="property-features"><span>9 Bedrooms</span><span>&bull;</span><span>Sleeps 21</span><span>&bull;</span><span>Pool/Pontoon</span></div>
+            <p>Two stunning waterfront houses on 1+ acres with 175' dock, pontoon boat with direct bay access included, pool, and fitness room.</p>
+            <a href="https://39113.holidayfuture.com/listings/160887" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
+        </div>
 
-            fadeElements.forEach(function(el) {
-                observer.observe(el);
-            });
-        });
-    </script>
+        <div class="property-card fade-in">
+          <img src="images/properties/tampa-bay-getaway-pool.webp" alt="Tampa Bay Getaway w/Pool" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">Tampa Bay Getaway w/Pool</h3>
+            <p class="property-location">Tampa, FL</p>
+            <div class="property-features"><span>3 Bedrooms</span><span>&bull;</span><span>Sleeps 7</span><span>&bull;</span><span>Pool &amp; Yard</span></div>
+            <p>Beautiful Cypress wood exterior house on 1+ acre lot with private pool, 85" HD smart TV, and outdoor dining. Perfect waterfront retreat with modern amenities.</p>
+            <a href="https://39113.holidayfuture.com/listings/160193" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
+        </div>
+
+        <div class="property-card fade-in delay-1">
+          <img src="images/properties/stunning-tampa-bay-waterfront.webp" alt="Stunning Tampa Bay Waterfront House w/Pool" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">Stunning Tampa Bay Waterfront House w/Pool</h3>
+            <p class="property-location">Tampa, FL</p>
+            <div class="property-features"><span>6 Bedrooms</span><span>&bull;</span><span>Sleeps 14</span><span>&bull;</span><span>Pool/Fitness</span></div>
+            <p>Beautiful Cypress wood waterfront estate on 1+ acres with 3 master suites, private pool, fitness room, and pool table. Perfect for large families seeking luxury bay living.</p>
+            <a href="https://39113.holidayfuture.com/listings/159976" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
+        </div>
+
+        <div class="property-card fade-in delay-2">
+          <img src="images/properties/waterfront-pool-oasis.webp" alt="Waterfront 3BR Pool Oasis" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">Waterfront 3BR Pool Oasis w/ Dock</h3>
+            <p class="property-location">Tampa, FL</p>
+            <div class="property-features"><span>3 Bedrooms</span><span>&bull;</span><span>Sleeps 7</span><span>&bull;</span><span>Pool &amp; Dock</span></div>
+            <p>Waterfront retreat with private dock, direct Gulf access (no bridges!), in-ground pool, and tropical outdoor spaces. Perfect for boaters and families seeking sunshine.</p>
+            <a href="https://ejretreats.holidayfuture.com/listings/448677" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
+        </div>
+
+        <div class="property-card fade-in">
+          <img src="images/properties/mini-resort-pool.webp" alt="8 Bedroom Mini Resort with Pool" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">8 Bedroom Mini Resort with Pool</h3>
+            <p class="property-location">Tampa, FL</p>
+            <div class="property-features"><span>8 Bedrooms</span><span>&bull;</span><span>Sleeps 22</span><span>&bull;</span><span>Heated Pool</span></div>
+            <p>One-of-a-kind 1920's Spanish-style mini resort with 3 professionally decorated homes. Features resort-sized heated pool surrounded by tropical landscaping. Perfect for large gatherings.</p>
+            <a href="https://ejretreats.holidayfuture.com/listings/447803" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
+        </div>
+
+        <div class="property-card fade-in delay-1">
+          <img src="images/properties/mini-resort-pool2.webp" alt="Tropical 7BR Mini-Resort" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">Tropical 7BR Mini-Resort w/ Pool</h3>
+            <p class="property-location">Tampa, FL</p>
+            <div class="property-features"><span>7 Bedrooms</span><span>&bull;</span><span>Sleeps 18</span><span>&bull;</span><span>Heated Pool</span></div>
+            <p>Unique 1920's Spanish-style mini resort with 2 professionally decorated homes. Features resort-sized heated pool surrounded by tropical landscaping near the beach.</p>
+            <a href="https://ejretreats.holidayfuture.com/listings/447802" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
+        </div>
+
+        <div class="property-card fade-in delay-2">
+          <img src="images/properties/busch-gardens-fire-pit.webp" alt="Close to Busch Gardens" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">Close to Busch Gardens - Fire Pit, Patio</h3>
+            <p class="property-location">Tampa, FL</p>
+            <div class="property-features"><span>3 Bedrooms</span><span>&bull;</span><span>Sleeps 7</span><span>&bull;</span><span>Fire Pit &amp; Patio</span></div>
+            <p>Charming home minutes from Busch Gardens with cozy fire pit, private patio, and modern kitchen. Pet-friendly and family-friendly with spacious living areas.</p>
+            <a href="https://ejretreats.holidayfuture.com/listings/437205" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phoenix -->
+    <div class="location-section">
+      <h2 class="location-title">Phoenix, AZ</h2>
+      <div class="properties-grid">
+        <div class="property-card fade-in">
+          <img src="images/properties/desert-oasis-retreat.webp" alt="Desert Oasis Retreat" class="property-image" loading="lazy" />
+          <div class="property-content">
+            <h3 class="property-title">Desert Oasis Retreat</h3>
+            <p class="property-location">Phoenix, AZ</p>
+            <div class="property-features"><span>Modern</span><span>&bull;</span><span>Desert Views</span><span>&bull;</span><span>Pool</span></div>
+            <p>Experience the beauty of the Arizona desert with this modern Phoenix vacation rental featuring stunning mountain views, private pool, and contemporary amenities in the heart of the Southwest.</p>
+            <a href="https://ejretreats.holidayfuture.com/listings/398502" target="_blank" class="property-cta">Book Now &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── CTA Section ─────────────────────────────── -->
+<section class="properties-page-cta">
+  <div class="container">
+    <h2>Ready to List Your Property with Us?</h2>
+    <p>Join our portfolio of premium vacation rentals and start maximizing your property's potential today.</p>
+    <div class="quote-box">
+      "We don't just manage. We protect your income, your asset, and your peace of mind — like it's ours."
+    </div>
+    <a href="index.html#revenue-report" class="btn btn-primary btn-lg">Get My Free Revenue Potential Report</a>
+  </div>
+</section>
+
+<!-- ── Footer ──────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="E&amp;J Retreats" />
+        <p>Helping your property perform at its full revenue potential. Professional short-term rental management in Tampa, FL and beyond.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#how-it-works">How It Works</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="index.html#revenue-report">Revenue Report</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="index.html#revenue-report">Free Revenue Report</a></li>
+          <li><a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/ejretreats1/30min?primary_color=FF7A00'});return false;">Schedule a Walkthrough</a></li>
+          <li><a href="properties.html">Our Properties</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-item"><span>📞</span><a href="tel:8136990509">813-699-0509</a></div>
+        <div class="footer-contact-item"><span>📧</span><a href="mailto:ejretreats1@gmail.com">ejretreats1@gmail.com</a></div>
+        <div class="footer-contact-item"><span>📍</span><span>Tampa, FL</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 E&amp;J Retreats. All rights reserved.</span>
+      <span>Helping your property perform at its full revenue potential.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ── Sticky Phone ────────────────────────────── -->
+<div class="sticky-phone" id="sticky-phone">
+  <button class="sticky-phone-btn" id="phone-toggle" aria-label="Contact us">
+    <div class="phone-pulse"></div>
+    <div class="phone-tooltip">Call for a quick revenue estimate</div>
+    <i class="fa-solid fa-phone"></i>
+  </button>
+  <div class="phone-modal" id="phone-modal">
+    <div class="pm-header">
+      <h5>Get in Touch</h5>
+      <button class="pm-close" id="phone-modal-close" aria-label="Close">✕</button>
+    </div>
+    <a href="tel:8136990509" class="modal-opt">
+      <span class="mo-icon"><i class="fa-solid fa-phone"></i></span>
+      <div><span class="mo-lbl">Call Directly</span><span class="mo-val">813-699-0509</span></div>
+    </a>
+    <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/ejretreats1/30min?primary_color=FF7A00'});return false;" class="modal-opt">
+      <span class="mo-icon"><i class="fa-regular fa-calendar"></i></span>
+      <div><span class="mo-lbl">Schedule Walkthrough</span><span class="mo-val">Pick a time that works</span></div>
+    </a>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var header = document.getElementById('site-header');
+  window.addEventListener('scroll', function () {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+
+  var hamburger = document.getElementById('hamburger');
+  var mobileNav = document.getElementById('mobile-nav');
+  var overlay   = document.getElementById('mobile-overlay');
+  function toggleMobile() {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+    overlay.classList.toggle('open');
+    document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+  }
+  hamburger.addEventListener('click', toggleMobile);
+  overlay.addEventListener('click', toggleMobile);
+  mobileNav.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { if (mobileNav.classList.contains('open')) toggleMobile(); });
+  });
+
+  var phoneToggle = document.getElementById('phone-toggle');
+  var phoneModal  = document.getElementById('phone-modal');
+  var phoneClose  = document.getElementById('phone-modal-close');
+  phoneToggle.addEventListener('click', function (e) {
+    if (window.innerWidth <= 768) { window.location.href = 'tel:8136990509'; }
+    else { phoneModal.classList.toggle('open'); e.stopPropagation(); }
+  });
+  phoneClose.addEventListener('click', function (e) { phoneModal.classList.remove('open'); e.stopPropagation(); });
+  document.addEventListener('click', function (e) {
+    if (!document.getElementById('sticky-phone').contains(e.target)) phoneModal.classList.remove('open');
+  });
+
+  var els = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); } });
+    }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  } else { els.forEach(function (el) { el.classList.add('visible'); }); }
+})();
+</script>
+
 </body>
-
 </html>

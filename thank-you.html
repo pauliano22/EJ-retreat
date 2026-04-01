@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Revenue Report Is Being Prepared — E&amp;J Retreats</title>
+  <meta name="description" content="Your Revenue Potential Report is being prepared. Schedule a walkthrough to review your results together." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Calendly widget CSS -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJJL0RNSEL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJJL0RNSEL');
+    gtag('event', 'conversion', { event_category: 'Lead', event_label: 'Thank You Page View' });
+  </script>
+</head>
+<body>
+
+<!-- ── Minimal header ─────────────────────── -->
+<header id="site-header">
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="E&amp;J Retreats" />
+        <span class="nav-tagline">Helping your property perform at its full revenue potential</span>
+      </a>
+      <div class="nav-cta">
+        <a href="index.html" class="btn btn-secondary" style="padding:8px 18px;font-size:0.83rem;">&larr; Back to Home</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ── Thank-You Body ──────────────────────── -->
+<main class="ty-page">
+  <div class="ty-content">
+
+    <!-- Check icon -->
+    <div class="ty-check"><i class="fa-solid fa-circle-check" style="color:var(--orange);font-size:3rem;"></i></div>
+
+    <!-- Headline -->
+    <h1>Your Revenue Report Is Being Prepared</h1>
+
+    <!-- Body -->
+    <p class="ty-body">
+      We're analyzing your property's past 12 months against nearby listings using professional short-term rental market data. <strong style="color:var(--orange);">Your report will arrive within 15 minutes.</strong>
+    </p>
+
+    <!-- Calendly intro -->
+    <p class="ty-calendly-intro">
+      Want to review the results together and see exactly how to close the gap?
+    </p>
+
+    <!-- Calendly Embed -->
+    <div class="ty-calendly-wrap">
+      <div
+        class="calendly-inline-widget"
+        data-url="https://calendly.com/ejretreats1/30min?hide_event_type_details=0&hide_gdpr_banner=1&primary_color=FF7A00"
+        style="min-width:320px;height:700px;">
+      </div>
+    </div>
+
+    <p style="color:var(--orange);font-family:var(--font-head);font-size:1rem;font-weight:700;margin-top:8px;">
+      Schedule a Quick Walkthrough
+    </p>
+
+    <!-- Secondary CTAs -->
+    <div style="margin-top:20px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="index.html#revenue-report" class="btn btn-ghost">
+        <i class="fa-solid fa-arrow-left"></i> Submit Another Property
+      </a>
+    </div>
+
+    <!-- Trust signals -->
+    <p class="ty-trust">
+      Trusted by 15+ property owners &nbsp;&middot;&nbsp; Powered by professional STR market analytics data
+    </p>
+    <p class="ty-privacy">
+      <i class="fa-solid fa-lock"></i> We respect your privacy. Your data will never be shared.
+    </p>
+
+  </div>
+</main>
+
+<!-- ── Sticky phone ────────────────────────── -->
+<div class="sticky-phone" id="sticky-phone">
+  <button class="sticky-phone-btn" id="phone-toggle" aria-label="Contact us">
+    <div class="phone-pulse"></div>
+    <div class="phone-tooltip">Call for a quick revenue estimate</div>
+    <i class="fa-solid fa-phone"></i>
+  </button>
+  <div class="phone-modal" id="phone-modal">
+    <div class="pm-header">
+      <h5>Get in Touch</h5>
+      <button class="pm-close" id="phone-modal-close" aria-label="Close">✕</button>
+    </div>
+    <a href="tel:8136990509" class="modal-opt">
+      <span class="mo-icon"><i class="fa-solid fa-phone"></i></span>
+      <div><span class="mo-lbl">Call Directly</span><span class="mo-val">813-699-0509</span></div>
+    </a>
+    <a href="https://calendly.com/ejretreats1/30min" target="_blank" rel="noopener" class="modal-opt">
+      <span class="mo-icon"><i class="fa-regular fa-calendar"></i></span>
+      <div><span class="mo-lbl">Schedule Walkthrough</span><span class="mo-val">Pick a time that works</span></div>
+    </a>
+  </div>
+</div>
+
+<!-- Calendly widget JS -->
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+<script>
+(function () {
+  var phoneToggle = document.getElementById('phone-toggle');
+  var phoneModal  = document.getElementById('phone-modal');
+  var phoneClose  = document.getElementById('phone-modal-close');
+  phoneToggle.addEventListener('click', function (e) {
+    if (window.innerWidth <= 768) { window.location.href = 'tel:8136990509'; }
+    else { phoneModal.classList.toggle('open'); e.stopPropagation(); }
+  });
+  phoneClose.addEventListener('click', function (e) { phoneModal.classList.remove('open'); e.stopPropagation(); });
+  document.addEventListener('click', function (e) {
+    if (!document.getElementById('sticky-phone').contains(e.target)) phoneModal.classList.remove('open');
+  });
+  var header = document.getElementById('site-header');
+  window.addEventListener('scroll', function () {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+})();
+</script>
+
+</body>
+</html>

@@ -1,924 +1,569 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E&J Retreats - Hands-Off Airbnb Management</title>
-    <meta name="description" content="E&J Retreats offers full-service short-term rental management in Tampa, North Myrtle Beach, Pennsylvania, and Phoenix. We handle pricing, guests, cleaning, and maintenance so you earn more while doing less.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/black-small.png" type="image/png">
-    <!-- Calendly link widget -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Leadsy AI Pixel -->
-    <script id="vtag-ai-js" async src="https://r2.leadsy.ai/tag.js" data-pid="ypf3xwz1YhqR3hsP" data-version="062024"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJJL0RNSEL"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E&amp;J Retreats — See What Your Property Should Be Making</title>
+  <meta name="description" content="Get a free Revenue Potential Report comparing your short-term rental earnings against 20+ nearby listings. Professional STR management in Tampa, FL and beyond." />
 
-        gtag('config', 'G-TJJL0RNSEL');
-    </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Calendly widget -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+  <!-- Leadsy AI Pixel -->
+  <script id="vtag-ai-js" async src="https://r2.leadsy.ai/tag.js" data-pid="ypf3xwz1YhqR3hsP" data-version="062024"></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJJL0RNSEL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJJL0RNSEL');
+  </script>
 </head>
+<body>
 
-<body class="page-home">
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/white-long.png" alt="E&J Retreats Logo">
-                </a>
-            </div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-            <nav id="nav-menu">
-                <div class="mobile-nav-header">
-                    <span>Menu</span>
-                    <button class="mobile-nav-close" id="navClose" aria-label="Close menu">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                        </svg>
-                    </button>
-                </div>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="properties.html">Properties</a></li>
-                    <li><a href="https://calendly.com/ejretreats1/30min" target="_blank"
-                            class="btn-contact">Contact</a></li>
-                </ul>
-            </nav>
+<!-- ══════════════════════════════════════════════════
+     HEADER
+     ══════════════════════════════════════════════════ -->
+<header id="site-header">
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="E&amp;J Retreats" />
+        <span class="nav-tagline">Helping your property perform at its full revenue potential</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="properties.html">Properties</a>
+        <a href="#revenue-report">Revenue Report</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="#revenue-report" class="btn btn-primary">Get Free Revenue Report</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="#how-it-works">How It Works</a>
+  <a href="#pricing">Pricing</a>
+  <a href="properties.html">Properties</a>
+  <a href="#revenue-report">Revenue Report</a>
+  <a href="contact.html">Contact</a>
+  <a href="#revenue-report" class="btn btn-primary btn-full mobile-cta">Get Free Revenue Report</a>
+</nav>
+<div class="mobile-overlay" id="mobile-overlay"></div>
+
+<!-- ══════════════════════════════════════════════════
+     HERO
+     ══════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <!-- Left: copy -->
+      <div>
+        <h1>See What Your Property Should Be Making</h1>
+        <p class="subtitle">We compare your last 12 months of rental revenue against 20+ nearby comparable listings using professional short-term rental market analytics.</p>
+        <div class="hero-cta">
+          <a href="#revenue-report" class="btn btn-primary btn-lg">Get My Free Revenue Potential Report</a>
         </div>
-    </header>
-    <div class="nav-overlay" id="navOverlay"></div>
+        <p class="hero-micro">Takes 30 seconds. No obligation. No contracts. Just data.</p>
+      </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <h1> Hands-Off Short-Term Rental Management That<span
-                            style="text-decoration: underline solid var(--accent-dark) 3px; text-underline-offset: 12px;">
-                            Actually Increases Your Revenue</span></h1>
-
-                    <p class="subtitle">We turn your property into a high-performing, guest-ready asset — without you
-                        dealing with cleaners, guests, pricing, or headaches.</p>
-
-                    <div class="hero-buttons">
-                        <a href="https://form.typeform.com/to/NJniTDDG" target="_blank" class="btn btn-primary btn-large">See What Your Property Could Earn</a>
-                        <a href="#pricing" class="btn btn-secondary btn-large">See Pricing</a>
-                    </div>
-
-                    <div class="trust-bar">
-                        <div class="trust-item">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span>24/7 guest support</span>
-                        </div>
-                        <div class="trust-item">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            <span>Local teams</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="hero-images">
-                        <img src="images/properties/front.png" alt="Luxury vacation rental" loading="lazy">
-                    </div>
-                    <div class="hero-badges">
-                        <div class="badge-item">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Revenue Optimization</span>
-                        </div>
-                        <div class="badge-item">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Guest Communication 24/7</span>
-                        </div>
-                        <div class="badge-item">
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Cleaning + Maintenance Included</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- Right: dashboard preview -->
+      <div class="hero-dashboard">
+        <div class="hd-title">Revenue Comparison Preview</div>
+        <div class="hd-row">
+          <div class="hd-panel">
+            <div class="hd-panel-label">Your Property</div>
+            <div class="hd-panel-sub">Last 12 Months Revenue</div>
+            <div class="hd-panel-value">$115,300</div>
+          </div>
+          <div class="hd-panel">
+            <div class="hd-panel-label">Nearby Comparable Listings</div>
+            <div class="hd-panel-sub">Average Revenue</div>
+            <div class="hd-panel-value">$151,100</div>
+          </div>
         </div>
-    </section>
-
-    <!-- NEW: Proof of Expertise Section -->
-    <section class="proof-section">
-        <div class="container">
-            <div class="proof-container">
-                <!-- Case Study -->
-                <div class="case-study-box">
-                    <span class="case-study-badge">Real Results</span>
-                    <h3>Case Study: Florida Investment Property</h3>
-                    <p>Property sat with <strong>zero bookings for 3 months</strong> before working with us.</p>
-                    <p>After taking over operations, pricing, and marketing, the property now averages <span class="case-study-highlight">$12,000 per month in bookings.</span></p>
-                    <p>The owner was preparing to sell before finding us — after results, they trusted us to operate their additional investment property as well.</p>
-                </div>
-
-                <!-- Partnership -->
-                <div class="partnership-box">
-                    <p><strong>Trusted by Real Estate Professionals:</strong> Licensed realtors and investment advisors refer their clients to E&J Retreats because they trust us to protect and grow their clients' rental income. We work alongside real estate professionals across Florida to help investors acquire and operate high-performing short-term rental properties.</p>
-                </div>
-
-            </div>
+        <div class="hd-gap">
+          <div class="hd-gap-label">Potential Increase Opportunity</div>
+          <div class="hd-gap-value"><i class="fa-solid fa-arrow-up"></i> +$35,800</div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Benefits Section -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Let Us Handle the Work — You Keep the Profits</h2>
+<!-- ══════════════════════════════════════════════════
+     SECTION 1 — PROBLEM AWARENESS
+     ══════════════════════════════════════════════════ -->
+<section class="section" id="how-it-works">
+  <div class="container text-center">
+    <span class="section-label">The Problem</span>
+    <h2 class="section-head">Most short-term rentals earn less than they should</h2>
+    <div class="problem-list">
+      <div class="problem-item fade-in">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>Pricing changes constantly</span>
+      </div>
+      <div class="problem-item fade-in delay-1">
+        <i class="fa-solid fa-calendar-week"></i>
+        <span>Demand shifts weekly</span>
+      </div>
+      <div class="problem-item fade-in delay-2">
+        <i class="fa-solid fa-robot"></i>
+        <span>Platform algorithms evolve quietly</span>
+      </div>
+      <div class="problem-item fade-in delay-3">
+        <i class="fa-solid fa-sun"></i>
+        <span>Seasonality impacts listing visibility</span>
+      </div>
+    </div>
+    <p style="color:var(--gray-500);max-width:600px;margin:0 auto 32px;">Most owners never see the gap between their performance and the market average.</p>
+    <a href="#revenue-report" class="btn btn-primary">Check My Property Performance</a>
+  </div>
+</section>
 
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                        </svg>
-                    </div>
-                    <h3>Increased Nightly Rate + 90%+ Occupancy Strategy</h3>
-                    <p>We use dynamic pricing & competitive analysis to maximize earnings. No more undercharging or
-                        long vacancies.</p>
-                </div>
+<!-- ══════════════════════════════════════════════════
+     PROPERTY SHOWCASE STRIP
+     ══════════════════════════════════════════════════ -->
+<div class="property-strip">
+  <div class="property-strip-inner">
+    <img src="images/properties/waterfront-boaters-paradise.webp" alt="Waterfront property" loading="lazy" />
+    <img src="images/properties/mini-resort-pool.webp" alt="Resort pool property" loading="lazy" />
+    <img src="images/properties/cocoa-ridge-retreat.webp" alt="Cocoa Ridge Retreat" loading="lazy" />
+    <img src="images/properties/myplace-holly-dr.jpg" alt="Holly Dr property" loading="lazy" />
+  </div>
+</div>
 
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                        </svg>
-                    </div>
-                    <h3>Guest Messaging Managed For You</h3>
-                    <p>We handle every message, late check-in, problem, and review. So you never have to.</p>
-                </div>
-
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
-                    </div>
-                    <h3>Professional Turnover + Quality Control</h3>
-                    <p>We schedule cleaners, inspect property quality, restock supplies, and keep everything
-                        Airbnb-ready.</p>
-                </div>
-            </div>
-
-            <div class="benefit-cta">
-                <p>We make your Airbnb passive. You earn more, while doing less.</p>
-                <a href="#book-call" class="btn btn-primary btn-large"
-                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Book
-                    a Call to Compare Your Current Performance</a>
-            </div>
+<!-- ══════════════════════════════════════════════════
+     SECTION 2+3 — AUTHORITY + DASHBOARD
+     ══════════════════════════════════════════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px;">
+      <span class="section-label">What You'll Receive</span>
+      <h2 class="section-head">We analyze your property using hyper-local market data within 1 mile of your listing</h2>
+    </div>
+    <div class="authority-grid">
+      <!-- Left: checklist -->
+      <div class="fade-in-left">
+        <h3 style="margin-bottom:8px;">Your free Revenue Potential Report includes:</h3>
+        <ul class="authority-list">
+          <li><i class="fa-solid fa-check"></i> 12-month performance comparison vs nearby listings</li>
+          <li><i class="fa-solid fa-check"></i> Average revenue for similar homes in your immediate area</li>
+          <li><i class="fa-solid fa-check"></i> Occupancy rate benchmarks across your market</li>
+          <li><i class="fa-solid fa-check"></i> Average nightly rate comparisons</li>
+          <li><i class="fa-solid fa-check"></i> Seasonal demand trends affecting your calendar</li>
+          <li><i class="fa-solid fa-check"></i> Estimated revenue opportunity gap</li>
+          <li><i class="fa-solid fa-check"></i> Listing optimization strategy recommendations</li>
+        </ul>
+        <p class="authority-note">This level of market visibility is typically only available to large operators and institutional investors.</p>
+        <div style="margin-top:24px;">
+          <a href="#revenue-report" class="btn btn-primary">Get My Free Revenue Potential Report</a>
         </div>
-    </section>
+      </div>
 
-    <!-- Metrics Section -->
-    <section class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Our Track Record</h2>
-            <p class="section-subtitle">Results across properties we manage</p>
+      <!-- Right: dashboard card -->
+      <div class="fade-in-right">
+        <div class="dash-card">
+          <div class="dash-card-title">Property Performance Snapshot</div>
+          <div class="dash-card-sub">Example local market comparison within 1 mile radius</div>
 
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <div class="metric-value">20%</div>
-                    <div class="metric-label">Higher Revenue</div>
-                    <p>Our properties earn an average of 20% more through strategic pricing and optimized listings.</p>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-value">95%</div>
-                    <div class="metric-label">Occupancy Rate</div>
-                    <p>Market-specific optimization delivers consistently high occupancy across our portfolio.</p>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-value">4.9/5</div>
-                    <div class="metric-label">Guest Rating</div>
-                    <p>Hands-on management ensures exceptional guest experiences and stellar reviews.</p>
-                </div>
+          <div class="dash-metric">
+            <span class="dash-metric-label">Your Property Revenue (Last 12 Months)</span>
+            <span class="dash-metric-value">$115,300</span>
+          </div>
+          <div class="dash-metric">
+            <span class="dash-metric-label">Nearby Market Average Revenue</span>
+            <span class="dash-metric-value">$151,100</span>
+          </div>
+          <div class="dash-metric">
+            <span class="dash-metric-label">Average Occupancy Rate (Local Market)</span>
+            <span class="dash-metric-value">59%</span>
+          </div>
+          <div class="dash-metric">
+            <span class="dash-metric-label">Estimated Opportunity Gap</span>
+            <span class="dash-metric-value highlight"><i class="fa-solid fa-arrow-up" style="font-size:.7em;margin-right:4px;"></i>+$35,800</span>
+          </div>
+
+          <div class="dash-bars">
+            <div class="dash-bar-row">
+              <div class="dash-bar-label">Your Property</div>
+              <div class="dash-bar"><div class="dash-bar-fill yours"></div></div>
             </div>
+            <div class="dash-bar-row">
+              <div class="dash-bar-label">Nearby Listings Average</div>
+              <div class="dash-bar"><div class="dash-bar-fill market"></div></div>
+            </div>
+          </div>
+          <div class="dash-card-footer">Based on comparable listings within 1 mile radius using professional STR market analytics data</div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- What's Included Section -->
-    <section class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">What's Included in Management</h2>
-
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-card-header">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        </svg>
-                        <h3>Operations</h3>
-                    </div>
-                    <ul>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Full guest communication
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Check-in support & resolution handling
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Automated messaging workflows
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-card-header">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                        </svg>
-                        <h3>Revenue Optimization</h3>
-                    </div>
-                    <ul>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Smart dynamic pricing
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Seasonal rate adjustments
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Occupancy and pacing analysis
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-card-header">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                        </svg>
-                        <h3>Maintenance & Housekeeping</h3>
-                    </div>
-                    <ul>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Vetted cleaners + turnovers
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Restocking supplies
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Repairs & contractor coordination
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-card-header">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                        </svg>
-                        <h3>Owner Experience</h3>
-                    </div>
-                    <ul>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Monthly performance reports
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Calendar control as needed
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Hands-off, transparent management
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="service-note">
-                <p>We take 100% off your plate. No more guest emergencies. No more cleaning scheduling. No more stress.
-                </p>
-            </div>
-
-            <div class="benefit-cta" style="margin-top: 32px;">
-                <a href="#book-call" class="btn btn-primary btn-large"
-                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Schedule
-                    Your Strategy Call</a>
-            </div>
+<!-- ══════════════════════════════════════════════════
+     SECTION 4 — REPORT PREVIEW
+     ══════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px;">
+      <span class="section-label">Report Preview</span>
+      <h2 class="section-head">See exactly where your property stands</h2>
+    </div>
+    <div class="report-preview-grid">
+      <div class="fade-in-left">
+        <h3 style="margin-bottom:16px;">Example Owner-Provided Revenue</h3>
+        <p style="color:var(--gray-500);margin-bottom:24px;">This is an example of the comparison report we prepare using your property's actual performance data.</p>
+        <a href="#revenue-report" class="btn btn-primary">Get My Free Revenue Potential Report</a>
+      </div>
+      <div class="fade-in-right">
+        <div class="report-preview-card">
+          <div class="rp-row">
+            <span class="rp-label">Property Revenue (12 months)</span>
+            <span class="rp-value">$115,300</span>
+          </div>
+          <div class="rp-row">
+            <span class="rp-label">Nearby Market Average</span>
+            <span class="rp-value">$151,100</span>
+          </div>
+          <div class="rp-row">
+            <span class="rp-label">Opportunity Gap</span>
+            <span class="rp-value gap">+$35,800</span>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Comparison Section -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">The Difference Between Renting... and Optimizing</h2>
-            <p class="section-subtitle">Most properties we take over see revenue increase within 60-90 days due to
-                optimized pricing, improved listing structure, and professional guest experience.</p>
+<!-- ══════════════════════════════════════════════════
+     SECTION 5 — URGENCY
+     ══════════════════════════════════════════════════ -->
+<section class="section section-dark section-urgency">
+  <div class="container text-center">
+    <span class="section-label">Don't Wait</span>
+    <h2 class="section-head" style="color:#fff;">If your property is underperforming the market, the gap usually increases over time</h2>
+    <div class="urgency-items" style="max-width:700px;margin:32px auto 36px;">
+      <div class="urgency-item fade-in"><i class="fa-solid fa-bolt"></i> Pricing algorithms evolve</div>
+      <div class="urgency-item fade-in delay-1"><i class="fa-solid fa-arrow-trend-up"></i> Competition improves listings</div>
+      <div class="urgency-item fade-in delay-2"><i class="fa-solid fa-calendar-days"></i> Demand shifts seasonally</div>
+    </div>
+    <p style="color:rgba(255,255,255,.6);margin-bottom:32px;">The sooner you identify the gap, the faster you can close it.</p>
+    <a href="#revenue-report" class="btn btn-primary btn-lg">Check My Revenue Gap</a>
+  </div>
+</section>
 
-            <div class="comparison-table">
-                <div class="comparison-row comparison-header">
-                    <div class="comparison-cell">Basic Airbnb Host</div>
-                    <div class="comparison-cell">E&J Retreats</div>
-                </div>
-                <div class="comparison-row">
-                    <div class="comparison-cell">Manual pricing</div>
-                    <div class="comparison-cell highlight">Dynamic pricing system</div>
-                </div>
-                <div class="comparison-row">
-                    <div class="comparison-cell">Late responses</div>
-                    <div class="comparison-cell highlight">24/7 guest communication</div>
-                </div>
-                <div class="comparison-row">
-                    <div class="comparison-cell">Occasional turnover issues</div>
-                    <div class="comparison-cell highlight">Dedicated cleaner network</div>
-                </div>
-                <div class="comparison-row">
-                    <div class="comparison-cell">Average revenue</div>
-                    <div class="comparison-cell highlight">Revenue-maximized performance</div>
-                </div>
-            </div>
+<!-- ══════════════════════════════════════════════════
+     SECTION 6 — OWNERSHIP POSITIONING
+     ══════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="container text-center">
+    <span class="section-label">How We Help</span>
+    <h2 class="section-head">Effortless ownership. Stronger returns.</h2>
+    <div class="ownership-features" style="max-width:700px;margin:28px auto 36px;">
+      <div class="ownership-feature fade-in"><i class="fa-solid fa-tags"></i> Pricing strategy</div>
+      <div class="ownership-feature fade-in delay-1"><i class="fa-solid fa-sliders"></i> Platform optimization</div>
+      <div class="ownership-feature fade-in delay-2"><i class="fa-solid fa-calendar-check"></i> Calendar exposure</div>
+      <div class="ownership-feature fade-in delay-3"><i class="fa-solid fa-chart-column"></i> Revenue positioning</div>
+    </div>
+    <p style="color:var(--gray-500);max-width:560px;margin:0 auto 32px;">So your property performs at its full revenue potential.</p>
+    <a href="#revenue-report" class="btn btn-primary">See My Revenue Opportunity</a>
+  </div>
+</section>
 
-            <div class="comparison-note">
-                <p>Case studies available during your strategy call — see real results from properties like yours.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Who This Is For -->
-    <section class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Who This Is Perfect For</h2>
-
-            <div class="fit-grid">
-                <div class="fit-card good">
-                    <h3>
-                        This is for you if you're a property owner who:
-                    </h3>
-                    <ul>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Wants passive income, not a second job
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Is overwhelmed with guest issues or turnover
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Thinks your revenue could be higher
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7" />
-                            </svg>
-                            Wants a management partner, not a headache
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="fit-card bad">
-                    <h3>
-                        Not the best fit if:
-                    </h3>
-                    <ul>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                            You want to manage every detail personally
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                            You don't want to improve guest experience or pricing strategy
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                            Your property isn't ready for guests and you're not open to upgrades
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                            You're looking for the cheapest option rather than the best results
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="section" id="pricing">
-        <div class="container">
-            <h2 class="section-title">Simple, Transparent Pricing</h2>
-            <p class="section-subtitle">Choose the level of support that fits your goals. Whether you want expert revenue & messaging support while handling local ops yourself, or full hands-off management, we have an option that fits your needs.</p>
-
-            <div class="pricing-tiers">
-                <!-- Core Management Tier -->
-                <div class="pricing-card pricing-card-core">
-                    <h3>Core Management</h3>
-                    <div class="pricing-amount">10%</div>
-                    <p class="pricing-note">For hands-on owners who want professional support without full operations.</p>
-
-                    <div class="pricing-section-label">Included:</div>
-                    <ul class="pricing-features">
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Distribution to 15+ booking channels
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Dynamic pricing strategy & revenue optimization
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Booking management
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Listing optimization & performance reporting
-                        </li>
-                    </ul>
-
-                    <div class="pricing-section-label pricing-section-label-owner">Owner Handles:</div>
-                    <ul class="pricing-features pricing-features-excluded">
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                            Cleaner coordination
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                            Maintenance coordination
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                            24/7 guest messaging & calendar management
-                        </li>
-                    </ul>
-
-                    <p class="pricing-perfect-for">Perfect for: Experienced hosts who want strong revenue and guest support without outsourcing local operations.</p>
-
-                    <a href="#book-call" class="btn btn-primary btn-large" style="width: 100%;"
-                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Get Started</a>
-                </div>
-
-                <!-- Full Service Tier -->
-                <div class="pricing-card pricing-card-full">
-                    <div class="pricing-badge">Most Popular</div>
-                    <h3>Full Service Management</h3>
-                    <div class="pricing-amount">15%</div>
-                    <p class="pricing-note">Comprehensive management where we handle everything so you never worry about operations.</p>
-
-                    <div class="pricing-section-label">Includes everything in Core, plus:</div>
-                    <ul class="pricing-features">
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Cleaner scheduling & quality control
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Maintenance coordination & repairs
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Turnovers, restocking supplies, inspections
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            24/7 guest messaging & calendar management
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            No onboarding or hidden fees
-                        </li>
-                        <li>
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            We only make money when you do
-                        </li>
-                    </ul>
-
-                    <p class="pricing-perfect-for">Perfect for: Owners who want truly hands-off vacation rental income.</p>
-
-                    <a href="#book-call" class="btn btn-primary btn-large" style="width: 100%;"
-                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">See If We're a Good Match</a>
-                </div>
-            </div>
-
-            <!-- Comparison Table -->
-            <div class="tier-comparison">
-                <h3 class="tier-comparison-title">Compare Plans</h3>
-                <div class="tier-comparison-table">
-                    <div class="tier-comparison-row tier-comparison-header">
-                        <div class="tier-comparison-cell">Feature</div>
-                        <div class="tier-comparison-cell">Core (10%)</div>
-                        <div class="tier-comparison-cell">Full Service (15%)</div>
-                    </div>
-                    <div class="tier-comparison-row">
-                        <div class="tier-comparison-cell">15+ Channel Distribution</div>
-                        <div class="tier-comparison-cell tier-check">&#10004;</div>
-                        <div class="tier-comparison-cell tier-check">&#10004;</div>
-                    </div>
-                    <div class="tier-comparison-row">
-                        <div class="tier-comparison-cell">Dynamic Pricing</div>
-                        <div class="tier-comparison-cell tier-check">&#10004;</div>
-                        <div class="tier-comparison-cell tier-check">&#10004;</div>
-                    </div>
-                    <div class="tier-comparison-row">
-                        <div class="tier-comparison-cell">24/7 Guest Messaging</div>
-                        <div class="tier-comparison-cell tier-cross">&#10008;</div>
-                        <div class="tier-comparison-cell tier-check">&#10004;</div>
-                    </div>
-                    <div class="tier-comparison-row">
-                        <div class="tier-comparison-cell">Booking Management</div>
-                        <div class="tier-comparison-cell tier-check">&#10004;</div>
-                        <div class="tier-comparison-cell tier-check">&#10004;</div>
-                    </div>
-                    <div class="tier-comparison-row">
-                        <div class="tier-comparison-cell">Listing Optimization</div>
-                        <div class="tier-comparison-cell tier-check">&#10004;</div>
-                        <div class="tier-comparison-cell tier-check">&#10004;</div>
-                    </div>
-                    <div class="tier-comparison-row">
-                        <div class="tier-comparison-cell">Cleaner Coordination</div>
-                        <div class="tier-comparison-cell tier-cross">&#10008;</div>
-                        <div class="tier-comparison-cell tier-check">&#10004;</div>
-                    </div>
-                    <div class="tier-comparison-row">
-                        <div class="tier-comparison-cell">Maintenance & Repairs</div>
-                        <div class="tier-comparison-cell tier-cross">&#10008;</div>
-                        <div class="tier-comparison-cell tier-check">&#10004;</div>
-                    </div>
-                    <div class="tier-comparison-row">
-                        <div class="tier-comparison-cell">Turnover Oversight</div>
-                        <div class="tier-comparison-cell tier-cross">&#10008;</div>
-                        <div class="tier-comparison-cell tier-check">&#10004;</div>
-                    </div>
-                </div>
-            </div>
-
-            <p class="pricing-limit" style="text-align: center; margin-top: 32px;">We onboard 2-5 new properties per month. Availability is limited.</p>
-        </div>
-    </section>
-
-    <!-- Properties Section -->
-    <section class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Properties We Manage</h2>
-            <p class="section-subtitle">From beachfront retreats to urban getaways — we actively manage properties
-                across multiple markets.</p>
-
-            <div class="properties-preview">
-                <div class="property-preview-card">
-                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600"
-                        alt="Luxury vacation rental" loading="lazy">
-                    <div class="property-preview-content">
-                        <span class="property-preview-location">Tampa, FL</span>
-                        <p>Waterfront estates, mini-resorts, urban retreats</p>
-                    </div>
-                </div>
-                <div class="property-preview-card">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Beach property" loading="lazy">
-                    <div class="property-preview-content">
-                        <span class="property-preview-location">North Myrtle Beach, SC</span>
-                        <p>Beachfront homes with pools & golf access</p>
-                    </div>
-                </div>
-                <div class="property-preview-card">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600"
-                        alt="Pennsylvania retreat" loading="lazy">
-                    <div class="property-preview-content">
-                        <span class="property-preview-location">Pennsylvania</span>
-                        <p>Countryside retreats near Hershey & beyond</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="properties-cta">
-                <a href="properties.html" class="btn btn-secondary">View All Properties</a>
-                <a href="#book-call" class="btn btn-primary"
-                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Add
-                    Your Property</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section section-dark">
-        <div class="container">
-            <h2 class="section-title">What Property Owners Say</h2>
-
-            <div class="testimonial-card">
-                <p>"E&J Retreats increased our occupancy and handled everything for us — total game changer. I
-                    finally have passive income without the stress."</p>
-                <cite>— Property Owner, Tampa FL</cite>
-            </div>
-
-            <div class="trust-logos">
-                <span>Revenue optimization powered by</span>
-                <span style="font-weight: 600; color: var(--white);">PriceLabs</span>
-                <span>|</span>
-                <span>Airbnb & VRBO management experience</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Calendly Section -->
-    <section class="calendly-section" id="book-call">
-        <div class="container">
-            <div class="calendly-wrapper">
-                <h2>Schedule Your Free Revenue Strategy Call</h2>
-                <p class="subtitle">We'll analyze your current listing performance, recommend revenue improvements, and
-                    show you how we can take over the hands-on work immediately.</p>
-
-                <!-- Calendly inline widget -->
-                <div class="calendly-inline-widget"
-                    data-url="https://calendly.com/ejretreats1/30min?hide_event_type_details=1&primary_color=007d47">
-                </div>
-
-                <p class="calendly-note">Takes 15 minutes. No pressure. Clear answers.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <img src="images/white-long.png" alt="E&J Retreats">
-                    <p>Professional short-term rental management that turns your property into truly passive income.</p>
-                    <p>(813) 699-0509</p>
-                </div>
-                <div>
-                    <h4>Markets Served</h4>
-                    <ul>
-                        <li>Tampa, FL</li>
-                        <li>North Myrtle Beach, SC</li>
-                        <li>Pennsylvania</li>
-                        <li>Phoenix, AZ</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Connect</h4>
-                    <ul>
-                        <li><a href="https://m.facebook.com/p/EJ-Retreats-61576666153450/" target="_blank">Facebook</a>
-                        </li>
-                        <li><a href="https://www.instagram.com/ejretreats" target="_blank">Instagram</a></li>
-                        <li><a href="/cdn-cgi/l/email-protection#553c3b333a15303f27302127303421267b363a38">Email Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2025 E&J Retreats. All rights reserved.</p>
-                <div class="footer-cta">
-                    <a href="#book-call"
-                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ejretreats1/30min'});return false;">Book
-                        a Call — Let's Grow Your Revenue</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Sticky Mobile CTA -->
-    <div class="sticky-cta">
-        <div class="container">
-            <p>Ready to earn more?</p>
-            <a href="https://form.typeform.com/to/NJniTDDG" target="_blank" class="btn btn-primary">Get Free Rental Income Analysis</a>
-        </div>
+<!-- ══════════════════════════════════════════════════
+     SECTION 7 — PRICING
+     ══════════════════════════════════════════════════ -->
+<section class="section section-alt" id="pricing">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px;">
+      <span class="section-label">Pricing</span>
+      <h2 class="section-head">Choose the level of support that fits your goals</h2>
+      <p class="section-sub">Whether you want expert revenue optimization while staying involved locally, or completely hands-off management, we have an option that fits your ownership style.</p>
     </div>
 
-    <!-- Sticky Contact Button (Right) -->
-    <div class="sticky-contact">
-        <button class="contact-btn" onclick="toggleContactPopup()"></button>
-        <div class="contact-popup" id="contactPopup">
-            <p>Call us: <a href="tel:+18136990509">(813) 699-0509</a></p>
-            <p>Or <a href="https://calendly.com/ejretreats1/30min" target="_blank">schedule a consultation</a></p>
-        </div>
+    <div class="pricing-grid">
+      <!-- Core -->
+      <div class="pricing-card fade-in">
+        <h3>Core Management</h3>
+        <div class="pricing-amount">10%</div>
+        <p class="pricing-subtitle">Professional revenue strategy without outsourcing local operations</p>
+
+        <div class="pricing-section-title">Included</div>
+        <ul class="pricing-list">
+          <li><i class="fa-solid fa-check"></i> Distribution to 15+ booking channels</li>
+          <li><i class="fa-solid fa-check"></i> Dynamic pricing strategy &amp; revenue optimization</li>
+          <li><i class="fa-solid fa-check"></i> Booking management</li>
+          <li><i class="fa-solid fa-check"></i> Listing optimization &amp; performance reporting</li>
+          <li><i class="fa-solid fa-check"></i> Strategic OTA promotion management</li>
+        </ul>
+
+        <div class="pricing-section-title owner-handles">Owner Handles</div>
+        <ul class="pricing-list excluded">
+          <li><i class="fa-solid fa-xmark"></i> Cleaner coordination</li>
+          <li><i class="fa-solid fa-xmark"></i> Maintenance coordination</li>
+          <li><i class="fa-solid fa-xmark"></i> Turnovers &amp; supplies</li>
+          <li><i class="fa-solid fa-xmark"></i> 24/7 guest messaging &amp; calendar management</li>
+        </ul>
+
+        <p class="pricing-footer">Perfect for experienced hosts who want stronger performance without full outsourcing</p>
+        <a href="#revenue-report" class="btn btn-primary btn-full">Get My Free Revenue Potential Report</a>
+      </div>
+
+      <!-- Full Service -->
+      <div class="pricing-card featured fade-in delay-1">
+        <div class="pricing-badge">Most Popular Option</div>
+        <h3>Full Service Management</h3>
+        <div class="pricing-amount">15%</div>
+        <p class="pricing-subtitle">Completely hands-off ownership with optimized performance</p>
+
+        <div class="pricing-section-title">Includes everything in Core, plus:</div>
+        <ul class="pricing-list">
+          <li><i class="fa-solid fa-check"></i> Cleaner scheduling &amp; quality control</li>
+          <li><i class="fa-solid fa-check"></i> Maintenance coordination &amp; repairs</li>
+          <li><i class="fa-solid fa-check"></i> Turnovers, restocking supplies, inspections</li>
+          <li><i class="fa-solid fa-check"></i> 24/7 guest messaging &amp; calendar management</li>
+        </ul>
+
+        <p class="pricing-footer">Perfect for owners who want passive vacation rental income</p>
+        <a href="#revenue-report" class="btn btn-primary btn-full">Get My Free Revenue Potential Report</a>
+      </div>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        // Header scroll shadow
-        var header = document.querySelector('header');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 20) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+    <!-- Comparison Table -->
+    <div class="comparison-wrap fade-in">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Core (10%)</th>
+            <th>Full Service (15%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>15+ Channel Distribution</td><td class="comp-check">&#10004;</td><td class="comp-check">&#10004;</td></tr>
+          <tr><td>Dynamic Pricing</td><td class="comp-check">&#10004;</td><td class="comp-check">&#10004;</td></tr>
+          <tr><td>Booking Management</td><td class="comp-check">&#10004;</td><td class="comp-check">&#10004;</td></tr>
+          <tr><td>Listing Optimization</td><td class="comp-check">&#10004;</td><td class="comp-check">&#10004;</td></tr>
+          <tr><td>OTA Promotions</td><td class="comp-check">&#10004;</td><td class="comp-check">&#10004;</td></tr>
+          <tr><td>24/7 Messaging</td><td class="comp-cross">&#10008;</td><td class="comp-check">&#10004;</td></tr>
+          <tr><td>Cleaner Coordination</td><td class="comp-cross">&#10008;</td><td class="comp-check">&#10004;</td></tr>
+          <tr><td>Maintenance &amp; Repairs</td><td class="comp-cross">&#10008;</td><td class="comp-check">&#10004;</td></tr>
+          <tr><td>Turnover Oversight</td><td class="comp-cross">&#10008;</td><td class="comp-check">&#10004;</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="pricing-note-bottom">Most properties we analyze earn enough additional revenue through optimization to offset management costs entirely.</p>
+  </div>
+</section>
 
-        // Show sticky CTA on scroll (mobile)
-        if (window.innerWidth <= 640) {
-            window.addEventListener('scroll', function () {
-                var stickyCta = document.querySelector('.sticky-cta');
-                if (window.scrollY > 500) {
-                    stickyCta.style.display = 'block';
-                } else {
-                    stickyCta.style.display = 'none';
-                }
-            });
-        }
+<!-- ══════════════════════════════════════════════════
+     SECTION 8 — ROI POSITIONING
+     ══════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="roi-grid">
+      <div class="roi-content fade-in-left">
+        <span class="section-label">Return on Investment</span>
+        <h2 class="section-head">Management that often pays for itself</h2>
+        <p>Many owners discover their property is earning below nearby comparable listings. Even modest improvements in pricing strategy, listing exposure, and calendar positioning often cover our management fee while increasing overall income.</p>
+        <a href="#revenue-report" class="btn btn-primary btn-lg">See What My Property Should Be Making</a>
+      </div>
+      <div class="roi-image fade-in-right">
+        <img src="images/properties/stunning-tampa-bay-waterfront.webp" alt="Tampa Bay waterfront property" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
 
-        // Contact popup toggle
-        function toggleContactPopup() {
-            var popup = document.getElementById('contactPopup');
-            popup.classList.toggle('show');
-        }
+<!-- ══════════════════════════════════════════════════
+     SECTION 9 — LEAD FORM
+     ══════════════════════════════════════════════════ -->
+<section class="lead-form-section" id="revenue-report">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:32px;">
+      <h2 style="color:#fff;">Get Your Free Revenue Potential Report</h2>
+      <p class="lead-form-sub">Compare your property's earnings against nearby listings and see your opportunity to earn more.</p>
+    </div>
+    <div class="typeform-wrap">
+      <div data-tf-live="NJniTDDG" style="width:100%;height:550px;"></div>
+    </div>
+    <p class="form-micro" style="text-align:center;margin-top:16px;"><i class="fa-solid fa-lock"></i> Private report. No obligation. Takes less than 1 minute.</p>
+  </div>
+  <script src="https://embed.typeform.com/next/embed.js"></script>
+</section>
 
-        // Close popup when clicking outside
-        document.addEventListener('click', function (event) {
-            var popup = document.getElementById('contactPopup');
-            if (!event.target.closest('.sticky-contact') && popup.classList.contains('show')) {
-                popup.classList.remove('show');
-            }
-        });
+<!-- ══════════════════════════════════════════════════
+     FINAL CTA
+     ══════════════════════════════════════════════════ -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Find out what your property should really be making</h2>
+    <a href="#revenue-report" class="btn btn-primary btn-lg">Get My Free Revenue Potential Report</a>
+  </div>
+  <div class="final-cta-images">
+    <img src="images/properties/waterfront-pool-oasis.webp" alt="Pool oasis property" loading="lazy" />
+    <img src="images/properties/tampa-bay-getaway-pool.webp" alt="Tampa getaway with pool" loading="lazy" />
+    <img src="images/properties/desert-oasis-retreat.webp" alt="Desert oasis retreat" loading="lazy" />
+  </div>
+</section>
 
-        // Hamburger menu toggle
-        var hamburger = document.getElementById('hamburger');
-        var navMenu = document.getElementById('nav-menu');
-        var navOverlay = document.getElementById('navOverlay');
-        var navClose = document.getElementById('navClose');
+<!-- ══════════════════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="E&amp;J Retreats" />
+        <p>Helping your property perform at its full revenue potential. Professional short-term rental management in Tampa, FL and beyond.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#revenue-report">Revenue Report</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="#revenue-report">Free Revenue Report</a></li>
+          <li><a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/ejretreats1/30min?primary_color=FF7A00'});return false;">Schedule a Walkthrough</a></li>
+          <li><a href="properties.html">Our Properties</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-item"><span>📞</span><a href="tel:8136990509">813-699-0509</a></div>
+        <div class="footer-contact-item"><span>📧</span><a href="mailto:ejretreats1@gmail.com">ejretreats1@gmail.com</a></div>
+        <div class="footer-contact-item"><span>📍</span><span>Tampa, FL</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 E&amp;J Retreats. All rights reserved.</span>
+      <span>Helping your property perform at its full revenue potential.</span>
+    </div>
+  </div>
+</footer>
 
-        function toggleMenu() {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('open');
-            navOverlay.classList.toggle('active');
-            document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
-        }
+<!-- ══════════════════════════════════════════════════
+     STICKY PHONE
+     ══════════════════════════════════════════════════ -->
+<div class="sticky-phone" id="sticky-phone">
+  <button class="sticky-phone-btn" id="phone-toggle" aria-label="Contact us">
+    <div class="phone-pulse"></div>
+    <div class="phone-tooltip">Call for a quick revenue estimate</div>
+    <i class="fa-solid fa-phone"></i>
+  </button>
+  <div class="phone-modal" id="phone-modal">
+    <div class="pm-header">
+      <h5>Get in Touch</h5>
+      <button class="pm-close" id="phone-modal-close" aria-label="Close">✕</button>
+    </div>
+    <a href="tel:8136990509" class="modal-opt">
+      <span class="mo-icon"><i class="fa-solid fa-phone"></i></span>
+      <div><span class="mo-lbl">Call Directly</span><span class="mo-val">813-699-0509</span></div>
+    </a>
+    <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/ejretreats1/30min?primary_color=FF7A00'});return false;" class="modal-opt">
+      <span class="mo-icon"><i class="fa-regular fa-calendar"></i></span>
+      <div><span class="mo-lbl">Schedule Walkthrough</span><span class="mo-val">Pick a time that works</span></div>
+    </a>
+  </div>
+</div>
 
-        hamburger.addEventListener('click', toggleMenu);
-        navOverlay.addEventListener('click', toggleMenu);
-        navClose.addEventListener('click', toggleMenu);
+<!-- ══════════════════════════════════════════════════
+     SCRIPTS
+     ══════════════════════════════════════════════════ -->
+<script>
+(function () {
+  'use strict';
 
-        // Close menu when clicking a nav link
-        navMenu.querySelectorAll('a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                if (navMenu.classList.contains('open')) {
-                    toggleMenu();
-                }
-            });
-        });
+  /* ── Header scroll ───────────────────────────── */
+  var header = document.getElementById('site-header');
+  window.addEventListener('scroll', function () {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
 
-        // Scroll animations with Intersection Observer
-        // Auto-add fade-in to common elements
-        var animateSelectors = [
-            '.section-title',
-            '.section-subtitle',
-            '.benefit-card',
-            '.metric-card',
-            '.service-card',
-            '.fit-card',
-            '.pricing-card',
-            '.tier-comparison',
-            '.property-preview-card',
-            '.testimonial-card',
-            '.case-study-box',
-            '.comparison-table'
-        ];
+  /* ── Hamburger ───────────────────────────────── */
+  var hamburger = document.getElementById('hamburger');
+  var mobileNav = document.getElementById('mobile-nav');
+  var overlay   = document.getElementById('mobile-overlay');
 
-        animateSelectors.forEach(function(selector) {
-            document.querySelectorAll(selector).forEach(function(el) {
-                el.classList.add('fade-in');
-            });
-        });
+  function toggleMobile() {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+    overlay.classList.toggle('open');
+    document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+  }
+  hamburger.addEventListener('click', toggleMobile);
+  overlay.addEventListener('click', toggleMobile);
+  mobileNav.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      if (mobileNav.classList.contains('open')) toggleMobile();
+    });
+  });
 
-        var fadeElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
+  /* ── Sticky phone ────────────────────────────── */
+  var phoneToggle = document.getElementById('phone-toggle');
+  var phoneModal  = document.getElementById('phone-modal');
+  var phoneClose  = document.getElementById('phone-modal-close');
 
-        var observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+  phoneToggle.addEventListener('click', function (e) {
+    if (window.innerWidth <= 768) {
+      window.location.href = 'tel:8136990509';
+    } else {
+      phoneModal.classList.toggle('open');
+      e.stopPropagation();
+    }
+  });
+  phoneClose.addEventListener('click', function (e) {
+    phoneModal.classList.remove('open');
+    e.stopPropagation();
+  });
+  document.addEventListener('click', function (e) {
+    if (!document.getElementById('sticky-phone').contains(e.target)) {
+      phoneModal.classList.remove('open');
+    }
+  });
 
-        var observer = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
+  /* ── Scroll animations ───────────────────────── */
+  var els = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  } else {
+    els.forEach(function (el) { el.classList.add('visible'); });
+  }
 
-        fadeElements.forEach(function(el) {
-            observer.observe(el);
-        });
-    </script>
+})();
+</script>
+
 </body>
-
 </html>

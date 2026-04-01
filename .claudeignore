@@ -1,0 +1,6 @@
+data/
+scripts/
+images/
+*.csv
+*.log
+install.cmd
