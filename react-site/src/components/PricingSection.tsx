@@ -98,30 +98,30 @@ export default function PricingSection() {
 
           {/* Full Service */}
           <AnimatedSection delay={0.2}>
-            <div className="relative bg-dark-base rounded-3xl p-8 border border-orange-500/30 shadow-xl shadow-orange-500/5 h-full flex flex-col">
+            <div className="relative bg-white rounded-3xl p-8 border border-blue-500 shadow-md hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-1.5 bg-orange-500 text-white text-xs font-heading font-bold rounded-full shadow-[0_4px_16px_rgba(255,122,0,0.4)]">
                 Most Popular Option
               </div>
 
-              <h3 className="font-heading text-xl font-bold text-white mb-2 mt-2">Full Service Management</h3>
+              <h3 className="font-heading text-xl font-bold text-slate-900 mb-2 mt-2">Full Service Management</h3>
               <div className="font-heading text-5xl font-extrabold text-orange-500 mb-2">15%</div>
-              <p className="text-white/60 text-sm mb-6">
+              <p className="text-slate-500 text-sm mb-6">
                 Completely hands-off ownership with optimized performance
               </p>
 
-              <div className="text-xs uppercase tracking-widest font-heading font-bold text-white/40 mb-3">
+              <div className="text-xs uppercase tracking-widest font-heading font-bold text-slate-400 mb-3">
                 Includes everything in Core, plus:
               </div>
               <ul className="space-y-3 mb-8">
                 {fullServiceExtra.map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
-                    <Check className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-white/80 text-sm">{item}</span>
+                    <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-slate-700 text-sm">{item}</span>
                   </li>
                 ))}
               </ul>
 
-              <p className="text-sm text-white/50 italic mb-6 mt-auto">
+              <p className="text-sm text-slate-500 italic mb-6 mt-auto">
                 Perfect for owners who want passive vacation rental income
               </p>
               <a
