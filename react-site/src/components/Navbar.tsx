@@ -6,7 +6,6 @@ const navLinks = [
   { label: 'How It Works', href: '#how-it-works' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'Properties', href: 'https://ejretreats.bookeddirectly.host/', external: true },
-  { label: 'Revenue Report', href: '#revenue-report' },
   { label: 'Contact', href: 'contact.html' },
 ]
 
