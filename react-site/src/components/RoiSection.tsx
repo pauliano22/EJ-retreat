@@ -25,8 +25,8 @@ export default function RoiSection() {
 
           <AnimatedSection direction="right">
             <img
-              src="/images/properties/stunning-tampa-bay-waterfront.webp"
-              alt="Tampa Bay waterfront property"
+              src="/images/Untitled design (1) copy 2.jpg"
+              alt="Comparable short-term rental listings report"
               loading="lazy"
               className="w-full rounded-3xl shadow-xl"
             />
