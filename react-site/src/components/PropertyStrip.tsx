@@ -15,15 +15,15 @@ export default function PropertyStrip() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="flex gap-2"
+        className="grid grid-cols-2 lg:grid-cols-4 gap-2"
       >
         {images.map((img) => (
-          <div key={img.alt} className="flex-1 min-w-0">
+          <div key={img.alt}>
             <img
               src={img.src}
               alt={img.alt}
               loading="lazy"
-              className="w-full h-48 md:h-64 object-cover rounded-lg"
+              className="w-full h-48 md:h-64 object-cover"
             />
           </div>
         ))}
