@@ -9,13 +9,13 @@ const images = [
 
 export default function PropertyStrip() {
   return (
-    <div className="w-full overflow-hidden bg-dark-base py-2">
+    <div className="w-full overflow-hidden bg-dark-base">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="grid grid-cols-2 lg:grid-cols-4 gap-2"
+        className="grid grid-cols-2 lg:grid-cols-4"
       >
         {images.map((img) => (
           <div key={img.alt}>
