@@ -24,14 +24,14 @@ export default function FinalCta() {
       </div>
 
       {/* Property images strip */}
-      <div className="mt-16 flex gap-4 px-4">
+      <div className="mt-16 grid grid-cols-3">
         {images.map((img) => (
-          <div key={img.alt} className="flex-1">
+          <div key={img.alt}>
             <img
               src={img.src}
               alt={img.alt}
               loading="lazy"
-              className="w-full h-48 md:h-64 object-cover rounded-xl opacity-60"
+              className="w-full h-48 md:h-64 object-cover opacity-60"
             />
           </div>
         ))}
