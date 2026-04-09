@@ -86,21 +86,9 @@ export default function LeadForm() {
                 />
               </div>
 
-              <div className="mb-4">
-                <label className="block text-white/70 text-sm font-medium mb-2">
-                  Airbnb / VRBO Listing URL <span className="text-white/30">(optional)</span>
-                </label>
-                <input
-                  type="url"
-                  name="listing_url"
-                  placeholder="https://www.airbnb.com/rooms/..."
-                  className="w-full px-4 py-3 bg-white/5 border border-white/15 rounded-lg text-white placeholder-white/30 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500/30 transition-colors duration-200"
-                />
-              </div>
-
               <div className="mb-6">
                 <label className="block text-white/70 text-sm font-medium mb-2">
-                  Anything else we should know? <span className="text-white/30">(optional)</span>
+                  Your last 12 months estimated revenue? <span className="text-white/30">(optional)</span>
                 </label>
                 <textarea
                   name="message"
