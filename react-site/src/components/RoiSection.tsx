@@ -25,10 +25,10 @@ export default function RoiSection() {
 
           <AnimatedSection direction="right">
             <img
-              src="/images/Untitled design (1) copy 2.jpg"
+              src="/images/Untitled design (1).jpg"
               alt="Comparable short-term rental listings report"
               loading="lazy"
-              className="w-full rounded-3xl shadow-xl"
+              className="w-full shadow-xl"
             />
           </AnimatedSection>
         </div>
