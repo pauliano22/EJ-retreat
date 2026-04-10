@@ -1,17 +1,20 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import Layout from './components/Layout';
 import Dashboard from './components/Dashboard';
 import Pipeline from './components/Pipeline';
 import Owners from './components/Owners';
 import OwnerDetail from './components/OwnerDetail';
 import OutreachLog from './components/OutreachLog';
+import Settings from './components/Settings';
 import LeadModal from './components/modals/LeadModal';
 import OwnerModal from './components/modals/OwnerModal';
 import PropertyModal from './components/modals/PropertyModal';
 import OutreachModal from './components/modals/OutreachModal';
 import { useLocalStorage } from './hooks/useLocalStorage';
 import { mockLeads, mockOwners, mockOutreach } from './data/mockData';
+import { fetchProperties, fetchReservations } from './services/uplisting';
 import type { Lead, Owner, Property, OutreachEntry, View } from './types';
+import type { UplistingProperty, UplistingReservation } from './services/uplisting';
 
 type Modal =
   | { type: 'lead'; lead?: Lead }
@@ -25,6 +28,12 @@ export default function App() {
   const [owners, setOwners] = useLocalStorage<Owner[]>('ej_owners', mockOwners);
   const [outreach, setOutreach] = useLocalStorage<OutreachEntry[]>('ej_outreach', mockOutreach);
 
+  // Uplisting integration
+  const [uplistingApiKey, setUplistingApiKey] = useLocalStorage<string>('ej_uplisting_key', '');
+  const [uplistingProperties, setUplistingProperties] = useLocalStorage<UplistingProperty[]>('ej_uplisting_properties', []);
+  const [uplistingReservations, setUplistingReservations] = useLocalStorage<UplistingReservation[]>('ej_uplisting_reservations', []);
+  const [lastSync, setLastSync] = useLocalStorage<string | null>('ej_uplisting_last_sync', null);
+
   const [view, setView] = useState<View>('dashboard');
   const [selectedOwnerId, setSelectedOwnerId] = useState<string | null>(null);
   const [modal, setModal] = useState<Modal>(null);
@@ -32,6 +41,42 @@ export default function App() {
   const navigate = (v: View, extra?: string) => {
     setView(v);
     if (v === 'owner-detail' && extra) setSelectedOwnerId(extra);
+  };
+
+  // Uplisting sync
+  const handleSync = useCallback(async () => {
+    if (!uplistingApiKey) return;
+    try {
+      const today = new Date();
+      const thirtyDaysAgo = new Date(today);
+      thirtyDaysAgo.setDate(today.getDate() - 30);
+      const ninetyDaysAhead = new Date(today);
+      ninetyDaysAhead.setDate(today.getDate() + 90);
+
+      const [props, res] = await Promise.all([
+        fetchProperties(uplistingApiKey),
+        fetchReservations(
+          uplistingApiKey,
+          thirtyDaysAgo.toISOString().slice(0, 10),
+          ninetyDaysAhead.toISOString().slice(0, 10)
+        ),
+      ]);
+      setUplistingProperties(props);
+      setUplistingReservations(res);
+      setLastSync(new Date().toISOString());
+    } catch {
+      // Sync errors shown in Settings; don't crash
+    }
+  }, [uplistingApiKey, setUplistingProperties, setUplistingReservations, setLastSync]);
+
+  const handleSaveApiKey = (key: string) => {
+    setUplistingApiKey(key);
+  };
+
+  const handleClearUplistingData = () => {
+    setUplistingProperties([]);
+    setUplistingReservations([]);
+    setLastSync(null);
   };
 
   // Lead CRUD
@@ -83,6 +128,7 @@ export default function App() {
   };
 
   const selectedOwner = owners.find(o => o.id === selectedOwnerId);
+  const uplistingConnected = !!uplistingApiKey;
 
   return (
     <Layout currentView={view} onNavigate={navigate}>
@@ -92,6 +138,11 @@ export default function App() {
           owners={owners}
           outreach={outreach}
           onNavigate={navigate}
+          uplistingConnected={uplistingConnected}
+          uplistingProperties={uplistingProperties}
+          uplistingReservations={uplistingReservations}
+          lastSync={lastSync}
+          onSync={handleSync}
         />
       )}
 
@@ -129,6 +180,18 @@ export default function App() {
           outreach={outreach}
           onUpdateOutreach={setOutreach}
           onOpenOutreachModal={(entry) => setModal({ type: 'outreach', entry })}
+        />
+      )}
+
+      {view === 'settings' && (
+        <Settings
+          apiKey={uplistingApiKey}
+          onSaveApiKey={handleSaveApiKey}
+          lastSync={lastSync}
+          properties={uplistingProperties}
+          reservations={uplistingReservations}
+          onSync={handleSync}
+          onClearData={handleClearUplistingData}
         />
       )}
 
