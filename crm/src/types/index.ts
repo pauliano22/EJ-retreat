@@ -61,4 +61,4 @@ export interface OutreachEntry {
   followUpDate?: string;
 }
 
-export type View = 'dashboard' | 'pipeline' | 'owners' | 'owner-detail' | 'outreach';
+export type View = 'dashboard' | 'pipeline' | 'owners' | 'owner-detail' | 'outreach' | 'settings';

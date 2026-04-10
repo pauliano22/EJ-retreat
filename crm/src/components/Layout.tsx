@@ -7,6 +7,7 @@ import {
   Menu,
   X,
   Building2,
+  Settings,
 } from 'lucide-react';
 import type { View } from '../types';
 
@@ -21,6 +22,10 @@ const navItems = [
   { id: 'pipeline' as View, label: 'Pipeline', icon: Columns3 },
   { id: 'owners' as View, label: 'Owners', icon: Users },
   { id: 'outreach' as View, label: 'Outreach Log', icon: MessageSquare },
+];
+
+const bottomNavItems = [
+  { id: 'settings' as View, label: 'Settings', icon: Settings },
 ];
 
 export default function Layout({ currentView, onNavigate, children }: LayoutProps) {
@@ -76,9 +81,24 @@ export default function Layout({ currentView, onNavigate, children }: LayoutProp
           ))}
         </nav>
 
-        {/* Footer */}
-        <div className="px-5 py-4 border-t border-slate-100">
-          <p className="text-xs text-slate-400">E&amp;J Retreats © 2026</p>
+        {/* Bottom nav */}
+        <div className="px-3 py-3 border-t border-slate-100 space-y-1">
+          {bottomNavItems.map(({ id, label, icon: Icon }) => (
+            <button
+              key={id}
+              onClick={() => { onNavigate(id); setSidebarOpen(false); }}
+              className={`
+                w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors
+                ${activeView === id
+                  ? 'bg-teal-50 text-teal-700'
+                  : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'}
+              `}
+            >
+              <Icon size={18} />
+              {label}
+            </button>
+          ))}
+          <p className="text-xs text-slate-400 px-3 pt-1">E&amp;J Retreats © 2026</p>
         </div>
       </aside>
 
