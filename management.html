@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Management — E&amp;J Retreats</title>
+  <meta name="description" content="Learn how E&J Retreats manages short-term rentals in Tampa, FL. Dynamic pricing, channel management, direct booking websites, and full-service STR management." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+
+  <!-- Calendly widget -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJJL0RNSEL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJJL0RNSEL');
+  </script>
+</head>
+<body>
+
+<!-- ── Navigation ───────────────────────────────── -->
+<header id="site-header">
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="E&amp;J Retreats" />
+        <span class="nav-tagline">Helping your property perform at its full revenue potential</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="https://ejretreats.bookeddirectly.host/" target="_blank">Properties</a>
+        <a href="management.html" class="active">Our Management</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="index.html#revenue-report" class="btn btn-primary">Get Free Revenue Report</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="index.html">Home</a>
+  <a href="index.html#how-it-works">How It Works</a>
+  <a href="index.html#pricing">Pricing</a>
+  <a href="https://ejretreats.bookeddirectly.host/" target="_blank">Properties</a>
+  <a href="management.html">Our Management</a>
+  <a href="contact.html">Contact</a>
+  <a href="index.html#revenue-report" class="btn btn-primary btn-full mobile-cta">Get Free Revenue Report</a>
+</nav>
+<div class="mobile-overlay" id="mobile-overlay"></div>
+
+<!-- ── Hero ─────────────────────────────────────── -->
+<section class="contact-page-hero">
+  <div class="container">
+    <span class="section-label">Our Management</span>
+    <h1>Professional Short-Term Rental Management</h1>
+    <p>Everything you need to know about how we maximize your property's revenue.</p>
+  </div>
+</section>
+
+<!-- ── Coming Soon placeholder ──────────────────── -->
+<section class="section">
+  <div class="container text-center">
+    <p style="color:var(--gray-500);font-size:1.1rem;">Full page coming soon.</p>
+  </div>
+</section>
+
+<!-- ── Footer ────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="E&amp;J Retreats" />
+        <p>Helping your property perform at its full revenue potential. Professional short-term rental management in Tampa, FL and beyond.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#how-it-works">How It Works</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="management.html">Our Management</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="index.html#revenue-report">Free Revenue Report</a></li>
+          <li><a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/ejretreats1/30min?primary_color=FF7A00'});return false;">Schedule a Call</a></li>
+          <li><a href="https://ejretreats.bookeddirectly.host/" target="_blank">Our Properties</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-contact-item"><span>📞</span><a href="tel:8136990509">813-699-0509</a></div>
+        <div class="footer-contact-item"><span>📧</span><a href="mailto:ejretreats1@gmail.com">ejretreats1@gmail.com</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 E&amp;J Retreats. All rights reserved.</span>
+      <span>Helping your property perform at its full revenue potential.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var header = document.getElementById('site-header');
+  window.addEventListener('scroll', function () {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+
+  var hamburger = document.getElementById('hamburger');
+  var mobileNav = document.getElementById('mobile-nav');
+  var overlay   = document.getElementById('mobile-overlay');
+  function toggleMobile() {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+    overlay.classList.toggle('open');
+    document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+  }
+  hamburger.addEventListener('click', toggleMobile);
+  overlay.addEventListener('click', toggleMobile);
+  mobileNav.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { if (mobileNav.classList.contains('open')) toggleMobile(); });
+  });
+})();
+</script>
+
+</body>
+</html>
