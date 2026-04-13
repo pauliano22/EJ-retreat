@@ -24,6 +24,16 @@
     </script>
     <script type="module" crossorigin src="/assets/index-bmXON5JT.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-DMysmgar.css">
+    <script>
+      window.addEventListener('load', function () {
+        if (window.location.hash) {
+          setTimeout(function () {
+            var el = document.querySelector(window.location.hash);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }, 500);
+        }
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>
