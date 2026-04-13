@@ -3,7 +3,6 @@ import { Menu, X } from 'lucide-react'
 
 const navLinks = [
   { label: 'Home', href: '#' },
-  { label: 'How It Works', href: '#how-it-works' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'Properties', href: 'https://ejretreats.bookeddirectly.host/', external: true },
   { label: 'Our Management', href: 'management.html' },
