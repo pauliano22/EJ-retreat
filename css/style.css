@@ -1133,3 +1133,14 @@ h3 { font-size: 1.25rem; font-weight: 700; }
 .plat-badge.hopper    { background:rgba(111,63,245,.08); border-color:rgba(111,63,245,.3); color:#6F3FF5; }
 .plat-badge.google    { background:rgba(66,133,244,.08); border-color:rgba(66,133,244,.3); color:#4285F4; }
 .plat-badge.more      { background:var(--gray-50);        border-color:var(--gray-200);     color:var(--gray-400); }
+
+/* Platform logos */
+.platform-logos {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; align-items: center;
+}
+.platform-logos img {
+  height: 28px; width: auto; object-fit: contain;
+  background: var(--white); border-radius: 8px;
+  border: 1px solid var(--gray-100); padding: 4px 10px;
+  box-shadow: var(--shadow-sm);
+}
