@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import PlatformStrip from './components/PlatformStrip'
 import ProblemSection from './components/ProblemSection'
 import PropertyStrip from './components/PropertyStrip'
 import AuthoritySection from './components/AuthoritySection'
@@ -18,6 +19,7 @@ export default function App() {
     <div className="min-h-screen bg-white">
       <Navbar />
       <Hero />
+      <PlatformStrip />
       <ProblemSection />
       <PropertyStrip />
       <AuthoritySection />

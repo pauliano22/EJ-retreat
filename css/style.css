@@ -1115,3 +1115,21 @@ h3 { font-size: 1.25rem; font-weight: 700; }
 @media(max-width:700px) {
   .faq-grid { grid-template-columns: 1fr; }
 }
+
+/* Platform badges */
+.platform-badges {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px;
+}
+.plat-badge {
+  display: inline-flex; align-items: center;
+  font-family: var(--font-head); font-size: .72rem; font-weight: 700;
+  padding: 4px 10px; border-radius: 20px; border: 1px solid;
+}
+.plat-badge.airbnb    { background:rgba(255,90,95,.08);  border-color:rgba(255,90,95,.3);  color:#FF5A5F; }
+.plat-badge.vrbo      { background:rgba(26,111,186,.08); border-color:rgba(26,111,186,.3); color:#1A6FBA; }
+.plat-badge.booking   { background:rgba(0,53,128,.08);   border-color:rgba(0,53,128,.3);   color:#003580; }
+.plat-badge.expedia   { background:rgba(255,185,0,.1);   border-color:rgba(255,185,0,.3);  color:#c48f00; }
+.plat-badge.tripadvisor { background:rgba(0,170,108,.08);border-color:rgba(0,170,108,.3);  color:#00AA6C; }
+.plat-badge.hopper    { background:rgba(111,63,245,.08); border-color:rgba(111,63,245,.3); color:#6F3FF5; }
+.plat-badge.google    { background:rgba(66,133,244,.08); border-color:rgba(66,133,244,.3); color:#4285F4; }
+.plat-badge.more      { background:var(--gray-50);        border-color:var(--gray-200);     color:var(--gray-400); }
