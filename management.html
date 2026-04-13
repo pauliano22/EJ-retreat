@@ -608,6 +608,15 @@
   mobileNav.querySelectorAll('a').forEach(function (a) {
     a.addEventListener('click', function () { if (mobileNav.classList.contains('open')) toggleMobile(); });
   });
+
+  /* Scroll animations */
+  var els = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); } });
+    }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  } else { els.forEach(function (el) { el.classList.add('visible'); }); }
 })();
 </script>
 
