@@ -38,7 +38,7 @@ export default function PlatformStrip() {
               </div>
             ))}
             <div className="flex items-center justify-center bg-slate-50 rounded-xl border border-slate-100 px-4 py-2 h-11">
-              <span className="text-xs font-heading font-bold text-slate-400">+ 8 more</span>
+              <span className="text-xs font-heading font-bold text-slate-400">+ more</span>
             </div>
           </div>
         </div>
