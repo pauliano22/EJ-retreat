@@ -93,7 +93,7 @@ export default function LeadForm() {
                 <textarea
                   name="message"
                   rows={3}
-                  placeholder="Number of bedrooms, current revenue, questions..."
+                  placeholder="$55,000 per year"
                   className="w-full px-4 py-3 bg-white/5 border border-white/15 rounded-lg text-white placeholder-white/30 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500/30 transition-colors duration-200 resize-none"
                 />
               </div>
