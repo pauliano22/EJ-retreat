@@ -1,10 +1,48 @@
+import { useState } from 'react'
 import { Lock } from 'lucide-react'
 import AnimatedSection from './AnimatedSection'
 
+const CRM_URL = 'https://crm-nine-delta-37.vercel.app/api/inbound-lead'
+const CRM_TOKEN = 'ejr_eab9ceb7d1463a8d8ddec037474149bda7a7153b4bf3408e'
+
 export default function LeadForm() {
+  const [loading, setLoading] = useState(false)
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setLoading(true)
+
+    const form = e.currentTarget
+    const data = {
+      first_name:       (form.elements.namedItem('first_name')       as HTMLInputElement).value,
+      last_name:        (form.elements.namedItem('last_name')        as HTMLInputElement).value,
+      email:            (form.elements.namedItem('email')            as HTMLInputElement).value,
+      phone:            (form.elements.namedItem('phone')            as HTMLInputElement).value,
+      property_address: (form.elements.namedItem('property_address') as HTMLInputElement).value,
+      message:          (form.elements.namedItem('message')          as HTMLTextAreaElement).value,
+    }
+
+    await Promise.allSettled([
+      fetch(CRM_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${CRM_TOKEN}`,
+        },
+        body: JSON.stringify(data),
+      }),
+      fetch('https://formsubmit.co/ajax/ejretreats1@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ ...data, _subject: 'New Revenue Report Request' }),
+      }),
+    ])
+
+    window.location.href = '/thank-you.html'
+  }
+
   return (
     <section id="revenue-report" className="relative py-20 md:py-28 bg-dark-base overflow-hidden">
-      {/* Subtle gradient accent */}
       <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-orange-500/3" />
 
       <div className="relative max-w-[1200px] mx-auto px-6">
@@ -21,13 +59,7 @@ export default function LeadForm() {
 
         <AnimatedSection delay={0.2}>
           <div className="max-w-2xl mx-auto bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 md:p-10 shadow-[0_8px_40px_rgba(0,0,0,0.3)]">
-            <form action="https://formsubmit.co/ejretreats1@gmail.com" method="POST">
-              {/* FormSubmit config */}
-              <input type="hidden" name="_subject" value="New Revenue Report Request" />
-              <input type="hidden" name="_next" value="https://www.ejretreats.com/thank-you.html" />
-              <input type="hidden" name="_captcha" value="true" />
-              <input type="text" name="_honey" style={{ display: 'none' }} />
-
+            <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                 <div>
                   <label className="block text-white/70 text-sm font-medium mb-2">First Name</label>
@@ -100,9 +132,10 @@ export default function LeadForm() {
 
               <button
                 type="submit"
-                className="w-full px-6 py-4 bg-orange-500 text-white font-heading font-bold text-base rounded-lg shadow-[0_4px_24px_rgba(255,122,0,0.35)] hover:bg-orange-600 hover:translate-y-[-1px] hover:shadow-[0_8px_32px_rgba(255,122,0,0.45)] transition-all duration-300 cursor-pointer"
+                disabled={loading}
+                className="w-full px-6 py-4 bg-orange-500 text-white font-heading font-bold text-base rounded-lg shadow-[0_4px_24px_rgba(255,122,0,0.35)] hover:bg-orange-600 hover:translate-y-[-1px] hover:shadow-[0_8px_32px_rgba(255,122,0,0.45)] transition-all duration-300 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                Submit
+                {loading ? 'Submitting...' : 'Submit'}
               </button>
             </form>
           </div>
