@@ -73,7 +73,7 @@ export default function AuthoritySection() {
         <AnimatedSection delay={0.3}>
           <div className="mt-12 text-center">
             <p className="text-sm text-slate-500 italic mb-4">
-              Preview of the professional analytics software we use to build your report
+              Preview of what your report will include
             </p>
             {/* Top 3 — full image, no crop */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2">
