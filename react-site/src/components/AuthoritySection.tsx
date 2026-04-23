@@ -75,12 +75,26 @@ export default function AuthoritySection() {
             <p className="text-sm text-slate-500 italic mb-4">
               Preview of the professional analytics software we use to build your report
             </p>
-            <img
-              src="/images/dashboard-preview.png"
-              alt="Property Performance Snapshot — preview of analytics software"
-              loading="lazy"
-              className="w-full rounded-2xl shadow-xl border border-slate-200"
-            />
+            <div className="space-y-4">
+              <img
+                src="/images/Screenshot 2026-04-21 at 11.24.38 PM.jpg"
+                alt="Revenue analysis report — projected annual revenue and occupancy breakdown"
+                loading="lazy"
+                className="w-full rounded-2xl shadow-xl border border-slate-200"
+              />
+              <img
+                src="/images/Screenshot 2026-04-21 at 11.24.54 PM.jpg"
+                alt="Revenue analysis report — market opportunity, performance gap, and recommendations"
+                loading="lazy"
+                className="w-full rounded-2xl shadow-xl border border-slate-200"
+              />
+              <img
+                src="/images/Screenshot 2026-04-21 at 11.25.15 PM.jpg"
+                alt="Revenue projections with E&J Retreats — conservative, realistic, and optimistic scenarios"
+                loading="lazy"
+                className="w-full rounded-2xl shadow-xl border border-slate-200"
+              />
+            </div>
           </div>
         </AnimatedSection>
       </div>
