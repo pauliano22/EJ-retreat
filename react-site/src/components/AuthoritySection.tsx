@@ -75,11 +75,12 @@ export default function AuthoritySection() {
             <p className="text-sm text-slate-500 italic mb-4">
               Preview of the professional analytics software we use to build your report
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-2">
               {[
-                { src: '/images/Screenshot 2026-04-21 at 11.24.38 PM.jpg', label: 'Revenue & Occupancy Breakdown' },
-                { src: '/images/Screenshot 2026-04-21 at 11.24.54 PM.jpg', label: 'Market Opportunity & Recommendations' },
+                { src: '/images/Screenshot 2026-04-21 at 11.24.38 PM.jpg', label: 'Revenue & Occupancy' },
                 { src: '/images/Screenshot 2026-04-21 at 11.25.15 PM.jpg', label: 'Revenue Projections' },
+                { src: '/images/Screenshot 2026-04-23 at 1.07.13 PM.jpg', label: 'Market Analysis' },
+                { src: '/images/Screenshot 2026-04-23 at 1.07.55 PM.jpg', label: 'Comp Breakdown' },
               ].map(({ src, label }) => (
                 <div key={label} className="flex flex-col items-center gap-2">
                   <div className="w-full rounded-xl overflow-hidden shadow-lg border border-slate-200 bg-white">
