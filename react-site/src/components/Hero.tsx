@@ -39,7 +39,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg text-white/60 leading-relaxed mb-8 max-w-lg">
-              We compare your property against 20+ nearby short-term rentals with similar bed and bath counts using professional STR market analytics.
+              National Airbnb and vacation rental management company. We compare your property against 20+ nearby short-term rentals using professional STR market analytics — then manage it to its full potential.
             </p>
 
             <a
