@@ -1,0 +1,68 @@
+name: Weekly Blog Post Generator
+
+on:
+  schedule:
+    # Every Monday at 9:00 AM UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (generate but do not commit)'
+        required: false
+        default: 'false'
+        type: boolean
+
+jobs:
+  generate-post:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install anthropic
+
+      - name: Generate blog post
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/generate_blog_post.py
+
+      - name: Check for new files
+        id: check_changes
+        run: |
+          if git diff --quiet && git diff --staged --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push new post
+        if: steps.check_changes.outputs.changed == 'true' && inputs.dry_run != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add blog/
+          git commit -m "feat: add weekly blog post ($(date '+%Y-%m-%d'))"
+          git push origin main
+
+      - name: Summary
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          echo "### Blog post generated successfully" >> "$GITHUB_STEP_SUMMARY"
+          git diff --name-only HEAD~1 HEAD 2>/dev/null | grep blog/ | while read f; do
+            echo "- $f" >> "$GITHUB_STEP_SUMMARY"
+          done || echo "- New post created" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: No changes
+        if: steps.check_changes.outputs.changed == 'false'
+        run: echo "No new post needed this week (post for this week already exists)."
