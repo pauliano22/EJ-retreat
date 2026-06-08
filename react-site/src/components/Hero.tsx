@@ -39,7 +39,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg text-white/60 leading-relaxed mb-8 max-w-lg">
-              National Airbnb and vacation rental management company. We compare your property against 20+ nearby short-term rentals using professional STR market analytics — then manage it to its full potential.
+              National Airbnb and vacation rental management company. We use AI-powered market analysis, AirDNA data, and real-time pricing intelligence to maximize every property we manage.
             </p>
 
             <a

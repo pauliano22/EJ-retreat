@@ -2,6 +2,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import PlatformStrip from './components/PlatformStrip'
 import ProblemSection from './components/ProblemSection'
+import AiSection from './components/AiSection'
 import PropertyStrip from './components/PropertyStrip'
 import AuthoritySection from './components/AuthoritySection'
 import ReportPreview from './components/ReportPreview'
@@ -21,6 +22,7 @@ export default function App() {
       <Hero />
       <PlatformStrip />
       <ProblemSection />
+      <AiSection />
       <PropertyStrip />
       <AuthoritySection />
       <ReportPreview />
