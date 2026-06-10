@@ -75,7 +75,7 @@ export default function AuthoritySection() {
             <p className="text-sm text-slate-500 italic mb-4">
               Preview of what your report will include
             </p>
-            {/* Top 3 — full image, no crop */}
+            {/* Top 3 - full image, no crop */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2">
               {[
                 { src: '/images/Screenshot 2026-04-21 at 11.24.38 PM.jpg', label: 'Revenue & Occupancy' },
@@ -91,7 +91,7 @@ export default function AuthoritySection() {
               ))}
             </div>
 
-            {/* Bottom — revenue projections full width */}
+            {/* Bottom - revenue projections full width */}
             <div className="flex flex-col items-center gap-2 mt-4">
               <div className="w-full rounded-xl overflow-hidden shadow-lg border border-slate-200 bg-white">
                 <img

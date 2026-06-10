@@ -84,7 +84,7 @@ const options = [
   },
   {
     name: '4. Sine Waves (shader)',
-    desc: 'Clean sine wave lines on dark — technical, structured.',
+    desc: 'Clean sine wave lines on dark - technical, structured.',
     el: (
       <Waves
         style={{ width: '100%', height: '100%' }}
@@ -102,7 +102,7 @@ const options = [
   },
   {
     name: '5. Sine Waves (tighter)',
-    desc: 'More wave lines, tighter spacing — subtle texture feel.',
+    desc: 'More wave lines, tighter spacing - subtle texture feel.',
     el: (
       <Waves
         style={{ width: '100%', height: '100%' }}

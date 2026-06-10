@@ -10,7 +10,7 @@ const diyList = [
   'Stay current as platform algorithms change every few months',
   'Analyze which amenities actually move the needle in your market',
   'Respond to guests, handle reviews, manage turnovers',
-  'Do it all over again — every single week',
+  'Do it all over again - every single week',
 ]
 
 const ejList = [
@@ -22,7 +22,7 @@ const ejList = [
   'Full guest communication and review management',
   'Investment deal analysis before you buy',
   'Monthly performance reports with market benchmarks',
-  'A human team running it all — every day',
+  'A human team running it all - every day',
 ]
 
 export default function UrgencySection() {
@@ -42,7 +42,7 @@ export default function UrgencySection() {
               on top of everything else.
             </h2>
             <p className="text-white/50 text-lg max-w-2xl mx-auto leading-relaxed">
-              The operators already using AI to manage pricing, analyze markets, and optimize portfolios are pulling ahead every month. The gap doesn't stay the same — it grows. And the learning curve to catch up is steep.
+              The operators already using AI to manage pricing, analyze markets, and optimize portfolios are pulling ahead every month. The gap doesn't stay the same - it grows. And the learning curve to catch up is steep.
             </p>
           </div>
         </AnimatedSection>
@@ -96,13 +96,13 @@ export default function UrgencySection() {
         <AnimatedSection delay={0.3}>
           <div className="text-center">
             <p className="text-white/40 text-base max-w-xl mx-auto mb-8 leading-relaxed">
-              We've spent months building, testing, and running this stack so you don't have to. Every AI tool. Every algorithm. Every data source. You give us the property — we do the rest.
+              We've spent months building, testing, and running this stack so you don't have to. Every AI tool. Every algorithm. Every data source. You give us the property - we do the rest.
             </p>
             <a
               href="#revenue-report"
               className="inline-flex items-center px-8 py-4 bg-orange-500 text-white font-heading font-bold text-base rounded-lg shadow-[0_4px_24px_rgba(255,122,0,0.35)] hover:bg-orange-600 hover:translate-y-[-2px] hover:shadow-[0_8px_32px_rgba(255,122,0,0.45)] transition-all duration-300 cursor-pointer"
             >
-              Let Us Handle It — Get My Free Report
+              Let Us Handle It - Get My Free Report
             </a>
           </div>
         </AnimatedSection>

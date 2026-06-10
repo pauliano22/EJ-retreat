@@ -18,7 +18,7 @@ TOPICS = [
         "slug": "how-to-find-airbnb-property-management-company",
         "keyword": "Airbnb property management company",
         "category": "Property Management",
-        "description": "What to look for when hiring an Airbnb management company — fees, transparency, communication, and results.",
+        "description": "What to look for when hiring an Airbnb management company - fees, transparency, communication, and results.",
     },
     {
         "title": "Short-Term Rental vs Long-Term Rental: Which Earns More?",
@@ -46,14 +46,14 @@ TOPICS = [
         "slug": "maximize-airbnb-income-without-lowering-rates",
         "keyword": "maximize Airbnb income",
         "category": "Revenue Management",
-        "description": "Strategies to boost Airbnb revenue through listing optimization, amenities, and channel distribution — not rate cuts.",
+        "description": "Strategies to boost Airbnb revenue through listing optimization, amenities, and channel distribution - not rate cuts.",
     },
     {
         "title": "What Does Vacation Rental Property Management Cost?",
         "slug": "vacation-rental-property-management-cost",
         "keyword": "vacation rental property management cost",
         "category": "Property Management",
-        "description": "A transparent breakdown of STR management fees — percentage models, flat fees, and what's worth paying for.",
+        "description": "A transparent breakdown of STR management fees - percentage models, flat fees, and what's worth paying for.",
     },
     {
         "title": "Channel Manager for Vacation Rentals: Is It Worth It?",
@@ -109,7 +109,7 @@ TOPICS = [
         "slug": "what-is-revpan-short-term-rentals",
         "keyword": "RevPAN short-term rental",
         "category": "Revenue Management",
-        "description": "Revenue per available night — the STR metric that reveals true earning efficiency beyond simple occupancy.",
+        "description": "Revenue per available night - the STR metric that reveals true earning efficiency beyond simple occupancy.",
     },
     {
         "title": "How to Turn Your Vacation Home Into a Rental Property",
@@ -165,14 +165,14 @@ TOPICS = [
         "slug": "airbnb-property-management-agreement",
         "keyword": "Airbnb property management agreement",
         "category": "Property Management",
-        "description": "Key clauses to review in a vacation rental management contract — termination rights, fee transparency, and performance guarantees.",
+        "description": "Key clauses to review in a vacation rental management contract - termination rights, fee transparency, and performance guarantees.",
     },
     {
         "title": "How Much Can You Make on Airbnb? A Realistic Income Guide",
         "slug": "how-much-can-you-make-on-airbnb",
         "keyword": "how much can you make on Airbnb",
         "category": "Getting Started",
-        "description": "Realistic Airbnb income expectations by property type, market, and management approach — backed by STR market data.",
+        "description": "Realistic Airbnb income expectations by property type, market, and management approach - backed by STR market data.",
     },
     {
         "title": "How to Handle Difficult Guests as a Vacation Rental Owner",
@@ -214,14 +214,14 @@ TOPICS = [
         "slug": "real-cost-self-managing-vacation-rental",
         "keyword": "self-managing vacation rental cost",
         "category": "Property Management",
-        "description": "The hidden time, stress, and revenue costs of self-managing an Airbnb — and when professional management pays off.",
+        "description": "The hidden time, stress, and revenue costs of self-managing an Airbnb - and when professional management pays off.",
     },
     {
         "title": "How to Increase Your Airbnb Average Daily Rate (ADR)",
         "slug": "increase-airbnb-average-daily-rate",
         "keyword": "Airbnb average daily rate",
         "category": "Revenue Management",
-        "description": "Specific tactics to increase ADR without sacrificing occupancy — from listing upgrades to strategic minimum stays.",
+        "description": "Specific tactics to increase ADR without sacrificing occupancy - from listing upgrades to strategic minimum stays.",
     },
 ]
 
@@ -244,7 +244,7 @@ def generate_post(topic: dict) -> str:
 
     system_prompt = """You are an expert content writer for E&J Retreats, a national Airbnb and short-term rental (STR) management company based in the US.
 
-Your job is to write SEO-optimized blog post BODY CONTENT in HTML. You will write informative, valuable content that helps vacation rental owners — while naturally positioning E&J Retreats as the expert solution.
+Your job is to write SEO-optimized blog post BODY CONTENT in HTML. You will write informative, valuable content that helps vacation rental owners - while naturally positioning E&J Retreats as the expert solution.
 
 Rules:
 - Write in a confident, helpful, professional tone (not salesy)
@@ -255,7 +255,7 @@ Rules:
 - Include one <div class="blog-callout"><h4><i class="fa-solid fa-lightbulb"></i> Tip title</h4><p>tip text</p></div>
 - Include one inline CTA early in the post: <div class="blog-cta-inline"><p><strong>CTA text</strong></p><a href="../index.html#revenue-report" class="btn btn-primary">Get Your Free Revenue Potential Report</a></div>
 - End with: <div class="blog-cta-bottom"><h3>Ready to see what your property should really be making?</h3><p>We compare your property against 20+ nearby short-term rentals with similar bed and bath counts using professional STR market analytics. Free, no obligation.</p><div style="display:flex;gap:12px;flex-wrap:wrap;"><a href="../index.html#revenue-report" class="btn btn-primary">Get My Free Revenue Report</a><a href="../contact.html" class="btn btn-secondary">Talk to Our Team</a></div></div>
-- Do NOT include <html>, <head>, <body>, or navigation tags — only the article body content
+- Do NOT include <html>, <head>, <body>, or navigation tags - only the article body content
 - Start with <p class="blog-lead"> for the opening paragraph
 - Word count: 700-900 words of visible text
 - Naturally mention "E&J Retreats" 1-2 times as a national STR management company"""
@@ -299,7 +299,7 @@ def build_html_page(topic: dict, article_body: str) -> str:
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{title} — E&amp;J Retreats</title>
+  <title>{title} - E&amp;J Retreats</title>
   <meta name="description" content="{description}" />
   <meta name="keywords" content="{keyword}, short-term rental management, Airbnb management company, vacation rental management USA, STR management" />
   <link rel="canonical" href="https://www.ejretreats.com/blog/{slug}.html" />
@@ -417,7 +417,7 @@ def build_html_page(topic: dict, article_body: str) -> str:
 
         <div class="sidebar-widget">
           <h4>Our Management</h4>
-          <p>Full-service STR management — dynamic pricing, channel distribution, guest experience and more.</p>
+          <p>Full-service STR management - dynamic pricing, channel distribution, guest experience and more.</p>
           <a href="../management.html" class="btn btn-secondary btn-full">Learn More</a>
         </div>
 
@@ -530,13 +530,13 @@ def update_blog_index(topic: dict, output_path: str = "blog/index.html") -> None
 
     # Check if this slug is already in the index (avoid duplicates on re-run)
     if topic["slug"] in content:
-        print(f"  Slug '{topic['slug']}' already exists in blog index — skipping index update.")
+        print(f"  Slug '{topic['slug']}' already exists in blog index - skipping index update.")
         return
 
     # Insert new card right after <div class="blog-grid">
     marker = '<div class="blog-grid">'
     if marker not in content:
-        print("  WARNING: Could not find blog-grid marker in blog/index.html — skipping index update.")
+        print("  WARNING: Could not find blog-grid marker in blog/index.html - skipping index update.")
         return
 
     updated = content.replace(marker, marker + new_card, 1)
@@ -568,7 +568,7 @@ def main():
 
     # Skip if file already exists (prevent overwriting on re-runs in same week)
     if os.path.exists(output_file):
-        print(f"  File {output_file} already exists — skipping generation.")
+        print(f"  File {output_file} already exists - skipping generation.")
         sys.exit(0)
 
     with open(output_file, "w", encoding="utf-8") as f:

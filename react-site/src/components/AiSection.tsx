@@ -6,7 +6,7 @@ const capabilities = [
   {
     icon: TrendingUp,
     title: 'AI Revenue Projections',
-    body: 'We build personalized revenue models for your property using 12+ months of comparable listing data, local demand signals, and seasonal trend analysis — not generic averages.',
+    body: 'We build personalized revenue models for your property using 12+ months of comparable listing data, local demand signals, and seasonal trend analysis - not generic averages.',
   },
   {
     icon: BarChart3,
@@ -16,12 +16,12 @@ const capabilities = [
   {
     icon: MapPin,
     title: 'Market Intelligence',
-    body: 'We identify underpriced markets, emerging demand trends, and specific property types that are outperforming — giving you data-backed insight to guide your next acquisition.',
+    body: 'We identify underpriced markets, emerging demand trends, and specific property types that are outperforming - giving you data-backed insight to guide your next acquisition.',
   },
   {
     icon: Sparkles,
     title: 'Smart Amenity Recommendations',
-    body: "Our AI analyzes which amenities generate the highest booking premiums in your specific market. We tell you exactly what to add — and what's not worth the investment.",
+    body: "Our AI analyzes which amenities generate the highest booking premiums in your specific market. We tell you exactly what to add - and what's not worth the investment.",
   },
   {
     icon: Brain,
@@ -58,7 +58,7 @@ export default function AiSection() {
               Most operators use gut instinct.<br className="hidden md:block" /> We use AI.
             </h2>
             <p className="text-white/55 max-w-2xl mx-auto text-lg leading-relaxed">
-              We've built a full AI intelligence layer on top of our management platform — from initial revenue projections to ongoing portfolio analysis. This is what separates top-earning properties from the rest.
+              We've built a full AI intelligence layer on top of our management platform - from initial revenue projections to ongoing portfolio analysis. This is what separates top-earning properties from the rest.
             </p>
           </div>
         </AnimatedSection>
@@ -90,7 +90,7 @@ export default function AiSection() {
               See exactly what your property should be earning
             </h3>
             <p className="text-white/50 max-w-lg mx-auto mb-7 text-sm leading-relaxed">
-              We run your address through our AI analysis stack — comparing it against 20+ nearby properties — and deliver a full revenue breakdown. Free, no obligation, in minutes.
+              We run your address through our AI analysis stack - comparing it against 20+ nearby properties - and deliver a full revenue breakdown. Free, no obligation, in minutes.
             </p>
             <a
               href="#revenue-report"

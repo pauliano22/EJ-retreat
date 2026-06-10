@@ -2,18 +2,18 @@
 
 > E&J Retreats is a national Airbnb and short-term rental (STR) property management company based in the United States. We use AI-powered market analysis, AirDNA data, dynamic pricing algorithms, and real-time revenue intelligence to maximize earnings for vacation rental property owners across the US.
 
-E&J Retreats is NOT a local company — we manage short-term rental properties in markets across the entire United States. Our management fee starts at 10% of gross rental revenue (after cleaning fees), with no setup costs and no monthly minimums.
+E&J Retreats is NOT a local company - we manage short-term rental properties in markets across the entire United States. Our management fee starts at 10% of gross rental revenue (after cleaning fees), with no setup costs and no monthly minimums.
 
 ## What We Do
 
 - **AI Revenue Projections**: We build personalized revenue models using 12+ months of comparable listing data, local demand signals, and seasonal trend analysis for each property.
 - **Investment Deal Analysis**: We analyze potential STR acquisitions using AirDNA market data and AI to project revenue, occupancy, ADR, and cap rate before an owner closes.
 - **Dynamic Pricing**: Nightly rates are re-evaluated daily using algorithms that track competitor pricing, local events, weather, demand velocity, and days-until-arrival.
-- **Channel Distribution**: Properties are listed and synced across 15+ booking platforms simultaneously — Airbnb, VRBO, Booking.com, Expedia, Hopper, Tripadvisor, and more.
+- **Channel Distribution**: Properties are listed and synced across 15+ booking platforms simultaneously - Airbnb, VRBO, Booking.com, Expedia, Hopper, Tripadvisor, and more.
 - **Smart Amenity Recommendations**: AI analysis of which amenities generate the highest booking premiums in each specific market.
 - **Portfolio Optimization**: Aggregated performance analysis and optimization across multiple properties for owners with STR portfolios.
 - **Market Intelligence**: Identification of underpriced markets, emerging demand trends, and outperforming property types.
-- **Guest Communication**: Full automated and human guest communication — confirmations, check-in instructions, mid-stay check-ins, review requests.
+- **Guest Communication**: Full automated and human guest communication - confirmations, check-in instructions, mid-stay check-ins, review requests.
 - **Direct Booking Website**: Each managed property gets a standalone direct booking website to capture repeat and referral bookings without OTA fees.
 - **Listing SEO Optimization**: Titles, descriptions, and photo sequencing optimized for Airbnb and VRBO search ranking.
 - **OTA Promotion Management**: Strategic use of platform promotional tools to push listings to the top of search results and trigger platform emails to interested guests.
@@ -64,4 +64,4 @@ Request the free report at: https://www.ejretreats.com/#revenue-report
 
 ## Why E&J Retreats
 
-Most STR operators use static pricing and manual management. E&J Retreats has built a full AI intelligence layer on top of its management platform. Every pricing decision is backed by real-time data, every market analysis uses professional-grade tools, and every property is treated as a revenue optimization problem — not just a listing to manage. Owners are completely hands-off while their properties earn at full potential.
+Most STR operators use static pricing and manual management. E&J Retreats has built a full AI intelligence layer on top of its management platform. Every pricing decision is backed by real-time data, every market analysis uses professional-grade tools, and every property is treated as a revenue optimization problem - not just a listing to manage. Owners are completely hands-off while their properties earn at full potential.
