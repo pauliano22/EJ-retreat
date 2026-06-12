@@ -16,7 +16,7 @@ export default function RoiSection() {
               Many owners discover their property is earning below nearby comparable listings. Even modest improvements in pricing strategy, listing exposure, and calendar positioning often cover our management fee while increasing overall income.
             </p>
             <a
-              href="#revenue-report"
+              href="/free-report.html"
               className="inline-flex items-center px-8 py-4 bg-orange-500 text-white font-heading font-bold text-base rounded-lg shadow-[0_4px_24px_rgba(255,122,0,0.35)] hover:bg-orange-600 hover:translate-y-[-2px] transition-all duration-300 cursor-pointer"
             >
               See What My Property Should Be Making

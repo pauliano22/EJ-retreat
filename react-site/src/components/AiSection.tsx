@@ -93,7 +93,7 @@ export default function AiSection() {
               We run your address through our AI analysis stack - comparing it against 20+ nearby properties - and deliver a full revenue breakdown. Free, no obligation, in minutes.
             </p>
             <a
-              href="#revenue-report"
+              href="/free-report.html"
               className="inline-flex items-center px-8 py-4 bg-orange-500 text-white font-heading font-bold text-base rounded-lg shadow-[0_4px_24px_rgba(255,122,0,0.35)] hover:bg-orange-600 hover:translate-y-[-2px] hover:shadow-[0_8px_32px_rgba(255,122,0,0.45)] transition-all duration-300 cursor-pointer"
             >
               Get My Free AI Revenue Report

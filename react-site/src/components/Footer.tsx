@@ -34,7 +34,7 @@ export default function Footer() {
                 { label: 'Home', href: '#' },
                 { label: 'How It Works', href: '#how-it-works' },
                 { label: 'Pricing', href: '#pricing' },
-                { label: 'Revenue Report', href: '#revenue-report' },
+                { label: 'Revenue Report', href: '/free-report.html' },
                 { label: 'Contact', href: 'contact.html' },
               ].map((link) => (
                 <li key={link.label}>
@@ -51,7 +51,7 @@ export default function Footer() {
             <h5 className="font-heading font-bold text-white text-sm mb-4">Resources</h5>
             <ul className="space-y-2.5">
               <li>
-                <a href="#revenue-report" className="text-white/50 text-sm hover:text-orange-500 transition-colors duration-200 cursor-pointer">
+                <a href="/free-report.html" className="text-white/50 text-sm hover:text-orange-500 transition-colors duration-200 cursor-pointer">
                   Free Revenue Report
                 </a>
               </li>

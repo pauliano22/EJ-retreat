@@ -60,7 +60,7 @@ export default function AuthoritySection() {
 
             <div className="text-center">
               <a
-                href="#revenue-report"
+                href="/free-report.html"
                 className="inline-flex items-center px-7 py-3 bg-orange-500 text-white font-heading font-bold text-sm rounded-lg shadow-[0_4px_20px_rgba(255,122,0,0.25)] hover:bg-orange-600 hover:translate-y-[-1px] transition-all duration-200 cursor-pointer"
               >
                 Get My Free Revenue Potential Report

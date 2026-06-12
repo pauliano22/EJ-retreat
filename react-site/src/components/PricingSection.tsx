@@ -88,7 +88,7 @@ export default function PricingSection() {
                 Perfect for experienced hosts who want stronger performance without full outsourcing
               </p>
               <a
-                href="#revenue-report"
+                href="/free-report.html"
                 className="w-full text-center px-6 py-3.5 bg-orange-500 text-white font-heading font-bold text-sm rounded-lg shadow-[0_4px_20px_rgba(255,122,0,0.25)] hover:bg-orange-600 transition-all duration-200 cursor-pointer"
               >
                 Get My Free Revenue Potential Report
@@ -125,7 +125,7 @@ export default function PricingSection() {
                 Perfect for owners who want passive vacation rental income
               </p>
               <a
-                href="#revenue-report"
+                href="/free-report.html"
                 className="w-full text-center px-6 py-3.5 bg-orange-500 text-white font-heading font-bold text-sm rounded-lg shadow-[0_4px_20px_rgba(255,122,0,0.25)] hover:bg-orange-600 transition-all duration-200 cursor-pointer"
               >
                 Get My Free Revenue Potential Report

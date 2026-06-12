@@ -58,7 +58,7 @@ export default function Navbar() {
 
             <div className="flex items-center gap-4">
               <a
-                href="#revenue-report"
+                href="/free-report.html"
                 className="hidden lg:inline-flex items-center px-6 py-2.5 bg-orange-500 text-white font-heading font-bold text-sm rounded-lg shadow-[0_4px_20px_rgba(255,122,0,0.25)] hover:bg-orange-600 hover:translate-y-[-1px] transition-all duration-200 cursor-pointer"
               >
                 Get Free Revenue Report
@@ -101,7 +101,7 @@ export default function Navbar() {
           </a>
         ))}
         <a
-          href="#revenue-report"
+          href="/free-report.html"
           onClick={() => setMobileOpen(false)}
           className="mt-6 w-full text-center px-6 py-4 bg-orange-500 text-white font-heading font-bold rounded-lg shadow-[0_4px_20px_rgba(255,122,0,0.25)] hover:bg-orange-600 transition-all duration-200 cursor-pointer"
         >

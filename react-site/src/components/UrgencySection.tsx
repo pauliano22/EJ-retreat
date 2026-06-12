@@ -99,7 +99,7 @@ export default function UrgencySection() {
               We've spent months building, testing, and running this stack so you don't have to. Every AI tool. Every algorithm. Every data source. You give us the property - we do the rest.
             </p>
             <a
-              href="#revenue-report"
+              href="/free-report.html"
               className="inline-flex items-center px-8 py-4 bg-orange-500 text-white font-heading font-bold text-base rounded-lg shadow-[0_4px_24px_rgba(255,122,0,0.35)] hover:bg-orange-600 hover:translate-y-[-2px] hover:shadow-[0_8px_32px_rgba(255,122,0,0.45)] transition-all duration-300 cursor-pointer"
             >
               Let Us Handle It - Get My Free Report
