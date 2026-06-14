@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>E&J Retreats - Social Media Management for Your Property</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0f1923;
+    --body: #374151;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --bg: #f8f9fb;
+    --white: #fff;
+    --gold: #b8860b;
+    --gold-light: #fef9ee;
+    --gold-border: #f0d080;
+    --blue: #1d4ed8;
+    --blue-light: #eff6ff;
+    --green: #047857;
+    --green-light: #ecfdf5;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--ink);
+    padding: 64px 40px 56px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(184,134,11,0.18) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .hero-from {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 7vw, 64px);
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.08;
+    margin-bottom: 20px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: #f0d080;
+  }
+  .hero-lead {
+    font-size: 16px;
+    color: #9ca3af;
+    max-width: 500px;
+    margin: 0 auto 36px;
+    line-height: 1.7;
+  }
+  .hero-cta {
+    display: inline-block;
+    background: var(--gold);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .hero-cta:hover { opacity: 0.88; }
+
+  /* ── WRAP ── */
+  .wrap { max-width: 700px; margin: 0 auto; padding: 0 0 80px; }
+
+  /* ── SECTION ── */
+  .section {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 40px;
+  }
+
+  .section-eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .section h2 em { font-style: italic; font-weight: 400; }
+  .section p { font-size: 15px; color: var(--body); margin-bottom: 14px; line-height: 1.7; }
+  .section p:last-child { margin-bottom: 0; }
+
+  /* ── PROBLEM STATS ── */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 28px 0;
+  }
+  .stat-card {
+    background: var(--gold-light);
+    border: 1px solid var(--gold-border);
+    border-radius: 10px;
+    padding: 20px 16px;
+    text-align: center;
+  }
+  .stat-card .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-card .desc {
+    font-size: 12px;
+    color: var(--body);
+    line-height: 1.4;
+  }
+
+  /* ── WHAT YOU GET ── */
+  .feature-list { display: flex; flex-direction: column; gap: 0; margin-top: 24px; }
+  .feature {
+    display: flex;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+    align-items: flex-start;
+  }
+  .feature:last-child { border-bottom: none; padding-bottom: 0; }
+  .feature:first-child { padding-top: 0; }
+  .feat-icon {
+    width: 42px; height: 42px;
+    background: var(--gold-light);
+    border: 1px solid var(--gold-border);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .feature h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+  .feature p { font-size: 13px; color: var(--body); line-height: 1.5; margin: 0; }
+
+  /* ── HOW IT WORKS ── */
+  .how-steps { display: flex; flex-direction: column; gap: 0; margin-top: 24px; }
+  .how-step {
+    display: flex; gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+    align-items: flex-start;
+  }
+  .how-step:last-child { border-bottom: none; padding-bottom: 0; }
+  .how-step:first-child { padding-top: 0; }
+  .hs-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 32px;
+    text-align: center;
+    margin-top: -2px;
+  }
+  .how-step h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+  .how-step p { font-size: 13px; color: var(--body); line-height: 1.5; margin: 0; }
+
+  /* ── PRICING ── */
+  .price-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .price-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 18px;
+    position: relative;
+  }
+  .price-card.featured {
+    border-color: var(--gold);
+    background: var(--gold-light);
+  }
+  .popular-tag {
+    position: absolute;
+    top: -11px; left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  .price-card h4 { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+  .price-card .amt {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px; font-weight: 600;
+    color: var(--ink); line-height: 1;
+    margin-bottom: 4px;
+  }
+  .price-card .psub { font-size: 11px; color: var(--muted); margin-bottom: 18px; }
+  .price-card ul { list-style: none; }
+  .price-card ul li {
+    font-size: 12px; color: var(--body);
+    padding: 4px 0 4px 16px;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+  .price-card ul li:last-child { border-bottom: none; }
+  .price-card ul li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+
+  /* ── AD SPEND NOTE ── */
+  .ad-note {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 13px;
+    color: var(--body);
+    margin-top: 16px;
+  }
+  .ad-note strong { color: var(--ink); }
+
+  /* ── TRUST ── */
+  .trust-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .trust-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+  }
+  .trust-card .icon { font-size: 22px; margin-bottom: 8px; }
+  .trust-card h4 { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+  .trust-card p { font-size: 12px; color: var(--body); line-height: 1.5; }
+
+  /* ── CTA FOOTER ── */
+  .cta-footer {
+    background: var(--ink);
+    padding: 52px 40px;
+    text-align: center;
+  }
+  .cta-footer h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(26px, 4vw, 40px);
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+  .cta-footer h2 em { font-style: italic; font-weight: 400; color: #f0d080; }
+  .cta-footer p {
+    font-size: 14px;
+    color: #9ca3af;
+    max-width: 420px;
+    margin: 0 auto 28px;
+    line-height: 1.6;
+  }
+  .cta-btn {
+    display: inline-block;
+    background: var(--gold);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 14px 36px;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  .cta-sub {
+    font-size: 11px;
+    color: #6b7280;
+    margin-top: 14px;
+  }
+
+  @media (max-width: 580px) {
+    .hero { padding: 48px 24px 40px; }
+    .section { padding: 28px 20px; }
+    .stat-row { grid-template-columns: 1fr; }
+    .price-grid { grid-template-columns: 1fr; }
+    .trust-row { grid-template-columns: 1fr; }
+    .cta-footer { padding: 40px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-from">E&J Retreats , Exclusive to Current Clients</div>
+  <h1>More direct bookings.<br><em>Less Airbnb.</em></h1>
+  <p class="hero-lead">Every booking through Airbnb costs you up to 15% in fees. We build and run your property's social media to drive guests directly to you , no middleman, no commission.</p>
+  <a href="mailto:ejretreats1@gmail.com" class="hero-cta">I'm Interested , Tell Me More</a>
+</div>
+
+<div class="wrap">
+
+  <!-- THE PROBLEM -->
+  <div class="section">
+    <div class="section-eyebrow">The Problem</div>
+    <h2>Airbnb takes a cut<br><em>every single booking.</em></h2>
+    <p>Between guest fees and host fees, Airbnb and VRBO skim up to 15% off every reservation. That's thousands of dollars a year leaving your pocket. And you have zero control over the algorithm that decides whether your listing even gets seen.</p>
+    <p>Direct bookings change everything. No fees. No algorithm. Guests book through you, pay you, and come back to you next time. The properties winning right now are the ones building their own audience on social , so guests find them before they ever open Airbnb.
+
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="num">15%</div>
+        <div class="desc">Lost to Airbnb host fees on every single booking</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">40%</div>
+        <div class="desc">Of travelers discover properties through social before booking</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">$0</div>
+        <div class="desc">Platform fees on every direct booking you earn through your page</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT YOU GET -->
+  <div class="section">
+    <div class="section-eyebrow">What's Included</div>
+    <h2>A complete social presence,<br><em>done for you.</em></h2>
+    <p>We handle everything. You send us your property photos once , we take it from there.</p>
+
+    <div class="feature-list">
+      <div class="feature">
+        <div class="feat-icon">📱</div>
+        <div>
+          <h4>Dedicated Facebook & Instagram Pages</h4>
+          <p>Your property gets its own branded pages , not buried on a generic management company account. Guests follow your property. You own the audience.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feat-icon">🎟️</div>
+        <div>
+          <h4>Direct Booking Discount Funnel</h4>
+          <p>We pin a post offering followers an exclusive 10% discount code when they book directly through your website , bypassing Airbnb entirely. One direct booking a month can pay for this service and then some. No platform fees means more money in your pocket every time it works.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feat-icon">📸</div>
+        <div>
+          <h4>3 Posts Per Week, Every Week</h4>
+          <p>Property highlights, local area spotlights, and lifestyle content that makes people want to book. Written, designed, and scheduled by our team , you do nothing.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feat-icon">🚁</div>
+        <div>
+          <h4>Professional Photo & Drone Shoot <span style="font-size:10px;font-weight:700;background:#fef9ee;border:1px solid #f0d080;color:#b8860b;padding:2px 7px;border-radius:10px;margin-left:4px;vertical-align:middle;">Growth & Full Service</span></h4>
+          <p>We coordinate a professional videographer and drone operator to come out on a non-booked day and capture your property the way it deserves to be shown. Aerial footage, interior walkthroughs, outdoor living , the kind of content that stops the scroll and gets people to book. This is what separates a social page from a great social page.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feat-icon">💬</div>
+        <div>
+          <h4>Comment & DM Management</h4>
+          <p>We monitor your pages and respond to comments. Booking inquiries get routed directly to us so no lead falls through the cracks.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feat-icon">📊</div>
+        <div>
+          <h4>Monthly Performance Report</h4>
+          <p>A simple monthly summary showing your reach, follower growth, direct booking conversions, and top-performing posts. No dashboards to learn , just a clear update.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feat-icon">🎯</div>
+        <div>
+          <h4>Optional: Paid Ad Campaigns</h4>
+          <p>On our Growth and Full Service plans, we run targeted Meta ads driving travelers straight to your direct booking page , not to Airbnb. Your ad spend, zero platform commission.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="section">
+    <div class="section-eyebrow">How It Works</div>
+    <h2>Up and running in<br><em>under a week.</em></h2>
+
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="hs-num">1</div>
+        <div>
+          <h4>You send us your property photos</h4>
+          <p>A one-time asset drop via Google Drive. 20,30 photos is plenty. If you have video walkthroughs, even better.</p>
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="hs-num">2</div>
+        <div>
+          <h4>You create the pages , takes 5 minutes</h4>
+          <p>You own the pages, so you create them. We send you simple step-by-step instructions. Then you add us as editors and we handle everything from that point.</p>
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="hs-num">3</div>
+        <div>
+          <h4>We build your first two weeks of content</h4>
+          <p>We write the bios, design the posts, and schedule the first 14 days before going live. You get a preview to approve before anything is published.</p>
+        </div>
+      </div>
+      <div class="how-step">
+        <div class="hs-num">4</div>
+        <div>
+          <h4>We run it , you watch the bookings</h4>
+          <p>From launch onward, we manage everything. You receive a monthly report and can reach us anytime with questions or new photos to add.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIRECT BOOKING CALLOUT -->
+  <div class="section" style="background: #0f1923; border-bottom: 1px solid #1f2937;">
+    <div class="section-eyebrow" style="color:#f0d080;">The Real Goal</div>
+    <h2 style="color:#fff;">One direct booking a month<br><em style="color:#f0d080;">pays for itself.</em></h2>
+    <p style="color:#9ca3af;">Here's how the math works. Airbnb charges hosts up to 15% on every booking. On a $1,000 stay that's $150 straight out of your pocket before you see a dollar. A direct booking keeps all of it. And your guests save money too because you can pass some of that back as a discount.</p>
+    <p style="color:#9ca3af;">We actively promote direct bookings on every property page. Followers see a pinned post offering a 10% discount code exclusively for people who find you through social. They save money. You save the platform fee. Everybody wins , except Airbnb.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px;">
+      <div style="background:#1f2937;border-radius:10px;padding:20px;border:1px solid #374151;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:600;color:#f0d080;line-height:1;margin-bottom:8px;">Airbnb Booking</div>
+        <div style="font-size:13px;color:#9ca3af;line-height:1.6;">$1,000 stay → you keep ~$850 after Airbnb's 15% host fee. Guest pays even more on top with their service fee. No relationship built. They book through Airbnb next time.</div>
+      </div>
+      <div style="background:#064e3b;border-radius:10px;padding:20px;border:1px solid #065f46;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:600;color:#6ee7b7;line-height:1;margin-bottom:8px;">Direct Booking</div>
+        <div style="font-size:13px;color:#a7f3d0;line-height:1.6;">$1,000 stay → you keep $1,000. Guest gets 10% off and feels like an insider. Zero fees. Direct relationship. They come back and skip Airbnb entirely next time.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRICING -->
+  <div class="section">
+    <div class="section-eyebrow">Pricing</div>
+    <h2>Simple, flat monthly<br><em>pricing per property.</em></h2>
+    <p>No setup fees. No long-term contracts. Cancel anytime with 30 days notice.</p>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <h4>Starter</h4>
+        <div class="amt">$299</div>
+        <div class="psub">/ month per property</div>
+        <ul>
+          <li>FB + IG page setup</li>
+          <li>3 posts per week</li>
+          <li>10% direct booking discount funnel</li>
+          <li>Comment monitoring</li>
+          <li>Monthly report</li>
+          <li>Organic reach only</li>
+        </ul>
+      </div>
+      <div class="price-card featured">
+        <div class="popular-tag">Most Popular</div>
+        <h4>Growth</h4>
+        <div class="amt">$599</div>
+        <div class="psub">/ month per property</div>
+        <ul>
+          <li>Everything in Starter</li>
+          <li>Professional photo & drone shoot</li>
+          <li>Meta ad management</li>
+          <li>1 boosted post per week</li>
+          <li>Booking inquiry routing</li>
+          <li>Ad spend billed separately</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <h4>Full Service</h4>
+        <div class="amt">$999</div>
+        <div class="psub">/ month per property</div>
+        <ul>
+          <li>Everything in Growth</li>
+          <li>Quarterly drone refresh shoot</li>
+          <li>$200 ad spend included</li>
+          <li>Direct booking funnel + landing page</li>
+          <li>Bi-weekly check-in calls</li>
+          <li>Priority support</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ad-note">
+      <strong>Note on ad spend:</strong> On Growth and Full Service plans, your ad budget is separate from the management fee and goes 100% toward your campaigns. You'll see exactly what was spent and the results each month.
+    </div>
+  </div>
+
+  <!-- TRUST -->
+  <div class="section">
+    <div class="section-eyebrow">Why E&J Retreats</div>
+    <h2>We already know<br><em>your property.</em></h2>
+    <p>We're not a generic social media agency. We manage your property day-to-day , we know what makes it special, what guests love about it, and what kind of traveler you want to attract. That context is everything when it comes to content that actually converts.</p>
+
+    <div class="trust-row">
+      <div class="trust-card">
+        <div class="icon">🔒</div>
+        <h4>You own everything</h4>
+        <p>Your pages, your followers, your audience. If you ever part ways with us, you keep it all.</p>
+      </div>
+      <div class="trust-card">
+        <div class="icon">📅</div>
+        <h4>No long contracts</h4>
+        <p>Month-to-month. Cancel with 30 days notice. We earn your business every month.</p>
+      </div>
+      <div class="trust-card">
+        <div class="icon">👁️</div>
+        <h4>Full transparency</h4>
+        <p>You have view access to your pages at all times and a monthly report showing every result.</p>
+      </div>
+      <div class="trust-card">
+        <div class="icon">🤝</div>
+        <h4>Current clients first</h4>
+        <p>We're offering this to our existing clients before anyone else. Spots are limited at launch.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA FOOTER -->
+<div class="cta-footer">
+  <h2>Ready to stop paying<br><em>Airbnb their cut?</em></h2>
+  <p>Reply to this email or tap below and we'll set up a quick call to figure out which plan makes sense for your property.</p>
+  <a href="mailto:ejretreats1@gmail.com" class="cta-btn">Let's Talk , I'm Interested</a>
+  <div class="cta-sub">Or simply reply to the email where you received this.</div>
+</div>
+
+</body>
+</html>
