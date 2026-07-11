@@ -438,6 +438,399 @@
       .hero-speed { font-size: 1.1rem; }
       .input-row { grid-template-columns: 1fr; }
     }
+
+    /* ── Scroll hint ── */
+    .scroll-hint {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      margin-top: 28px;
+      color: rgba(255,255,255,0.22);
+      font-size: 0.68rem;
+      font-family: var(--font-h);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color .2s;
+    }
+    .scroll-hint:hover { color: rgba(255,255,255,0.45); }
+    .scroll-hint svg {
+      animation: bounce 1.8s ease-in-out infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(5px); }
+    }
+
+    /* ── Below-fold section ── */
+    .below-fold {
+      width: 100%;
+      background: #07080e;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 72px 24px 80px;
+    }
+    .bf-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .bf-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .bf-eyebrow {
+      display: inline-block;
+      background: rgba(255,122,0,0.1);
+      border: 1px solid rgba(255,122,0,0.2);
+      color: var(--orange);
+      font-family: var(--font-h);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 14px;
+    }
+    .bf-title {
+      font-family: var(--font-h);
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+    .bf-sub {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.4);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* Two-col: full report left, checklist right */
+    .bf-grid {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* Full report card */
+    .full-report {
+      background: #0e0f1b;
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .fr-topbar {
+      background: linear-gradient(90deg, #1a1b2e, #141524);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .fr-topbar-left { display: flex; align-items: center; gap: 10px; }
+    .fr-topbar-left img { height: 20px; width: auto; }
+    .fr-topbar-left span {
+      font-family: var(--font-h);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.5);
+    }
+    .fr-score {
+      background: rgba(255,122,0,0.12);
+      border: 1px solid rgba(255,122,0,0.3);
+      color: var(--orange);
+      font-family: var(--font-h);
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+    .fr-addr {
+      padding: 10px 20px;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.32);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* Big stats */
+    .fr-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .fr-stat {
+      padding: 16px 18px;
+      border-right: 1px solid rgba(255,255,255,0.05);
+    }
+    .fr-stat:last-child { border-right: none; }
+    .fr-stat-lbl {
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: rgba(255,255,255,0.28);
+      margin-bottom: 5px;
+    }
+    .fr-stat-val {
+      font-family: var(--font-h);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+    }
+    .fr-stat-val.orange { color: var(--orange); }
+    .fr-stat-val.green { color: var(--green); }
+    .fr-stat-sub { font-size: 0.6rem; color: rgba(255,255,255,0.28); margin-top: 3px; }
+
+    /* Executive summary */
+    .fr-section {
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .fr-section-title {
+      font-family: var(--font-h);
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 10px;
+    }
+    .fr-summary-text {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.58);
+      line-height: 1.65;
+    }
+
+    /* Key findings */
+    .fr-findings {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .fr-finding {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 8px;
+      padding: 10px 12px;
+      display: flex;
+      gap: 8px;
+    }
+    .fr-finding-num {
+      font-family: var(--font-h);
+      font-size: 0.6rem;
+      font-weight: 800;
+      color: var(--orange);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .fr-finding p {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.5;
+    }
+
+    /* Chart section */
+    .fr-chart-wrap {
+      display: flex;
+      align-items: flex-end;
+      gap: 6px;
+      height: 80px;
+      margin-bottom: 8px;
+    }
+    .fr-bar-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      height: 100%;
+      justify-content: flex-end;
+    }
+    .fr-bar {
+      width: 100%;
+      background: var(--orange);
+      border-radius: 3px 3px 0 0;
+      min-height: 3px;
+    }
+    .fr-bar.low { opacity: 0.22; }
+    .fr-bar.mid { opacity: 0.55; }
+    .fr-bar.peak { opacity: 1; }
+    .fr-bar-mo {
+      font-size: 0.55rem;
+      color: rgba(255,255,255,0.28);
+    }
+
+    /* Revenue scenarios */
+    .fr-scenarios { display: flex; flex-direction: column; gap: 10px; }
+    .fr-scenario {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .fr-scenario-label {
+      font-family: var(--font-h);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+      width: 90px;
+      flex-shrink: 0;
+    }
+    .fr-scenario-bar-bg {
+      flex: 1;
+      height: 8px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .fr-scenario-bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      background: var(--orange);
+    }
+    .fr-scenario-val {
+      font-family: var(--font-h);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.6);
+      width: 52px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .fr-scenario-val.hl { color: var(--orange); }
+
+    .fr-watermark {
+      padding: 12px 20px;
+      text-align: center;
+      background: rgba(255,255,255,0.015);
+      border-top: 1px solid rgba(255,255,255,0.04);
+    }
+    .fr-watermark span {
+      font-size: 0.62rem;
+      color: rgba(255,255,255,0.18);
+      font-family: var(--font-h);
+      letter-spacing: 0.03em;
+    }
+
+    /* ── Checklist ── */
+    .bf-checklist {
+      position: sticky;
+      top: 24px;
+    }
+    .bc-card {
+      background: #0e0f1b;
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .bc-card-header {
+      background: linear-gradient(135deg, #1a1b2e, #141524);
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .bc-card-header h3 {
+      font-family: var(--font-h);
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .bc-card-header p {
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.38);
+    }
+    .bc-items {
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .bc-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .bc-check {
+      width: 18px;
+      height: 18px;
+      background: rgba(34,197,94,0.1);
+      border: 1px solid rgba(34,197,94,0.25);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .bc-check svg {
+      width: 9px;
+      height: 9px;
+      stroke: var(--green);
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .bc-item-text strong {
+      display: block;
+      font-family: var(--font-h);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+    .bc-item-text span {
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.38);
+      line-height: 1.4;
+    }
+    .bc-cta {
+      padding: 16px 20px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .bc-cta-btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background: var(--orange);
+      color: #fff;
+      font-family: var(--font-h);
+      font-weight: 900;
+      font-size: 0.85rem;
+      letter-spacing: 0.03em;
+      text-align: center;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(255,122,0,0.4);
+      transition: background .2s, transform .15s;
+    }
+    .bc-cta-btn:hover { background: var(--orange-dark); transform: translateY(-1px); }
+    .bc-privacy {
+      margin-top: 8px;
+      text-align: center;
+      font-size: 0.65rem;
+      color: rgba(255,255,255,0.2);
+    }
+
+    @media (max-width: 860px) {
+      .bf-grid {
+        grid-template-columns: 1fr;
+      }
+      .bf-checklist { position: static; }
+      .fr-findings { grid-template-columns: 1fr; }
+      .fr-stats { grid-template-columns: repeat(2, 1fr); }
+      .fr-stat:nth-child(2) { border-right: none; }
+      .fr-stat:nth-child(3) { border-right: 1px solid rgba(255,255,255,0.05); }
+    }
+    @media (max-width: 480px) {
+      .below-fold { padding: 52px 16px 60px; }
+      .fr-stats { grid-template-columns: repeat(2, 1fr); }
+    }
   </style>
 </head>
 <body>
@@ -603,6 +996,226 @@
     </div>
 
   </main>
+
+  <!-- Scroll hint -->
+  <div class="scroll-hint" onclick="document.getElementById('full-report').scrollIntoView({behavior:'smooth'})">
+    <span>See full report below</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </div>
+
+  <!-- Below-fold: Full Report + Checklist -->
+  <section class="below-fold" id="full-report">
+    <div class="bf-inner">
+      <div class="bf-header">
+        <div class="bf-eyebrow">Sample Revenue Report</div>
+        <h2 class="bf-title">Here's exactly what you'll receive.</h2>
+        <p class="bf-sub">A real report for 1450 Gulf to Bay Blvd, Clearwater — pulled from live AirDNA market data.</p>
+      </div>
+      <div class="bf-grid">
+
+        <!-- Full Report Card -->
+        <div class="full-report">
+          <div class="fr-topbar">
+            <div class="fr-topbar-left">
+              <img src="images/logo.png" alt="E&amp;J Retreats" />
+              <span>Revenue Analysis</span>
+            </div>
+            <div class="fr-score">Opportunity Score: 9 / 10</div>
+          </div>
+          <div class="fr-addr">1450 Gulf to Bay Blvd, Clearwater, FL 33755 &nbsp;&middot;&nbsp; Powered by AirDNA</div>
+
+          <!-- 4 Stats -->
+          <div class="fr-stats">
+            <div class="fr-stat">
+              <div class="fr-stat-lbl">Projected Annual</div>
+              <div class="fr-stat-val orange">$223,400</div>
+              <div class="fr-stat-sub">Realistic estimate</div>
+            </div>
+            <div class="fr-stat">
+              <div class="fr-stat-lbl">Occupancy Rate</div>
+              <div class="fr-stat-val">55.8%</div>
+              <div class="fr-stat-sub">Market average</div>
+            </div>
+            <div class="fr-stat">
+              <div class="fr-stat-lbl">Avg Daily Rate</div>
+              <div class="fr-stat-val">$1,100</div>
+              <div class="fr-stat-sub">Comp-based target</div>
+            </div>
+            <div class="fr-stat">
+              <div class="fr-stat-lbl">RevPAR</div>
+              <div class="fr-stat-val green">$614</div>
+              <div class="fr-stat-sub">Submarket: 65/100</div>
+            </div>
+          </div>
+
+          <!-- Executive Summary -->
+          <div class="fr-section">
+            <div class="fr-section-title">Executive Summary</div>
+            <p class="fr-summary-text">This 4-unit multiplex (3BR/1BA, 2BR/1BA, 2BR/1BA, Studio) sits in a high-demand Clearwater corridor with consistent 55%+ occupancy and $1,100+ average daily rates. Market comparables show the property can realistically generate $195K–$285K annually, with top performers clearing nearly $300K. The Opportunity Score of 9/10 reflects strong market fundamentals and untapped revenue potential through professional management and dynamic pricing.</p>
+          </div>
+
+          <!-- 8 Key Findings -->
+          <div class="fr-section">
+            <div class="fr-section-title">8 Key Findings</div>
+            <div class="fr-findings">
+              <div class="fr-finding">
+                <span class="fr-finding-num">01</span>
+                <p>High-demand Clearwater market sustains 55%+ occupancy with Feb–Mar peak rates reaching near 100%.</p>
+              </div>
+              <div class="fr-finding">
+                <span class="fr-finding-num">02</span>
+                <p>Premium ADR of $1,100 is achievable based on 12+ comparable luxury properties in the immediate area.</p>
+              </div>
+              <div class="fr-finding">
+                <span class="fr-finding-num">03</span>
+                <p>4-unit multiplex structure creates multiple revenue streams and strong portfolio diversification.</p>
+              </div>
+              <div class="fr-finding">
+                <span class="fr-finding-num">04</span>
+                <p>Significant revenue gap exists between current performance and top comps — $75K+ upside available.</p>
+              </div>
+              <div class="fr-finding">
+                <span class="fr-finding-num">05</span>
+                <p>Dynamic pricing in Aug–Sep low season can recover 15–20% of lost revenue vs. flat rates.</p>
+              </div>
+              <div class="fr-finding">
+                <span class="fr-finding-num">06</span>
+                <p>Top competing properties achieve $297,900+ annually, confirming strong ceiling potential at this address.</p>
+              </div>
+              <div class="fr-finding">
+                <span class="fr-finding-num">07</span>
+                <p>RevPAR of $614 signals room for improvement through professional occupancy and rate management.</p>
+              </div>
+              <div class="fr-finding">
+                <span class="fr-finding-num">08</span>
+                <p>Opportunity Score of 9/10 places this property in the top tier of Clearwater investment opportunities.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Seasonal Chart -->
+          <div class="fr-section">
+            <div class="fr-section-title">Seasonal Revenue Breakdown</div>
+            <div class="fr-chart-wrap">
+              <div class="fr-bar-col"><div class="fr-bar mid" style="height:52%"></div><span class="fr-bar-mo">Jan</span></div>
+              <div class="fr-bar-col"><div class="fr-bar peak" style="height:100%"></div><span class="fr-bar-mo">Feb</span></div>
+              <div class="fr-bar-col"><div class="fr-bar peak" style="height:97%"></div><span class="fr-bar-mo">Mar</span></div>
+              <div class="fr-bar-col"><div class="fr-bar mid" style="height:72%"></div><span class="fr-bar-mo">Apr</span></div>
+              <div class="fr-bar-col"><div class="fr-bar mid" style="height:65%"></div><span class="fr-bar-mo">May</span></div>
+              <div class="fr-bar-col"><div class="fr-bar mid" style="height:58%"></div><span class="fr-bar-mo">Jun</span></div>
+              <div class="fr-bar-col"><div class="fr-bar mid" style="height:48%"></div><span class="fr-bar-mo">Jul</span></div>
+              <div class="fr-bar-col"><div class="fr-bar low" style="height:29%"></div><span class="fr-bar-mo">Aug</span></div>
+              <div class="fr-bar-col"><div class="fr-bar low" style="height:29%"></div><span class="fr-bar-mo">Sep</span></div>
+              <div class="fr-bar-col"><div class="fr-bar mid" style="height:42%"></div><span class="fr-bar-mo">Oct</span></div>
+              <div class="fr-bar-col"><div class="fr-bar mid" style="height:50%"></div><span class="fr-bar-mo">Nov</span></div>
+              <div class="fr-bar-col"><div class="fr-bar mid" style="height:55%"></div><span class="fr-bar-mo">Dec</span></div>
+            </div>
+          </div>
+
+          <!-- Revenue Scenarios -->
+          <div class="fr-section" style="border-bottom:none">
+            <div class="fr-section-title">Revenue Scenarios — With E&amp;J Retreats Management</div>
+            <div class="fr-scenarios">
+              <div class="fr-scenario">
+                <span class="fr-scenario-label">Conservative</span>
+                <div class="fr-scenario-bar-bg"><div class="fr-scenario-bar-fill" style="width:65%;opacity:.45"></div></div>
+                <span class="fr-scenario-val">$195,000</span>
+              </div>
+              <div class="fr-scenario">
+                <span class="fr-scenario-label">Realistic</span>
+                <div class="fr-scenario-bar-bg"><div class="fr-scenario-bar-fill" style="width:75%"></div></div>
+                <span class="fr-scenario-val hl">$223,400</span>
+              </div>
+              <div class="fr-scenario">
+                <span class="fr-scenario-label">Optimistic</span>
+                <div class="fr-scenario-bar-bg"><div class="fr-scenario-bar-fill" style="width:96%"></div></div>
+                <span class="fr-scenario-val">$285,000</span>
+              </div>
+              <div class="fr-scenario">
+                <span class="fr-scenario-label" style="color:rgba(255,255,255,.3)">Top Comp</span>
+                <div class="fr-scenario-bar-bg"><div class="fr-scenario-bar-fill" style="width:100%;background:#22c55e;opacity:.5"></div></div>
+                <span class="fr-scenario-val" style="color:rgba(255,255,255,.3)">$297,900</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="fr-watermark">
+            <span>Prepared by E&amp;J Retreats &nbsp;&middot;&nbsp; Data powered by AirDNA &nbsp;&middot;&nbsp; ejretreats.com</span>
+          </div>
+        </div>
+        <!-- end full-report -->
+
+        <!-- Checklist Sidebar -->
+        <div class="bf-checklist">
+          <div class="bc-card">
+            <div class="bc-card-header">
+              <h3>What's included in your free report</h3>
+              <p>Everything you need to make a confident decision about your property.</p>
+            </div>
+            <div class="bc-items">
+              <div class="bc-item">
+                <div class="bc-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></div>
+                <div class="bc-item-text"><strong>12-Month Revenue Projection</strong><span>Full year estimated earnings based on live market data</span></div>
+              </div>
+              <div class="bc-item">
+                <div class="bc-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></div>
+                <div class="bc-item-text"><strong>Occupancy Rate Benchmarks</strong><span>How your property stacks up against the local STR market</span></div>
+              </div>
+              <div class="bc-item">
+                <div class="bc-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></div>
+                <div class="bc-item-text"><strong>Average Daily Rate vs. Comps</strong><span>Pricing analysis against comparable listings in your submarket</span></div>
+              </div>
+              <div class="bc-item">
+                <div class="bc-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></div>
+                <div class="bc-item-text"><strong>RevPAR Analysis</strong><span>Revenue per available room — the core metric driving true profitability</span></div>
+              </div>
+              <div class="bc-item">
+                <div class="bc-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></div>
+                <div class="bc-item-text"><strong>Executive Summary</strong><span>Plain-English breakdown of what the numbers mean for your property</span></div>
+              </div>
+              <div class="bc-item">
+                <div class="bc-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></div>
+                <div class="bc-item-text"><strong>8 Key Findings</strong><span>Specific insights on demand, pricing, and competitive positioning</span></div>
+              </div>
+              <div class="bc-item">
+                <div class="bc-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></div>
+                <div class="bc-item-text"><strong>Market Opportunity Analysis</strong><span>Submarket score, demand trends, and gap vs. top performers</span></div>
+              </div>
+              <div class="bc-item">
+                <div class="bc-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></div>
+                <div class="bc-item-text"><strong>7 Expert Recommendations</strong><span>Actionable steps to close the gap between current and peak revenue</span></div>
+              </div>
+              <div class="bc-item">
+                <div class="bc-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></div>
+                <div class="bc-item-text"><strong>3 Revenue Scenarios</strong><span>Conservative, realistic, and optimistic projections with clear assumptions</span></div>
+              </div>
+              <div class="bc-item">
+                <div class="bc-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></div>
+                <div class="bc-item-text"><strong>Seasonal Demand Analysis</strong><span>Month-by-month trends so you can plan pricing and availability</span></div>
+              </div>
+              <div class="bc-item">
+                <div class="bc-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></div>
+                <div class="bc-item-text"><strong>Comparable Properties Breakdown</strong><span>What top STRs in your area are doing — and how to beat them</span></div>
+              </div>
+              <div class="bc-item">
+                <div class="bc-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"></polyline></svg></div>
+                <div class="bc-item-text"><strong>Submarket Score</strong><span>A 0–100 demand index for your exact neighborhood (this property: 65/100)</span></div>
+              </div>
+            </div>
+            <div class="bc-cta">
+              <button class="bc-cta-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">Get My Free Report &uarr;</button>
+              <p class="bc-privacy">Free &nbsp;&middot;&nbsp; No obligation &nbsp;&middot;&nbsp; Takes 30 seconds</p>
+            </div>
+          </div>
+        </div>
+        <!-- end checklist -->
+
+      </div>
+    </div>
+  </section>
+
 </div>
 
 <script>
