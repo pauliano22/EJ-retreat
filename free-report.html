@@ -1280,8 +1280,6 @@
       message:          document.getElementById('message').value,
     };
 
-    if (window.fbq) fbq('track', 'Lead');
-
     await Promise.allSettled([
       fetch(CRM_URL, {
         method: 'POST',
