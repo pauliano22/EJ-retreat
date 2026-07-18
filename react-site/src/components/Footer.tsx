@@ -34,6 +34,7 @@ export default function Footer() {
                 { label: 'Home', href: '#' },
                 { label: 'How It Works', href: '#how-it-works' },
                 { label: 'Pricing', href: '#pricing' },
+                { label: 'Areas We Serve', href: '/areas-we-serve.html' },
                 { label: 'Revenue Report', href: '/free-report.html' },
                 { label: 'Contact', href: 'contact.html' },
               ].map((link) => (
