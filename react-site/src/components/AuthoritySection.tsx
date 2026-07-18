@@ -72,9 +72,17 @@ export default function AuthoritySection() {
         {/* Live report preview */}
         <AnimatedSection delay={0.3}>
           <div className="mt-12">
-            <p className="text-sm text-slate-500 italic text-center mb-4">
-              Preview of what your report will include
-            </p>
+            <div className="text-center mb-8">
+              <span className="inline-block font-heading text-xs font-bold tracking-[0.12em] uppercase bg-orange-500/10 border border-orange-500/30 text-orange-500 rounded-full px-4 py-1.5 mb-4">
+                Sample Revenue Report
+              </span>
+              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-3">
+                Here's exactly what you'll receive.
+              </h2>
+              <p className="text-slate-500 text-base">
+                A real report for 1450 Gulf to Bay Blvd, Clearwater — pulled from live AirDNA market data.
+              </p>
+            </div>
             <div style={{ background: '#09090f', borderRadius: 14, border: '1px solid rgba(255,255,255,0.08)', overflow: 'hidden', textAlign: 'left', fontSize: 13 }}>
 
               {/* Topbar */}
