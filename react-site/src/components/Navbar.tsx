@@ -44,7 +44,7 @@ export default function Navbar() {
               </span>
             </a>
 
-            <div className="hidden lg:flex items-center gap-8">
+            <div className="hidden lg:flex items-center gap-5">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
@@ -60,7 +60,7 @@ export default function Navbar() {
             <div className="flex items-center gap-4">
               <a
                 href="/free-report.html"
-                className="hidden lg:inline-flex items-center px-6 py-2.5 bg-orange-500 text-white font-heading font-bold text-sm rounded-lg shadow-[0_4px_20px_rgba(255,122,0,0.25)] hover:bg-orange-600 hover:translate-y-[-1px] transition-all duration-200 cursor-pointer"
+                className="hidden lg:inline-flex items-center whitespace-nowrap px-5 py-2.5 bg-orange-500 text-white font-heading font-bold text-sm rounded-lg shadow-[0_4px_20px_rgba(255,122,0,0.25)] hover:bg-orange-600 hover:translate-y-[-1px] transition-all duration-200 cursor-pointer"
               >
                 Get Free Revenue Report
               </a>
