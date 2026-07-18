@@ -4,7 +4,7 @@ const images = [
   { src: '/images/properties/waterfront-boaters-paradise.webp', alt: 'Waterfront property' },
   { src: '/images/properties/mini-resort-pool.webp', alt: 'Resort pool property' },
   { src: '/images/properties/cocoa-ridge-retreat.webp', alt: 'Cocoa Ridge Retreat' },
-  { src: '/images/beachfront-aerial.png', alt: 'Beachfront aerial view' },
+  { src: '/images/beachfront-aerial.jpg', alt: 'Beachfront aerial view' },
 ]
 
 export default function PropertyStrip() {
