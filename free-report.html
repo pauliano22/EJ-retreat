@@ -985,7 +985,7 @@
           <input class="f-input" id="email" type="email" placeholder="Email Address" autocomplete="email" />
         </div>
         <div class="input-row single">
-          <input class="f-input" id="phone" type="tel" placeholder="Phone (Optional)" autocomplete="tel" />
+          <input class="f-input" id="phone" type="tel" placeholder="Phone Number" autocomplete="tel" />
         </div>
         <button class="cta-btn" onclick="next(3)">Continue &rarr;</button>
       </div>
@@ -1259,6 +1259,8 @@
     if (step === 3) {
       var em = document.getElementById('email').value.trim();
       if (!em || !em.includes('@')) { document.getElementById('email').focus(); return; }
+      var ph = document.getElementById('phone').value.trim();
+      if (!ph) { document.getElementById('phone').focus(); return; }
     }
     setStep(step);
   };
