@@ -548,9 +548,209 @@
       .clean-hero { padding: 72px 20px 64px; }
       .clean-section, .clean-section-dark, .clean-section-light { padding: 60px 20px; }
     }
+
+    /* ── PROMO ANNOUNCEMENT BAR ── */
+    .promo-bar {
+      background: linear-gradient(90deg, #0a7c79, #0ea5a0, #10b981);
+      padding: 11px 24px;
+      text-align: center;
+      font-family: var(--font-h);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.01em;
+    }
+    .promo-bar a {
+      color: #fff;
+      font-weight: 800;
+      text-decoration: none;
+      background: rgba(255,255,255,0.2);
+      border-radius: 100px;
+      padding: 2px 12px;
+      margin-left: 10px;
+      transition: background .2s;
+    }
+    .promo-bar a:hover { background: rgba(255,255,255,0.32); }
+
+    /* ── WELCOME PACKAGE SECTION ── */
+    .welcome-section {
+      background: linear-gradient(135deg, #060c0c, #071614);
+      padding: 80px 24px;
+      border-top: 1px solid rgba(14,165,160,0.12);
+      border-bottom: 1px solid rgba(14,165,160,0.12);
+      text-align: center;
+    }
+    .welcome-eyebrow {
+      display: inline-block;
+      font-family: var(--font-h);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      background: rgba(14,165,160,0.1);
+      border: 1px solid rgba(14,165,160,0.25);
+      border-radius: 100px;
+      padding: 5px 16px;
+      margin-bottom: 18px;
+    }
+    .welcome-h2 {
+      font-family: var(--font-h);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+    .welcome-h2 em { font-style: normal; color: var(--teal); }
+    .welcome-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.5);
+      max-width: 560px;
+      margin: 0 auto 48px;
+      line-height: 1.7;
+    }
+    .punch-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    .punch-slot {
+      width: 74px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .punch-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-h);
+      font-size: 1.1rem;
+      font-weight: 800;
+    }
+    .punch-circle.paid {
+      background: rgba(14,165,160,0.15);
+      border: 2px solid var(--teal);
+      color: var(--teal);
+    }
+    .punch-circle.free {
+      background: linear-gradient(135deg, #ca8a04, #f59e0b);
+      border: 2px solid #f59e0b;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(245,158,11,0.35);
+    }
+    .punch-label {
+      font-family: var(--font-h);
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .punch-label.paid { color: rgba(255,255,255,0.35); }
+    .punch-label.free { color: #f59e0b; }
+    .punch-divider {
+      font-size: 1.4rem;
+      color: rgba(255,255,255,0.15);
+      margin: 0 4px;
+      flex-shrink: 0;
+    }
+    .punch-legend {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .punch-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-h);
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .legend-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+    }
+    .legend-dot.paid { background: var(--teal); }
+    .legend-dot.free { background: #f59e0b; }
+    .punch-legend-item.paid { color: rgba(255,255,255,0.45); }
+    .punch-legend-item.free { color: #f59e0b; }
+    .welcome-savings {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(245,158,11,0.1);
+      border: 1px solid rgba(245,158,11,0.25);
+      border-radius: 12px;
+      padding: 14px 24px;
+      margin-bottom: 36px;
+    }
+    .savings-icon { font-size: 1.4rem; }
+    .savings-text { text-align: left; }
+    .savings-text strong {
+      display: block;
+      font-family: var(--font-h);
+      font-size: 1rem;
+      font-weight: 800;
+      color: #f59e0b;
+    }
+    .savings-text span {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+    }
+    .welcome-fine {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.22);
+      margin-top: 14px;
+      font-family: var(--font-h);
+    }
+
+    /* ── FORM PROMO CALLOUT ── */
+    .form-promo {
+      background: linear-gradient(90deg, rgba(14,165,160,0.08), rgba(16,185,129,0.08));
+      border: 1px solid rgba(14,165,160,0.2);
+      border-radius: 12px;
+      padding: 16px 22px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 36px;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .form-promo-icon { font-size: 1.6rem; flex-shrink: 0; }
+    .form-promo-text strong {
+      display: block;
+      font-family: var(--font-h);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--teal);
+      margin-bottom: 2px;
+    }
+    .form-promo-text span {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+    }
   </style>
 </head>
 <body>
+
+  <!-- PROMO BAR -->
+  <div class="promo-bar">
+    🎁 &nbsp;New Client Welcome Package — Pay for 5 STR Cleans, Get the Next 2 <strong>FREE</strong>
+    <a href="#get-quote">Claim Offer &rarr;</a>
+  </div>
 
   <!-- NAV -->
   <nav class="clean-nav" id="cleanNav">
@@ -676,6 +876,61 @@
     </div>
   </section>
 
+  <!-- WELCOME PACKAGE -->
+  <section class="welcome-section">
+    <div class="welcome-eyebrow">New Client Welcome Package</div>
+    <h2 class="welcome-h2">Your First 7 Cleans.<br><em>Pay for 5.</em></h2>
+    <p class="welcome-sub">New STR clients get their 6th and 7th turnover cleans on us — no catches, no commitment. It's our way of proving what professional property cleaning actually looks like.</p>
+
+    <div class="punch-card">
+      <div class="punch-slot">
+        <div class="punch-circle paid">✓</div>
+        <div class="punch-label paid">Clean 1</div>
+      </div>
+      <div class="punch-slot">
+        <div class="punch-circle paid">✓</div>
+        <div class="punch-label paid">Clean 2</div>
+      </div>
+      <div class="punch-slot">
+        <div class="punch-circle paid">✓</div>
+        <div class="punch-label paid">Clean 3</div>
+      </div>
+      <div class="punch-slot">
+        <div class="punch-circle paid">✓</div>
+        <div class="punch-label paid">Clean 4</div>
+      </div>
+      <div class="punch-slot">
+        <div class="punch-circle paid">✓</div>
+        <div class="punch-label paid">Clean 5</div>
+      </div>
+      <div class="punch-divider">→</div>
+      <div class="punch-slot">
+        <div class="punch-circle free">🎁</div>
+        <div class="punch-label free">FREE</div>
+      </div>
+      <div class="punch-slot">
+        <div class="punch-circle free">🎁</div>
+        <div class="punch-label free">FREE</div>
+      </div>
+    </div>
+
+    <div class="punch-legend">
+      <div class="punch-legend-item paid"><div class="legend-dot paid"></div> You pay for these 5</div>
+      <div class="punch-legend-item free"><div class="legend-dot free"></div> We cover these 2</div>
+    </div>
+
+    <div class="welcome-savings">
+      <div class="savings-icon">💰</div>
+      <div class="savings-text">
+        <strong>Up to $300 in free cleaning services</strong>
+        <span>Applied automatically after your 5th completed turnover</span>
+      </div>
+    </div>
+
+    <a href="#get-quote" class="btn-teal">Claim Your Welcome Package &rarr;</a>
+    <div class="welcome-fine">New clients only &nbsp;·&nbsp; STR turnover cleans &nbsp;·&nbsp; No minimum commitment required</div>
+  </section>
+
   <!-- WHO WE WORK WITH -->
   <section class="clean-section">
     <div class="section-inner">
@@ -766,6 +1021,13 @@
   <!-- CONTACT FORM -->
   <section class="clean-section" id="get-quote">
     <div class="section-inner">
+      <div class="form-promo">
+        <div class="form-promo-icon">🎁</div>
+        <div class="form-promo-text">
+          <strong>Welcome Package: Pay for 5 Cleans, Get 2 FREE</strong>
+          <span>Mention this offer in your message below and we'll apply it to your account automatically after your 5th turnover.</span>
+        </div>
+      </div>
       <div class="section-head" style="text-align:center;">
         <span class="section-tag">Get a Quote</span>
         <h2 class="section-title" style="margin: 0 auto 12px;">Tell us about your property.</h2>
