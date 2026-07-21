@@ -21,9 +21,22 @@
     "url": "https://www.ejretreats.com/cleaning.html",
     "telephone": "813-699-0509",
     "email": "ejretreats1@gmail.com",
-    "areaServed": {"@type": "State", "name": "Florida"},
+    "areaServed": [{"@type":"State","name":"Florida"},{"@type":"State","name":"Tennessee"},{"@type":"State","name":"Texas"},{"@type":"State","name":"Arizona"},{"@type":"State","name":"North Carolina"},{"@type":"State","name":"South Carolina"},{"@type":"State","name":"Georgia"},{"@type":"State","name":"Colorado"},{"@type":"State","name":"California"},{"@type":"State","name":"Nevada"},{"@type":"State","name":"Utah"},{"@type":"State","name":"Alabama"},{"@type":"State","name":"Louisiana"},{"@type":"State","name":"Virginia"},{"@type":"State","name":"Maryland"},{"@type":"State","name":"Missouri"},{"@type":"State","name":"Oklahoma"},{"@type":"State","name":"Arkansas"}],
     "serviceType": ["STR Turnover Cleaning", "Vacation Rental Cleaning", "Lawn Care", "Pool Maintenance", "Handyman Services"],
     "parentOrganization": {"@type": "Organization", "name": "E&J Retreats", "url": "https://www.ejretreats.com"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"What is STR turnover cleaning and how is it different from regular cleaning?","acceptedAnswer":{"@type":"Answer","text":"STR turnover cleaning is a same-day service performed between guest checkouts and the next check-in. It follows documented SOPs covering every surface, linen swaps, restocking, and a final photo walkthrough — faster and more standardized than regular residential cleaning."}},
+      {"@type":"Question","name":"Do you provide cleaning supplies, linens, and restocking?","acceptedAnswer":{"@type":"Answer","text":"Yes. We bring all cleaning supplies and can manage linen and consumable restocking depending on your package. We keep a documented checklist for every property so nothing is missed between turnovers."}},
+      {"@type":"Question","name":"How do you handle same-day back-to-back turnovers?","acceptedAnswer":{"@type":"Answer","text":"We use automated dispatch so cleaners are assigned and confirmed the moment a checkout is logged. Every team has a documented backup cleaner on standby, and our photo documentation system confirms completion before the next guest arrives."}},
+      {"@type":"Question","name":"What does the New Client Welcome Package include?","acceptedAnswer":{"@type":"Answer","text":"New STR clients get their 6th and 7th turnover cleans free after completing 5 paid turnovers — no commitment, no strings. The offer applies automatically after your 5th completed turnover."}},
+      {"@type":"Question","name":"What cities and states do you serve for STR cleaning?","acceptedAnswer":{"@type":"Answer","text":"We provide STR turnover cleaning across 80+ cities in 15+ states including Florida, Tennessee, Texas, Arizona, North Carolina, South Carolina, Georgia, Colorado, California, Nevada, Utah, Alabama, Louisiana, Virginia, and Maryland."}}
+    ]
   }
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -549,6 +562,24 @@
       .clean-section, .clean-section-dark, .clean-section-light { padding: 60px 20px; }
     }
 
+    /* ── FAQ SECTION ── */
+    .faq-clean { display: flex; flex-direction: column; gap: 12px; max-width: 780px; margin: 0 auto; }
+    .faq-clean-item {
+      background: #fff; border: 1px solid #e5e7eb; border-radius: 12px;
+      overflow: hidden;
+    }
+    .faq-clean-q {
+      width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+      padding: 18px 22px; display: flex; justify-content: space-between; align-items: center;
+      font-family: var(--font-h); font-size: 0.95rem; font-weight: 700; color: #111827;
+    }
+    .faq-clean-q .faq-icon { color: var(--teal); font-size: 1.1rem; flex-shrink: 0; margin-left: 12px; transition: transform .2s; }
+    .faq-clean-q.open .faq-icon { transform: rotate(45deg); }
+    .faq-clean-a {
+      display: none; padding: 0 22px 18px; font-size: 0.9rem; color: #4b5563; line-height: 1.7;
+    }
+    .faq-clean-a.open { display: block; }
+
     /* ── PROMO ANNOUNCEMENT BAR ── */
     .promo-bar {
       background: linear-gradient(90deg, #0a7c79, #0ea5a0, #10b981);
@@ -1018,6 +1049,39 @@
     </div>
   </section>
 
+  <!-- FAQ SECTION -->
+  <section class="clean-section-light">
+    <div class="section-inner">
+      <div class="section-head" style="text-align:center;">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Common Questions About Our Cleaning Service</h2>
+        <p class="section-sub" style="margin:0 auto 36px;">Everything STR operators ask before getting started.</p>
+      </div>
+      <div class="faq-clean">
+        <div class="faq-clean-item">
+          <button class="faq-clean-q" onclick="toggleFaqClean(this)">What is STR turnover cleaning and how is it different from regular cleaning? <span class="faq-icon">+</span></button>
+          <div class="faq-clean-a">STR turnover cleaning is a same-day service performed between guest checkouts and the next check-in. It's faster, more thorough, and more standardized than regular residential cleaning — following documented SOPs that cover every surface, linen swap, restocking, and a final photo walkthrough. We treat each turnover like a hotel room reset.</div>
+        </div>
+        <div class="faq-clean-item">
+          <button class="faq-clean-q" onclick="toggleFaqClean(this)">Do you provide cleaning supplies, linens, and restocking? <span class="faq-icon">+</span></button>
+          <div class="faq-clean-a">Yes. We bring all cleaning supplies and can manage your linen and consumable restocking (paper towels, soap, toiletries) depending on your package. We keep a checklist for every property so nothing is ever missed between turnovers.</div>
+        </div>
+        <div class="faq-clean-item">
+          <button class="faq-clean-q" onclick="toggleFaqClean(this)">How do you handle same-day back-to-back turnovers? <span class="faq-icon">+</span></button>
+          <div class="faq-clean-a">We use automated dispatch so cleaners are assigned and confirmed the moment a checkout is logged. Every team has a documented backup cleaner on standby — so if your primary is unavailable for any reason, the turnover still happens on time. Our photo documentation system confirms completion before the next guest arrives.</div>
+        </div>
+        <div class="faq-clean-item">
+          <button class="faq-clean-q" onclick="toggleFaqClean(this)">What does the New Client Welcome Package include? <span class="faq-icon">+</span></button>
+          <div class="faq-clean-a">New STR clients get their 6th and 7th turnover cleans free after completing 5 paid turnovers — no commitment, no strings. It's our way of showing what professional, documented, backup-covered cleaning looks like in practice. The offer applies automatically after your 5th completed turnover.</div>
+        </div>
+        <div class="faq-clean-item">
+          <button class="faq-clean-q" onclick="toggleFaqClean(this)">What cities and states do you serve? <span class="faq-icon">+</span></button>
+          <div class="faq-clean-a">We provide STR turnover cleaning across 80+ cities in 15+ states including Florida, Tennessee, Texas, Arizona, North Carolina, South Carolina, Georgia, Colorado, California, Nevada, Utah, Alabama, Louisiana, and more. <a href="areas-we-serve.html" style="color:var(--teal)">See our full service area →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT FORM -->
   <section class="clean-section" id="get-quote">
     <div class="section-inner">
@@ -1333,6 +1397,15 @@
         success.style.display = 'block';
       });
     });
+  </script>
+  <script>
+  function toggleFaqClean(btn) {
+    var ans = btn.nextElementSibling;
+    var isOpen = ans.classList.contains('open');
+    document.querySelectorAll('.faq-clean-a').forEach(function(a){ a.classList.remove('open'); });
+    document.querySelectorAll('.faq-clean-q').forEach(function(b){ b.classList.remove('open'); });
+    if (!isOpen) { ans.classList.add('open'); btn.classList.add('open'); }
+  }
   </script>
 </body>
 </html>
