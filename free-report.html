@@ -403,6 +403,31 @@
       margin-top: 4px;
     }
 
+    .sms-opt {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 10px 0 14px;
+      text-align: left;
+    }
+    .sms-opt input[type="checkbox"] {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      accent-color: var(--orange);
+      cursor: pointer;
+    }
+    .sms-opt label {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.45;
+      cursor: pointer;
+    }
+    .sms-opt label a { color: var(--orange); text-decoration: none; }
+    .sms-opt label a:hover { text-decoration: underline; }
+    .sms-opt-error { color: #ff6b6b; font-size: 0.7rem; margin-top: -10px; margin-bottom: 8px; display: none; }
+
     /* Progress indicator */
     .step-dots {
       display: flex;
@@ -992,6 +1017,13 @@
         <div class="input-row single">
           <input class="f-input" id="phone" type="tel" placeholder="Phone Number" autocomplete="tel" />
         </div>
+        <div class="sms-opt">
+          <input type="checkbox" id="sms_consent" />
+          <label for="sms_consent">
+            By checking this box, I agree to receive text messages from E&amp;J Retreats regarding my revenue report and short-term rental management services. Message frequency varies. Msg &amp; data rates may apply. Reply <strong>STOP</strong> to cancel, <strong>HELP</strong> for help. View our <a href="/terms.html" target="_blank">Terms</a> and <a href="/privacy.html" target="_blank">Privacy Policy</a>.
+          </label>
+        </div>
+        <p class="sms-opt-error" id="sms-error">Please check the box above to continue.</p>
         <button class="cta-btn" onclick="next(3)">Continue &rarr;</button>
       </div>
 
@@ -1331,6 +1363,11 @@
       if (!em || !em.includes('@')) { document.getElementById('email').focus(); return; }
       var ph = document.getElementById('phone').value.trim();
       if (!ph) { document.getElementById('phone').focus(); return; }
+      if (!document.getElementById('sms_consent').checked) {
+        document.getElementById('sms-error').style.display = 'block';
+        return;
+      }
+      document.getElementById('sms-error').style.display = 'none';
     }
     setStep(step);
   };
@@ -1348,6 +1385,7 @@
       last_name:        document.getElementById('last_name').value,
       email:            document.getElementById('email').value,
       phone:            document.getElementById('phone').value,
+      sms_consent:      document.getElementById('sms_consent').checked,
       property_address: addr,
       message:          document.getElementById('message').value,
     };
