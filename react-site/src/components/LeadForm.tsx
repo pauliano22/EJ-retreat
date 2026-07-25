@@ -1,16 +1,18 @@
-import { useState } from 'react'
 import { Lock } from 'lucide-react'
+import { useState } from 'react'
 import AnimatedSection from './AnimatedSection'
 
-const CRM_URL = 'https://crm-nine-delta-37.vercel.app/api/inbound-lead'
+const CRM_URL = 'https://ej-retreat.vercel.app/api/inbound-lead'
 const CRM_TOKEN = 'ejr_eab9ceb7d1463a8d8ddec037474149bda7a7153b4bf3408e'
 
 export default function LeadForm() {
-  const [loading, setLoading] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    setLoading(true)
+    setSubmitting(true)
+    setError(null)
 
     const form = e.currentTarget
     const data = {
@@ -22,23 +24,21 @@ export default function LeadForm() {
       message:          (form.elements.namedItem('message')          as HTMLTextAreaElement).value,
     }
 
-    await Promise.allSettled([
-      fetch(CRM_URL, {
+    try {
+      const r = await fetch(CRM_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${CRM_TOKEN}`,
         },
         body: JSON.stringify(data),
-      }),
-      fetch('https://formsubmit.co/ajax/ejretreats1@gmail.com', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({ ...data, _subject: 'New Revenue Report Request' }),
-      }),
-    ])
-
-    window.location.href = '/thank-you.html'
+      })
+      if (!r.ok) throw new Error('CRM error')
+      window.location.href = '/thank-you.html'
+    } catch {
+      setError('Something went wrong — please try again or call us at (813) 699-0509.')
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -77,7 +77,6 @@ export default function LeadForm() {
                     type="text"
                     name="last_name"
                     placeholder="Smith"
-                    required
                     className="w-full px-4 py-3 bg-white/5 border border-white/15 rounded-lg text-white placeholder-white/30 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500/30 transition-colors duration-200"
                   />
                 </div>
@@ -125,17 +124,21 @@ export default function LeadForm() {
                 <textarea
                   name="message"
                   rows={3}
-                  placeholder="$55,000 per year"
+                  placeholder="Number of bedrooms, current revenue, questions..."
                   className="w-full px-4 py-3 bg-white/5 border border-white/15 rounded-lg text-white placeholder-white/30 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500/30 transition-colors duration-200 resize-none"
                 />
               </div>
 
+              {error && (
+                <p className="mb-4 text-sm text-red-400 bg-red-950/40 border border-red-800/50 rounded-lg px-4 py-3">{error}</p>
+              )}
+
               <button
                 type="submit"
-                disabled={loading}
-                className="w-full px-6 py-4 bg-orange-500 text-white font-heading font-bold text-base rounded-lg shadow-[0_4px_24px_rgba(255,122,0,0.35)] hover:bg-orange-600 hover:translate-y-[-1px] hover:shadow-[0_8px_32px_rgba(255,122,0,0.45)] transition-all duration-300 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
+                disabled={submitting}
+                className="w-full px-6 py-4 bg-orange-500 text-white font-heading font-bold text-base rounded-lg shadow-[0_4px_24px_rgba(255,122,0,0.35)] hover:bg-orange-600 hover:translate-y-[-1px] hover:shadow-[0_8px_32px_rgba(255,122,0,0.45)] transition-all duration-300 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                {loading ? 'Submitting...' : 'Submit'}
+                {submitting ? 'Submitting…' : 'Submit'}
               </button>
             </form>
           </div>
