@@ -34,6 +34,9 @@ export default function LeadForm() {
         body: JSON.stringify(data),
       })
       if (!r.ok) throw new Error('CRM error')
+      if (typeof window !== 'undefined' && (window as any).fbq) {
+        (window as any).fbq('track', 'Lead')
+      }
       window.location.href = '/thank-you.html'
     } catch {
       setError('Something went wrong — please try again or call us at (813) 699-0509.')
