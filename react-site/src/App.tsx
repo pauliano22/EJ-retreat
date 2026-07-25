@@ -8,6 +8,7 @@ import AuthoritySection from './components/AuthoritySection'
 import ReportPreview from './components/ReportPreview'
 import UrgencySection from './components/UrgencySection'
 import OwnershipSection from './components/OwnershipSection'
+import CaseStudiesSection from './components/CaseStudiesSection'
 import PricingSection from './components/PricingSection'
 import RoiSection from './components/RoiSection'
 import LeadForm from './components/LeadForm'
@@ -28,6 +29,7 @@ export default function App() {
       <ReportPreview />
       <UrgencySection />
       <OwnershipSection />
+      <CaseStudiesSection />
       <PricingSection />
       <RoiSection />
       <LeadForm />
