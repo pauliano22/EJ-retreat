@@ -5,9 +5,9 @@ const navLinks = [
   { label: 'Home', href: '#' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'Properties', href: 'https://ejretreats.bookeddirectly.host/', external: true },
-  { label: 'Our Management', href: 'management.html' },
+  { label: 'Management', href: 'management.html' },
   { label: 'Case Studies', href: 'case-studies.html' },
-  { label: 'Areas We Serve', href: 'areas-we-serve.html' },
+  { label: 'Markets', href: 'areas-we-serve.html' },
   { label: 'Blog', href: 'blog/index.html' },
   { label: 'Contact', href: 'contact.html' },
 ]
@@ -39,13 +39,10 @@ export default function Navbar() {
         <div className="max-w-[1200px] mx-auto px-6">
           <nav className="flex items-center justify-between h-20">
             <a href="#" className="flex items-center gap-3">
-              <img src="/images/logo.png" alt="E&J Retreats" className="h-16 w-auto bg-white rounded-lg p-1" />
-              <span className="hidden lg:block text-xs text-slate-400 max-w-[180px] leading-tight">
-                Helping your property perform at its full revenue potential
-              </span>
+              <img src="/images/logo.png" alt="E&J Retreats" className="h-12 w-auto bg-white rounded-lg p-1" />
             </a>
 
-            <div className="hidden lg:flex items-center gap-5">
+            <div className="hidden lg:flex items-center gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
