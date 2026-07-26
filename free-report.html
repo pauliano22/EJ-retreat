@@ -469,6 +469,260 @@
     }
     .form-success p { font-size: 0.8rem; color: rgba(255,255,255,0.45); }
 
+    /* ── Case Studies trigger button ── */
+    .cs-trigger-wrap {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .cs-trigger-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,122,0,0.08);
+      border: 1px solid rgba(255,122,0,0.25);
+      color: var(--orange);
+      font-family: var(--font-h);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 9px 20px;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: background .2s, border-color .2s;
+    }
+    .cs-trigger-btn:hover {
+      background: rgba(255,122,0,0.15);
+      border-color: rgba(255,122,0,0.45);
+    }
+    .cs-trigger-btn svg { flex-shrink: 0; }
+
+    /* ── Case Studies Modal ── */
+    .cs-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.82);
+      backdrop-filter: blur(6px);
+      z-index: 9000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s;
+    }
+    .cs-modal-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .cs-modal {
+      background: #0e0f1b;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      width: 100%;
+      max-width: 900px;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      transform: translateY(20px);
+      transition: transform .25s;
+      padding: 40px;
+    }
+    .cs-modal-overlay.open .cs-modal {
+      transform: translateY(0);
+    }
+    .cs-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: rgba(255,255,255,0.5);
+      font-size: 1.1rem;
+      line-height: 1;
+      transition: background .2s, color .2s;
+    }
+    .cs-modal-close:hover { background: rgba(255,255,255,0.14); color: #fff; }
+
+    .cs-modal-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .cs-modal-eyebrow {
+      display: inline-block;
+      background: rgba(255,122,0,0.1);
+      border: 1px solid rgba(255,122,0,0.2);
+      color: var(--orange);
+      font-family: var(--font-h);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+    .cs-modal-title {
+      font-family: var(--font-h);
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.15;
+    }
+    .cs-modal-title span { color: var(--orange); }
+
+    .cs-modal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 640px) {
+      .cs-modal { padding: 28px 20px; }
+      .cs-modal-grid { grid-template-columns: 1fr; }
+    }
+
+    .cs-m-card {
+      border-radius: 16px;
+      overflow: hidden;
+      background: #131420;
+      border: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      flex-direction: column;
+    }
+    .cs-m-accent { height: 4px; }
+    .cs-m-accent.orange { background: var(--orange); }
+    .cs-m-accent.green { background: var(--green); }
+
+    .cs-m-body { padding: 24px; flex: 1; display: flex; flex-direction: column; gap: 14px; }
+
+    .cs-m-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.65rem;
+      font-family: var(--font-h);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .cs-m-tag.orange { color: var(--orange); }
+    .cs-m-tag.green { color: var(--green); }
+
+    .cs-m-headline {
+      font-family: var(--font-h);
+      font-size: clamp(1rem, 2.2vw, 1.2rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.25;
+    }
+
+    .cs-m-story {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+    }
+
+    .cs-m-what {
+      font-family: var(--font-h);
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .cs-m-what.orange { color: var(--orange); }
+    .cs-m-what.green { color: var(--green); }
+
+    .cs-m-checks { display: flex; flex-direction: column; gap: 7px; }
+    .cs-m-check {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.4;
+    }
+    .cs-m-check-icon {
+      width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; margin-top: 1px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.55rem; font-weight: 700;
+    }
+    .cs-m-check-icon.orange {
+      background: rgba(255,122,0,0.12);
+      border: 1px solid rgba(255,122,0,0.3);
+      color: var(--orange);
+    }
+    .cs-m-check-icon.green {
+      background: rgba(34,197,94,0.12);
+      border: 1px solid rgba(34,197,94,0.3);
+      color: var(--green);
+    }
+
+    .cs-m-result {
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-top: auto;
+    }
+    .cs-m-result.orange { background: rgba(255,122,0,0.08); border: 1px solid rgba(255,122,0,0.2); }
+    .cs-m-result.green { background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.2); }
+
+    .cs-m-result-num {
+      font-family: var(--font-h);
+      font-size: 2.4rem;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+    .cs-m-result-num.orange { color: var(--orange); }
+    .cs-m-result-num.green { color: var(--green); }
+
+    .cs-m-result-label {
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.35);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .cs-m-result-quote {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.5;
+      font-style: italic;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding-top: 10px;
+    }
+
+    .cs-modal-cta {
+      text-align: center;
+      margin-top: 28px;
+    }
+    .cs-modal-cta-btn {
+      display: inline-block;
+      background: var(--orange);
+      color: #fff;
+      font-family: var(--font-h);
+      font-size: 0.85rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 24px rgba(255,122,0,0.35);
+      transition: background .2s, transform .15s;
+    }
+    .cs-modal-cta-btn:hover { background: var(--orange-dark); transform: translateY(-1px); }
+
     /* ── Responsive tweaks ── */
     @media (max-width: 520px) {
       .hero { padding: 20px 20px 28px; }
@@ -990,6 +1244,14 @@
     </div>
     <!-- end mockup spread -->
 
+    <!-- Case Studies trigger -->
+    <div class="cs-trigger-wrap">
+      <button class="cs-trigger-btn" onclick="openCaseStudies()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+        See real client results
+      </button>
+    </div>
+
     <!-- Form -->
     <div class="form-wrap">
       <div class="step-dots">
@@ -1050,6 +1312,84 @@
     </div>
 
   </main>
+
+  <!-- ── Case Studies Modal ─────────────────────── -->
+  <div class="cs-modal-overlay" id="cs-modal-overlay" onclick="closeCaseStudiesOutside(event)">
+    <div class="cs-modal" role="dialog" aria-modal="true" aria-label="Case Studies">
+      <button class="cs-modal-close" onclick="closeCaseStudies()" aria-label="Close">&times;</button>
+
+      <div class="cs-modal-header">
+        <div class="cs-modal-eyebrow">Real Numbers &nbsp;&middot;&nbsp; Real Owners</div>
+        <h2 class="cs-modal-title">What happens when owners <span>switch to E&amp;J</span></h2>
+      </div>
+
+      <div class="cs-modal-grid">
+
+        <!-- Card 1: Orange -->
+        <div class="cs-m-card">
+          <div class="cs-m-accent orange"></div>
+          <div class="cs-m-body">
+            <div class="cs-m-tag orange">
+              <span>Case Study #1</span>
+              <span style="opacity:.4">&middot;</span>
+              <span style="opacity:.6">Vacation Rental &mdash; Florida</span>
+            </div>
+            <h3 class="cs-m-headline">Sitting at $0 for 3 months. First month with us: $12,000.</h3>
+            <p class="cs-m-story">A property owner came to us after their rental sat completely empty for three months straight — zero bookings, zero revenue. The property itself was a goldmine: great location, solid amenities. The problem was entirely operational. They were on one platform, had no pricing strategy, and the listing was doing nothing to convert views into bookings.</p>
+            <div>
+              <div class="cs-m-what orange">What We Did</div>
+              <div class="cs-m-checks">
+                <div class="cs-m-check"><div class="cs-m-check-icon orange">&#10003;</div>Listed on 15+ booking platforms — had been on just one</div>
+                <div class="cs-m-check"><div class="cs-m-check-icon orange">&#10003;</div>Dynamic pricing system with real-time market data</div>
+                <div class="cs-m-check"><div class="cs-m-check-icon orange">&#10003;</div>Rewrote and fully optimized the listing copy, photos, and titles</div>
+                <div class="cs-m-check"><div class="cs-m-check-icon orange">&#10003;</div>Full backend operations: guest comms, cleaning, automation</div>
+              </div>
+            </div>
+            <div class="cs-m-result orange">
+              <div class="cs-m-result-num orange">$12,000</div>
+              <div class="cs-m-result-label">First month under E&amp;J management</div>
+              <div class="cs-m-result-quote">"The property has been consistently booked ever since. The demand was always there — it just needed the right operator."</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Green -->
+        <div class="cs-m-card">
+          <div class="cs-m-accent green"></div>
+          <div class="cs-m-body">
+            <div class="cs-m-tag green">
+              <span>Case Study #2</span>
+              <span style="opacity:.4">&middot;</span>
+              <span style="opacity:.6">Duplex &mdash; Palm Harbor, FL</span>
+            </div>
+            <h3 class="cs-m-headline">Previous manager had them on Airbnb only. We changed that — immediately.</h3>
+            <p class="cs-m-story">These owners were frustrated with their previous property management company — and rightfully so. Despite paying management fees month after month, their Palm Harbor duplex was listed on a single platform. Airbnb only. No Vrbo. No Booking.com. No additional channels. The revenue potential was being systematically cut in half and they didn't even know it.</p>
+            <div>
+              <div class="cs-m-what green">What We Did</div>
+              <div class="cs-m-checks">
+                <div class="cs-m-check"><div class="cs-m-check-icon green">&#10003;</div>Immediately listed on Vrbo, Booking.com + 12 more platforms</div>
+                <div class="cs-m-check"><div class="cs-m-check-icon green">&#10003;</div>Dynamic pricing live across all channels from day one</div>
+                <div class="cs-m-check"><div class="cs-m-check-icon green">&#10003;</div>Optimized copy, channel-specific content, and professional photos</div>
+                <div class="cs-m-check"><div class="cs-m-check-icon green">&#10003;</div>Built complete operations backend — messaging, cleaning, reporting</div>
+              </div>
+            </div>
+            <div class="cs-m-result green">
+              <div class="cs-m-result-num green">+$5,000</div>
+              <div class="cs-m-result-label">Additional income in their very first month with us</div>
+              <div class="cs-m-result-quote">"Switching wasn't just a better management experience — it was an immediate, measurable income increase. First month."</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end cs-modal-grid -->
+
+      <div class="cs-modal-cta">
+        <button class="cs-modal-cta-btn" onclick="closeCaseStudies()">Get My Free Revenue Report &uarr;</button>
+      </div>
+
+    </div>
+  </div>
+  <!-- end case studies modal -->
 
   <!-- Scroll hint -->
   <div class="scroll-hint" onclick="document.getElementById('full-report').scrollIntoView({behavior:'smooth'})">
@@ -1406,7 +1746,22 @@
     window.location.href = '/thank-you.html';
   };
 
+  window.openCaseStudies = function() {
+    var overlay = document.getElementById('cs-modal-overlay');
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+  window.closeCaseStudies = function() {
+    var overlay = document.getElementById('cs-modal-overlay');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+  window.closeCaseStudiesOutside = function(e) {
+    if (e.target === document.getElementById('cs-modal-overlay')) closeCaseStudies();
+  };
+
   document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') { closeCaseStudies(); return; }
     if (e.key !== 'Enter') return;
     if (document.getElementById('s1').classList.contains('active')) window.next(2);
     else if (document.getElementById('s2').classList.contains('active')) window.next(3);
