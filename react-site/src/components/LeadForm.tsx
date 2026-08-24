@@ -22,6 +22,7 @@ export default function LeadForm() {
       phone:            (form.elements.namedItem('phone')            as HTMLInputElement).value,
       property_address: (form.elements.namedItem('property_address') as HTMLInputElement).value,
       message:          (form.elements.namedItem('message')          as HTMLTextAreaElement).value,
+      sms_consent:      (form.elements.namedItem('sms_consent')      as HTMLInputElement).checked,
     }
 
     try {
@@ -130,6 +131,19 @@ export default function LeadForm() {
                   placeholder="Number of bedrooms, current revenue, questions..."
                   className="w-full px-4 py-3 bg-white/5 border border-white/15 rounded-lg text-white placeholder-white/30 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500/30 transition-colors duration-200 resize-none"
                 />
+              </div>
+
+              <div className="mb-5">
+                <label className="flex items-start gap-3 cursor-pointer group">
+                  <input
+                    type="checkbox"
+                    name="sms_consent"
+                    className="mt-0.5 w-4 h-4 flex-shrink-0 accent-orange-500 cursor-pointer"
+                  />
+                  <span className="text-white/45 text-xs leading-relaxed">
+                    By checking this box, I agree to receive text messages from E&amp;J Retreats regarding my revenue report and short-term rental management services. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to cancel, HELP for help.
+                  </span>
+                </label>
               </div>
 
               {error && (
