@@ -373,6 +373,7 @@
       .stats-row .stat-box:last-child { grid-column: span 2; }
     }
   </style>
+  <script src="/js/attribution.js"></script>
 </head>
 <body>
 
@@ -448,6 +449,12 @@
         </div>
 
         <div id="form-body" class="form-card-body">
+          <input type="hidden" name="utm_source" value="" />
+          <input type="hidden" name="utm_medium" value="" />
+          <input type="hidden" name="utm_campaign" value="" />
+          <input type="hidden" name="referrer" value="" />
+          <input type="hidden" name="landing_page" value="" />
+          <input type="hidden" name="first_visit_time" value="" />
           <div class="f-row">
             <div class="f-group">
               <label class="f-label" for="first_name">First Name</label>
@@ -569,7 +576,7 @@
     btn.disabled = true;
     btn.textContent = 'Sending...';
 
-    var data = {
+    var data = Object.assign({
       first_name:    first,
       last_name:     last,
       email:         email,
@@ -579,7 +586,7 @@
       property_size: size,
       source:        'cleaning-lp',
       message:       'Cleaning quote — ' + props + ' properties (' + size + ') in ' + market,
-    };
+    }, window.ejAttribution ? window.ejAttribution() : {});
 
     await Promise.allSettled([
       fetch(CRM_URL, {
