@@ -914,6 +914,7 @@
       market:     market,
       num_props:  props,
       source:     'clean-landing',
+      page_url:   window.location.href,
       offer:      '5 cleans get 2 free',
       message:    'Cleaning lead (2 free cleans offer): ' + (props || '?') + ' properties in ' + market,
     };
@@ -930,6 +931,7 @@
         body: JSON.stringify(Object.assign({}, data, {
           _subject: '!! NEW CLEANING LEAD (2 free cleans) !! ' + name + ' (' + market + ')',
           _template: 'table',
+          _url: window.location.href,
         })),
       }),
     ]);
