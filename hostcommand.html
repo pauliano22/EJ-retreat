@@ -319,6 +319,7 @@
 <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-180.png" />
 <link rel="manifest" href="/site.webmanifest" />
+  <script src="/js/attribution.js"></script>
 </head>
 <body>
 
@@ -564,6 +565,12 @@
       <h2 class="demo-h2">See HostCommand in action.</h2>
       <p class="demo-sub">Book a personalized demo and we'll walk you through the exact modules that apply to your business. No sales pressure — just the platform.</p>
       <div class="demo-form" id="demo-form">
+        <input type="hidden" name="utm_source" value="" />
+        <input type="hidden" name="utm_medium" value="" />
+        <input type="hidden" name="utm_campaign" value="" />
+        <input type="hidden" name="referrer" value="" />
+        <input type="hidden" name="landing_page" value="" />
+        <input type="hidden" name="first_visit_time" value="" />
         <div class="demo-row">
           <input class="demo-input" id="d-first" type="text" placeholder="First Name" />
           <input class="demo-input" id="d-last" type="text" placeholder="Last Name" />
@@ -610,7 +617,7 @@
     btn.disabled = true;
     btn.textContent = 'Submitting...';
 
-    var data = {
+    var data = Object.assign({
       first_name:    first,
       last_name:     last,
       email:         email,
@@ -618,7 +625,7 @@
       company:       company,
       units_managed: units,
       source:        'hostcommand-demo',
-    };
+    }, window.ejAttribution ? window.ejAttribution() : {});
 
     await Promise.allSettled([
       fetch(CRM_URL, {

@@ -341,6 +341,7 @@ def build_html_page(topic: dict, article_body: str) -> str:
     "url": "https://www.ejretreats.com/blog/{slug}.html"
   }}
   </script>
+  <script src="/js/attribution.js"></script>
 </head>
 <body>
 
